@@ -1,0 +1,84 @@
+
+body{
+  overflow: hidden;
+}
+
+a {
+  color: rgb(166, 216, 39);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(92, 16, 233);
+}
+
+h1 {
+  color: rgb(40, 44, 30);
+}
+
+ul {
+  list-style: none;
+}
+
+.container{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+.things {
+  margin-bottom: 80px;
+}
+
+.things ul {
+  list-style: none;
+  padding: 5px;
+}
+
+.things li{
+  display: inline-block;
+  margin-right: 30;
+}
+
+.infos {
+  width: 42%;
+  height: 90%;
+  display: inline-block;
+}
+
+.content {
+  top: 50px;
+  width: 60%;
+  height: 90%;
+  position: relative;
+  display: inline-block;
+  padding-left: 50px;
+}
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.life {
+  font-size: 0.9em;
+  color: #566377;
+}
+
+.posts a {
+  font-size: 1.4em;
+}
+
+#url {
+  color: rgb(166, 216, 39);
+}
