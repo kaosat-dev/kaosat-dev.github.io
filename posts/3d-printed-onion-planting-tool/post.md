@@ -1,5 +1,6 @@
 ---
 title: "3d printed onion planting tool"
+permalink: posts/{{ title | slug }}/index.html
 authors: Mark Moissette
 tags:
   - gardening onions 3d-printing diy jscad gahoma
@@ -13,10 +14,12 @@ date: "2018-11-26"
 
 ## Table of Contents
 
-- [About](#about)
-- [Usage](#usage)
-- [Interactive version](#interactive)
-- [Pictures](#pictures)
+- [3d printed onion planting tool (aka 'gahoma')](#3d-printed-onion-planting-tool-aka-gahoma)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Usage](#usage)
+  - [Interactive](#interactive)
+  - [Pictures:](#pictures)
 
 ## About
 

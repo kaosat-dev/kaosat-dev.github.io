@@ -3,7 +3,7 @@ title: "Mirabelle plums first harvest"
 authors: Mark Moissette
 tags:
   - fruits gardening mirabel cooking
-date: "2018-26-08"
+date: "2018-08-26"
 
 ---
 
