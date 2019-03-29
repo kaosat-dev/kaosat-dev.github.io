@@ -82,7 +82,10 @@ const sendMessageToSW = msg => {
 ```
 
 And in the service worker:
+
 Handle the messages that set the **content** and **uris** for our 'virtual' modules
+See [here](http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html) for a good
+article on service worker messenging
 
 ```javascript
 self.addEventListener('message', async function (event) {
@@ -102,7 +105,7 @@ self.addEventListener('fetch', (event) => {
   const url = event.request.url
   let path = url.replace('http://localhost:8080/zborg/', '').replace('http://localhost:8080/', '')
   const ext = path.split('.').pop()
-  if (url.includes('zborg') || url.includes('/@jscad')) {
+  if (url.includes('--dynamic--') || url.includes('/@jscad')) {
     const module = modules[path]
     console.log('loading module', path, module)
     event.respondWith(
@@ -144,6 +147,8 @@ const registerJscadExtension = (fs, _require) => {
   }
 }
 ```
+
+Since it is a mechanism we use in Jscad for loading various file formats (which all returned data parsed as js objects), I thought it would be fun to try and add something similar to 
 
 
 ## references
