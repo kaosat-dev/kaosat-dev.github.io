@@ -2,7 +2,12 @@
 title: "dynamic es-module creation"
 authors: Mark Moissette
 tags:
-  - es javascript jscad dynamic horror jscad
+  - es
+  - javascript
+  - jscad
+  - dynamic
+  - horror
+  - jscad
 date: "2018-11-26"
 
 ---

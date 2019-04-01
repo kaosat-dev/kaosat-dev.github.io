@@ -2,7 +2,11 @@
 title: "Greenhouse building musings"
 authors: Mark Moissette
 tags:
-  - gardening greenhouse passive solar design
+  - gardening
+  - greenhouse
+  - passive
+  - solar
+  - design
 date: "2018-11-12"
 
 ---

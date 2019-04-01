@@ -1,9 +1,14 @@
 ---
 title: "3d printed onion planting tool"
-permalink: posts/{{ title | slug }}/index.html
 authors: Mark Moissette
 tags:
-  - gardening onions 3d-printing diy jscad gahoma
+  - gardening
+  - onions
+  - 3d-printing
+  - diy
+  - jscad
+  - gahoma
+  - design
 date: "2018-11-26"
 
 ---
