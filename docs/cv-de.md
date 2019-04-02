@@ -21,14 +21,14 @@
     * Entwicklung von cnc Benutzer Oberfläche & 3d viewer (node.js , WebGL, Vue.js, Elixir)
       * Wiederbenutzbare software componente
       * backend, frontend (Elixir, Webpack usw.)
-      * Docker container creation & deployment
+      * Docker Kontainer Entwicklung & Bereitschtellung
     -----------------------------------------------------------------------
 
   - *2014 - 2018*  **Web Application Developer** *[Ultimaker BV](https://ultimaker.com/) / [youmagine.com](youmagine.com), Remote*
     * Entwicklung von 3d viewer / modelierung /rendering software (node.js , WebGL, React, Cycle.js) 
       * Wiederbenutzbare software componente
-      * backend, frontend, mobile app (Browserify, Webpack usw.)
-      * Docker container creation & deployment
+      * backend, frontend, mobile App (Browserify, Webpack usw.)
+      * Docker Kontainer Entwicklung & Bereitschtellung
       * 3D printing tooling software research & prototyping
     -----------------------------------------------------------------------
 

@@ -110,6 +110,6 @@
 ## Strengths
 
 - team player
-- always striving for good communication & clarity 
+- always striving for good communication & clarity
 - reuseable software components
 - a decade of experience in web based 3d viewers, formats, optimisations
