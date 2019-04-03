@@ -33,7 +33,7 @@
     * Development of 3d viewer / modelling /rendering software (Node.js , WebGL, React, Cycle.js) 
       * reuseable, modular software components
       * backend, frontend, mobile app (Browserify, Webpack etc.)
-      * Docker container creation & deployment
+      * Docker container creation & deployment (server side webgl rendering etc)
       * 3D printing tooling software research & prototyping
     -----------------------------------------------------------------------
 
@@ -48,14 +48,14 @@
     * Development of core & UI of parametric 2D/3d modeling program (Javascript, Coffeescript, Node.js)
     -----------------------------------------------------------------------
 
-  - *2011 - 2014* **Software Developer/ Bioinformatician** *[Labor für Genomik and Informatik, INRA](https://urgi.versailles.inra.fr/) ,Versailles* 
+  - *2011 - 2014* **Software Developer/ Bioinformatician** *[URGI, INRA](https://urgi.versailles.inra.fr/) ,Versailles* 
     * Development of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile) 
     * Organisation of migration of all software to Git     
     * Migration of Software to virtual machines / parallelization
     -----------------------------------------------------------------------
 
   - *2007 - 2010* **Test Technician/ Software Developer/ Database Manager** *[Micro Application SA](https://microapp.com/), Paris*
-    * Development of an automation ystem and UI for the generation of installations programs
+    * Development of an automation system and UI for the generation of installations programs
     * Digital signatures management (nsis + php + C#)
     * Creation & maintenance of the internal bug-databases (Mantis/Php/MySql)
     -----------------------------------------------------------------------
@@ -105,7 +105,7 @@
 
 |             |                                          |
 | ----------- | ---------------------------------------- |
-| 2008 - 2010 | **Evening courses/ ECS** - Cs, Biochistry und Bioinformatics, *CNAM , Paris* |
+| 2008 - 2010 | **Evening courses/ ECS** - Cs, Biochemistry und Bioinformatics, *CNAM , Paris* |
 | 2003 - 2004 | **Bachelor in Computer Science** *DUT Jules Vernes Amiens* |
 | 2000 - 2003 | **Bachelor in Applied foreign Languagues** *Université Lyon 2 Lumière* |
 | 1999        | **GED** Lyon                          |
