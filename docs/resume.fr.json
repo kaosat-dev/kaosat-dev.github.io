@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Mark Moissette",
-    "label": "Software Developer",
+    "label": "Développeur logiciel",
     "picture": "",
     "birthDate":"18-07-1981",
-    "status": "Civil union, 2 children",
-    "summary": "Hi, my name is Mark, an experienced programmer with a focus on all things Javascript & 3D!",
+    "status": "Pacs, 2 enfants",
+    "summary": "Bonjour, je suis Mark, un développer with a focus on all things Javascript & 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
@@ -41,10 +41,10 @@
     {  
         "company":"Stykka Aps",
         "website":"https://stykka.com",
-        "position":"Web/ Full Stack Developer",
+        "position":"Web Developer",
         "startDate":"2018",
         "endDate":"2019",
-        "summary":"Development of cnc UI & 3D viewer (Node.js , WebGL, Vue.js, Elixir)",
+        "summary":"Développement of cnc UI & 3D viewer (Node.js , WebGL, Vue.js, Elixir)",
         "highlights": [
           "reuseable, modular software components",
           "backend & frontend (Elixir, Webpack etc.)",
@@ -57,15 +57,15 @@
    {  
         "company":"Ultimaker",
         "website":"https://ultimaker.com",
-        "position":"Web/ Full Stack Application Developer",
+        "position":"Web Application Developer",
         "startDate":"2014",
         "endDate":"2018",
-        "summary":"Development of 3D viewer / modelling /rendering software (Node.js , WebGL, React, Cycle.js)",
+        "summary":"Développement of 3D viewer / modelling /rendering software (Node.js , WebGL, React, Cycle.js)",
         "highlights": [
           "reuseable, modular software components",
           "backend, frontend, mobile app (Browserify, Webpack etc.)",
           "Docker container creation & deployment (server side webgl rendering etc)",
-          "3D printing tooling software research & prototyping"
+          "Impression 3D tooling software research & prototyping"
         ],
         "keywords": ["Javascript", "Webgl", "Node.js", "Cycle.js", "HTML", "CSS", "Cad", "3dPrinting", "Parsers", "Mobile"],
         "Focus":"Software development"
@@ -76,10 +76,10 @@
         "position":"Software Developer / 3DP technician",
         "startDate":"2014",
         "endDate": "2014",
-        "summary":"Development of accessibility database (Sight/Hearing/Wheelchair etc.)  & UI (Javascript, Polymer)",
+        "summary":"Développement of accessibility database (Sight/Hearing/Wheelchair etc.)  & UI (Javascript, Polymer)",
         "highlights": [
           "Maintenance and use of 3D Printers (creation of custom 3D printed designs etc)",
-          "Development of ui & backend for custom 3D scanner software",
+          "Développement of ui & backend for custom 3D scanner software",
           "Migration of [node-opencv](https://github.com/peterbraden/node-opencv) c++ bindings to use Nan"
         ],
         "keywords": ["Javascript", "Webgl", "Node.js", "Polymer.js", "HTML", "CSS", "Elixir", "Cad", "3dPrinting", "Accessibility"],
@@ -91,9 +91,9 @@
       "position":"Software Developer/ Bioinformatician",
       "startDate":"2011",
       "endDate": "2014",
-      "summary":"Development of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile) ",
+      "summary":"Développement of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile) ",
       "highlights":[
-        "Development of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile)",
+        "Développement of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile)",
         "Organisation of migration of all software to Git",
         "Migration of Software to virtual machines / parallelization"
       ],
@@ -106,7 +106,7 @@
       "position":"Test Technician/ Software Developer/ Database Manager",
       "startDate":"2007",
       "endDate": "2010",
-      "summary":"Development of automation systems and UI for the generation of installations programs",
+      "summary":"Développement of automation systems and UI for the generation of installations programs",
       "highlights":[
         "Digital signatures management (nsis + php + C#)",
         "Creation & maintenance of the internal bug-databases (Mantis/Php/MySql)"
@@ -120,7 +120,7 @@
       "position":"Web-Developer",
       "startDate":"2005",
       "endDate": "2005",
-      "summary":"Development of various websites & backend data treatment",
+      "summary":"Développement of various websites & backend data treatment",
       "highlights":[
         "php/ mysql",
         "js/html etc"
@@ -134,7 +134,7 @@
       "position":"Software & Database Developer",
       "startDate":"2004",
       "endDate": "2004",
-      "summary":"Development of various websites & backend data treatment",
+      "summary":"Développement of various websites & backend data treatment",
       "highlights":["php/ asp/ delphi"],
       "keywords": ["Javascript", "MySql", "Php", "Delphi"],
       "Focus":"Software development"
@@ -174,20 +174,20 @@
       "website": "https://github.com/kaosat-dev/CoffeeSCad",
       "startDate": "2012",
       "endDate": "2017",
-      "summary": "Development of core & UI of parametric 2D/3D modeling program (Javascript, Coffeescript, Node.js)",
+      "summary": "Développement of core & UI of parametric 2D/3D modeling program (Javascript, Coffeescript, Node.js)",
       "Focus":"Software development"
     },
     {
-      "name": "3D printing",
+      "name": "Impression 3D",
       "startDate": "2010",
       "summary": "years of experience in working with printers: possibities, challenges, limitations, design etc",
       "highlights": [
         "design & creation of multiple 3D printers",
         "extensive knowledge of processes, technical and human aspects (UI, design, formats)",
-        "worked for European Leaders of Open Source 3D printers ([Ultimaker BV](https://ultimaker.com/) / [youmagine.com](youmagine.com))",
-        "organization of 3D printing workshops"
+        "worked for European Leaders of Open Source 3D printers (Ultimaker)",
+        "organization of Impression 3D workshops"
       ],
-      "Focus":"3D printing"
+      "Focus":"Impression 3D"
     },
     {
       "name": "3D Design & modelling",
@@ -207,7 +207,7 @@
       "highlights": [
         "Use of Microcontrollers (Arduino, Eps8266, Raspberry Pi etc)",
         "Creation of Sensors systems, mechanisms, diy multi touch displays etc",
-        "Creation of [Robots](https://github.com/PiRo-bots/kiwikee) for Kids: mix of code, 3D design & 3D printing",
+        "Creation of [Robots](https://github.com/PiRo-bots/kiwikee) for Kids: mix of code, 3D design & Impression 3D",
         "Environmental monitoring & control for plants etc..."
       ],
       "Focus":"Robotics"
@@ -236,7 +236,7 @@
     {
       "institution": "CNAM",
       "area": "Paris, France",
-      "degree":"Validated ECS in Computer Science, Biochemistry und Bioinformatics",
+      "degree":"Validated ECS in Cs, Biochemistry und Bioinformatics, *CNAM , Paris*",
       "studyType": "ECS",
       "startDate": "2008",
       "endDate": "2010",
@@ -278,7 +278,7 @@
   ],
   "skills": [
     {
-    "name": "Web Development",
+    "name": "Développement Web",
     "keywords": [
       "Javascript",
       "WebGL",
@@ -302,7 +302,7 @@
     ]
   },
   {
-    "name": "Development",
+    "name": "Développement",
     "keywords": [
       "algorithms",
       "Analysis",
@@ -316,7 +316,7 @@
     ]
   },
   {
-    "name": "System",
+    "name": "Système",
     "keywords": [
       "Linux",
       "Docker",
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "name": "Testing",
+    "name": "Tests",
     "keywords": [
       "CI",
       "TDD",
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "name": "3D printing",
+    "name": "Impression 3D",
     "keywords": [
       "FDM",
       "Mechanical",
@@ -371,15 +371,15 @@
     "highlights": [
       "Scratch, Hour of Code etc",
       "Motivation via accessible electronics: Calliope Mini & co",
-      "occasionally combining designing via code (openjscad) & 3D printing !"
+      "occasionally combining designing via code (openjscad) & Impression 3D !"
     ]
   },
   {
-    "organization": "3D printing workshops",
+    "organization": "Impression 3D workshops",
     "position" : "Organizer",
     "startDate":"2012",
     "endDate":"2014",
-    "summary":"Organisation of multiple 3D printing workshops: study, assembly, operation"
+    "summary":"Organisation of multiple Impression 3D workshops: study, assembly, operation"
   }
   ],
   "languages": [
@@ -393,11 +393,11 @@
     },
     {  
         "language":"French",
-        "fluency":"Native speaker"
+        "fluency":"Langue maternelle"
     },
     {  
         "language":"Hungarian",
-        "fluency":"Native speaker"
+        "fluency":"Langue maternelle"
     }
   ],
 
