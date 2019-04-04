@@ -3,20 +3,20 @@
     "name": "Mark Moissette",
     "label": "Software Entwickler",
     "picture": "",
-    "birthDate":"18-07-1981",
+    "birthDate":"Geboren: 18-07-1981",
     "status": "Zivil Partnerschaft, 2 kinder",
-    "summary": "Hallo, ich bin Mark, ein erfahrener Entwickler mit Schwerpunkt Javascript & 3D!",
+    "summary": "Hallo, ich bin Mark, ein erfahrener Entwickler mit Schwerpunkt Javascript u. 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
     "website":"https://kaosat.net",
     "highlights": [
-      "always striving für good communication & clarity : team player !",
-      "a decade von Erfahrung in web based 3D viewers & tools, parsers & serializers, optimisations",
-      "focus on reuseable software components, functional & reactive programming",
-      "passion für open source software & hardware",
-      "scientific curiosity and motivation",
-      "good ability to learn & adapt"
+      "immer streben nach gute Kommunikation u. Klarheit : 'team player' !",
+      "mehr als 10 Jahre Erfahrung in web-basierte 3D Viewers u. Werkzeuge, Parsers u. Serializers, usw",
+      "Schwerpunkt Wiederbenutzbare, Modulare software Komponente, funktionales u. 'reaktive programming'",
+      "Leidenschaft für Open Source Software u. Hardware",
+      "Wissenschaftlische Neugier und Motivation",
+      "Gute Lern-und Anpassungs-Fähigkeit"
     ],
     "location": {
       "postalCode": "66763",
@@ -44,12 +44,12 @@
         "position":"Web/ Full Stack Entwickler",
         "startDate":"2018",
         "endDate":"2019",
-        "summary":"Entwicklung von CNC Benutzer Oberfläche & 3d Viewer (Node.js , WebGL, Vue.js, Elixir)",
+        "summary":"Entwicklung von CNC Benutzer Oberfläche u. 3d Viewer (Node.js , WebGL, Vue.js, Elixir)",
         "highlights": [
           "Wiederbenutzbare, Modulare software Komponente",
-          "Backend & Frontend (Elixir, Webpack usw..)",
+          "Backend u. Frontend (Elixir, Webpack usw..)",
           "Entwicklung von e2e Tests (TestCafe)",
-          "Docker Kontainer Entwicklung & Bereitschtellung"
+          "Docker Kontainer Entwicklung u. Bereitschtellung"
         ],
         "keywords": ["Javascript", "Webgl", "Node.js", "Vue.js", "HTML", "CSS", "Elixir", "Cad", "Cnc", "E2e", "Testing"],
         "Focus":"Software Entwicklung"
@@ -64,8 +64,8 @@
         "highlights": [
           "Wiederbenutzbare, Modulare software Komponente",
           "Backend, Frontend, Mobile App (Browserify, Webpack usw..)",
-          "Docker Kontainer Entwicklung & Bereitschtellung (Server Side Webgl Rendering usw.)",
-          "3D Druck Werkzeug Software Forschung & Prototypen Erstellung"
+          "Docker Kontainer Entwicklung u. Bereitschtellung (Server Side Webgl Rendering usw.)",
+          "3D Druck Werkzeug Software Forschung u. Prototypen Erstellung"
         ],
         "keywords": ["Javascript", "Webgl", "Node.js", "Cycle.js", "HTML", "CSS", "Cad", "3dPrinting", "Parsers", "Mobile"],
         "Focus":"Software Entwicklung"
@@ -76,10 +76,10 @@
         "position":"Software Entwickler / 3D Druck Techniker",
         "startDate":"2014",
         "endDate": "2014",
-        "summary":"Entwicklung von zugänglichkeit Datenbank(Seh/Hör/Rollstuhl usw.) & UI (Javascript, Polymer)",
+        "summary":"Entwicklung von zugänglichkeit Datenbank(Seh/Hör/Rollstuhl usw.) u. UI (Javascript, Polymer)",
         "highlights": [
           "Wartung/ Benuztung von 3d Druckern. (Erstellung von custom 3D printed designs usw.)",
-          "Entwicklung von BO & Backend für spezieles 3D Scanner software",
+          "Entwicklung von BO u. Backend für spezieles 3D Scanner software",
           "Migration von [node-opencv](https://github.com/peterbraden/node-opencv) c++ Bindings zu Nan"
         ],
         "keywords": ["Javascript", "Webgl", "Node.js", "Polymer.js", "HTML", "CSS", "Elixir", "Cad", "3dPrinting", "Accessibility"],
@@ -120,7 +120,7 @@
       "position":"Web-Entwickler",
       "startDate":"2005",
       "endDate": "2005",
-      "summary":"Entwicklung verschieden websites & Backend Datenverwaltung",
+      "summary":"Entwicklung verschieden websites u. Backend Datenverwaltung",
       "highlights":[
         "php/ mysql",
         "js/html usw."
@@ -131,10 +131,10 @@
   {  
       "company":"Elogis Gmbh",
       "website":"http://www.elogis.de/",
-      "position":"Software & Datenbank Entwickler",
+      "position":"Software u. Datenbank Entwickler",
       "startDate":"2004",
       "endDate": "2004",
-      "summary":"Entwicklung verschieden websites & Backend Datenverwaltung",
+      "summary":"Entwicklung verschieden websites u. Backend Datenverwaltung",
       "highlights":["php/ asp/ delphi"],
       "keywords": ["Javascript", "MySql", "Php", "Delphi"],
       "Focus":"Software Entwicklung"
@@ -159,9 +159,9 @@
       "name": "Core Maintainer/ Entwickler",
       "website": "https://github.com/jscad",
       "startDate": "2016",
-      "summary": "Upgrade zu Es-next, Entwicklung von Kern- Funktionen & UI für parametrisches 2D/3D Modelierung Program (Javascript, Node.js, ...)",
+      "summary": "Upgrade zu Es-next, Entwicklung von Kern- Funktionen u. UI für parametrisches 2D/3D Modelierung Program (Javascript, Node.js, ...)",
       "highlights": [
-        "Entwicklung von kern Modelierung & maths Funktionen, UI",
+        "Entwicklung von kern Modelierung u. maths Funktionen, UI",
         "Erstellung von Desktop App (Electron)",
         "migration von monolithishes Code zu Node Module",
         "ERstellung von riesen menge von Unit-tests"
@@ -174,7 +174,7 @@
       "website": "https://github.com/kaosat-dev/CoffeeSCad",
       "startDate": "2012",
       "endDate": "2017",
-      "summary": "Entwicklung von core & UI für parametrisches 2D/3D Modelierung program (Javascript, Coffeescript, Node.js)",
+      "summary": "Entwicklung von core u. UI für parametrisches 2D/3D Modelierung program (Javascript, Coffeescript, Node.js)",
       "Focus":"Software Entwicklung"
     },
     {
@@ -182,7 +182,7 @@
       "startDate": "2010",
       "summary": "Jahre Erfahrung mit Druckern: Möglichkeiten, Herausforderungen, Limitationen, Design usw.",
       "highlights": [
-        "Design & Erstellung von mehreren 3D Drucker",
+        "Design u. Erstellung von mehreren 3D Drucker",
         "Umfangreiche Kenntnisse von Prozesse, technisches so wohl als auch menchlichliche Aspekte (UI, Design, Formate)",
         "Jahre Arbeit für europäische Leiter von Open Source 3D Drucker ([Ultimaker BV](https://ultimaker.com/) / [youmagine.com](youmagine.com))",
         "organization von 3D Druck Workshops"
@@ -190,7 +190,7 @@
       "Focus":"3D Druck"
     },
     {
-      "name": "3D Design & Modelierung",
+      "name": "3D Design u. Modelierung",
       "startDate": "2001",
       "summary": "Low/High poly, Wings3D, 3DSMAX, Blender, OpenSCAD, OpenJSCAD usw.",
       "highlights": [
@@ -207,7 +207,7 @@
       "highlights": [
         "Benutzung von Microcontroller (Arduino, Eps8266, Raspberry Pi usw.)",
         "Erschafung von Sensor-systeme, Mechanismen, diy Multi-touch Displays usw.",
-        "Erschafung von [Robotern](https://github.com/PiRo-bots/kiwikee) für Kinder: mischung aus Kod, 3D Design & 3D Druck",
+        "Erschafung von [Robotern](https://github.com/PiRo-bots/kiwikee) für Kinder: mischung aus Kod, 3D Design u. 3D Druck",
         "Umgebung Überwachung und Kontrolle für Pflanzen usw...."
       ],
       "Focus":"Robotics"
@@ -344,7 +344,7 @@
     "name": "3D design",
     "keywords": [
       "Analysis",
-      "Low & High poly",
+      "Low u. High poly",
       "Wings3D",
       "OpenSCAD",
       "OpenJSCAD",
@@ -370,7 +370,7 @@
     "summary": "Code-Mentoring für Kinder !",
     "highlights": [
       "Scratch, Hour of Code usw.",
-      "Motivation durch zugängliche Elektronik: Calliope Mini & co",
+      "Motivation durch zugängliche Elektronik: Calliope Mini u. co",
       "Manchmal Code-basierte Designs (openjscad) combiniert mit 3D Druck um beides den Kindern beizubringen!"
     ]
   },

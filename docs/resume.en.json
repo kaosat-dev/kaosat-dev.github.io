@@ -3,7 +3,7 @@
     "name": "Mark Moissette",
     "label": "Software Developer",
     "picture": "",
-    "birthDate":"18-07-1981",
+    "birthDate":"Born: 18-07-1981",
     "status": "Civil union, 2 children",
     "summary": "Hi, my name is Mark, an experienced programmer with a focus on all things Javascript & 3D!",
     "email":"moissette.mark@gmail.com",
@@ -180,7 +180,7 @@
     {
       "name": "3D printing",
       "startDate": "2010",
-      "summary": "years of experience in working with printers: possibities, challenges, limitations, design etc",
+      "summary": "years of experience in working with printers: possibilities, challenges, limitations, design etc",
       "highlights": [
         "design & creation of multiple 3D printers",
         "extensive knowledge of processes, technical and human aspects (UI, design, formats)",

@@ -5,14 +5,14 @@
     "picture": "",
     "birthDate":"18-07-1981",
     "status": "Pacs, 2 enfants",
-    "summary": "Bonjour, je suis Mark, un développer with a focus on all things Javascript & 3D!",
+    "summary": "Bonjour, je suis Mark, un développer expérimenté, specialisé Javascript et 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
     "website":"https://kaosat.net",
     "highlights": [
       "always striving for good communication & clarity : team player !",
-      "a decade of experience in web based 3D viewers & tools, parsers & serializers, optimisations",
+      "a decade de experience in web based 3D viewers & tools, parsers & serializers, optimisations",
       "focus on reuseable software components, functional & reactive programming",
       "passion for open source software & hardware",
       "scientific curiosity and motivation",
@@ -41,103 +41,103 @@
     {  
         "company":"Stykka Aps",
         "website":"https://stykka.com",
-        "position":"Web Developer",
+        "position":"Développeur Web / Fullstack",
         "startDate":"2018",
         "endDate":"2019",
-        "summary":"Développement of cnc UI & 3D viewer (Node.js , WebGL, Vue.js, Elixir)",
+        "summary":"Développement d'interface graphique pour outils CNC & visualisateur 3D (Node.js , WebGL, Vue.js, Elixir)",
         "highlights": [
-          "reuseable, modular software components",
-          "backend & frontend (Elixir, Webpack etc.)",
-          "setup for e2e testing (TestCafe)",
-          "Docker container creation & deployment"
+          "composants logiciels modulaires et réutilisables",
+          "backend, frontend (Elixir, Webpack etc.)",
+          "créations de tests & procedures e2e  (TestCafe)",
+          "création, maintenance et déploiement de containers Docker"
         ],
-        "keywords": ["Javascript", "Webgl", "Node.js", "Vue.js", "HTML", "CSS", "Elixir", "Cad", "Cnc", "E2e", "Testing"],
-        "Focus":"Software development"
+        "keywords": ["Javascript", "Webgl", "Node.js", "Vue.js", "HTML", "CSS", "Elixir", "Cad", "Cnc", "E2e", "Tests"],
+        "Focus":"Développement logiciel"
    },
    {  
         "company":"Ultimaker",
         "website":"https://ultimaker.com",
-        "position":"Web Application Developer",
+        "position":"Développeur d'Applications Web / Fullstack",
         "startDate":"2014",
         "endDate":"2018",
-        "summary":"Développement of 3D viewer / modelling /rendering software (Node.js , WebGL, React, Cycle.js)",
+        "summary":"Développement d'outils de visualisation 3D / modelisation /rendu (Node.js , WebGL, React, Cycle.js) ",
         "highlights": [
-          "reuseable, modular software components",
-          "backend, frontend, mobile app (Browserify, Webpack etc.)",
-          "Docker container creation & deployment (server side webgl rendering etc)",
-          "Impression 3D tooling software research & prototyping"
+          "composants logiciels modulaires et réutilisables",
+          "backend, frontend, application mobile (Browserify, Webpack etc.)",
+          "création, maintenance et déploiement de containers Docker (server side webgl rendering etc)",
+          "recherche et développement d'outils logiciels pour l'impression 3D"
         ],
-        "keywords": ["Javascript", "Webgl", "Node.js", "Cycle.js", "HTML", "CSS", "Cad", "3dPrinting", "Parsers", "Mobile"],
-        "Focus":"Software development"
+        "keywords": ["Javascript", "Webgl", "Node.js", "Cycle.js", "HTML", "CSS", "Cad", "Impression 3D", "Parsers", "Mobile"],
+        "Focus":"Développement logiciel"
     },
     {  
         "company":"KIT",
         "website":"https://www.kit.edu",
-        "position":"Software Developer / 3DP technician",
+        "position":"Développeur logiciel/ Technicien impression 3D",
         "startDate":"2014",
         "endDate": "2014",
-        "summary":"Développement of accessibility database (Sight/Hearing/Wheelchair etc.)  & UI (Javascript, Polymer)",
+        "summary":"Développement de bases de données d'accessibilité (vue/ ouie/ Fauteuils roulants etc.) & d'interfaces graphiques (Javascript, Polymer)",
         "highlights": [
-          "Maintenance and use of 3D Printers (creation of custom 3D printed designs etc)",
-          "Développement of ui & backend for custom 3D scanner software",
-          "Migration of [node-opencv](https://github.com/peterbraden/node-opencv) c++ bindings to use Nan"
+          "Maintenance, utilisation d'imprimantes 3D, création de contenus 3D imprimables sur mesure",
+          "Développement d'application sur mesure de scan 3D",
+          "Migration de bindings c++ vers Nan pour [node-opencv](https://github.com/peterbraden/node-opencv)"
         ],
-        "keywords": ["Javascript", "Webgl", "Node.js", "Polymer.js", "HTML", "CSS", "Elixir", "Cad", "3dPrinting", "Accessibility"],
-        "Focus":"Software development"
+        "keywords": ["Javascript", "Webgl", "Node.js", "Polymer.js", "HTML", "CSS", "Elixir", "Cad", "Impression 3D", "Accessibilité"],
+        "Focus":"Développement logiciel"
     },
     {  
       "company":"URGI",
       "website":"https://urgi.versailles.inra.fr",
-      "position":"Software Developer/ Bioinformatician",
+      "position":"Développeur/ Bioinformaticien",
       "startDate":"2011",
       "endDate": "2014",
-      "summary":"Développement of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile) ",
+      "summary":"Développement de pipelines d'analyses en Python/ R/ C++/ Linux Shell (Agile)",
       "highlights":[
-        "Développement of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile)",
-        "Organisation of migration of all software to Git",
-        "Migration of Software to virtual machines / parallelization"
+        "Développement de pipelines d'analyses en Python/ R/ C++/ Linux Shell (Agile)",
+        "Organisation de la migration du code vers Git",
+        "Migration des pipelines vers des machines virtuelles / parallelisation"
       ],
-      "keywords": ["Python","Agile","R","Git","Shell","Bioinformatics","Science","JIRA"],
-      "Focus":"Software development"
+      "keywords": ["Python","Agile","R","Git","Shell","Bioinformatique","Science","JIRA"],
+      "Focus":"Développement logiciel"
   },
   {  
       "company":"Micro Application SA",
       "website":"https://microapp.com",
-      "position":"Test Technician/ Software Developer/ Database Manager",
+      "position":"Test Technician/ Software Développeur/ Database Manager",
       "startDate":"2007",
       "endDate": "2010",
-      "summary":"Développement of automation systems and UI for the generation of installations programs",
+      "summary":"Développement de systèmes d' automatisation et UI pour la géneration de programmes d'installation",
       "highlights":[
-        "Digital signatures management (nsis + php + C#)",
-        "Creation & maintenance of the internal bug-databases (Mantis/Php/MySql)"
+        "gestion des signatures digitales(nsis + php + C#)",
+        "création & maintenance des bases de données de bugs interne (Mantis/Php/MySql)"
       ],
-      "keywords": ["Javascript", "MySql", "Php", "C#", "Nsis", "Testing"],
-      "Focus":"Software development"
+      "keywords": ["Javascript", "MySql", "Php", "C#", "Nsis", "Tests"],
+      "Focus":"Développement logiciel"
   },
   {  
       "company":"Ciblo.Net",
       "website":"http://www.ciblo.net",
-      "position":"Web-Developer",
+      "position":"Développeur Web",
       "startDate":"2005",
       "endDate": "2005",
-      "summary":"Développement of various websites & backend data treatment",
+      "summary":"Développement de sites web et gestion de données (backend)",
       "highlights":[
         "php/ mysql",
         "js/html etc"
       ],
       "keywords": ["Javascript", "MySql", "Php"],
-      "Focus":"Software development"
+      "Focus":"Développement logiciel"
   },
   {  
       "company":"Elogis Gmbh",
       "website":"http://www.elogis.de/",
-      "position":"Software & Database Developer",
+      "position":"Développeur Web",
       "startDate":"2004",
       "endDate": "2004",
-      "summary":"Développement of various websites & backend data treatment",
+      "summary":"Développement de sites web et gestion de données (backend)",
       "highlights":["php/ asp/ delphi"],
       "keywords": ["Javascript", "MySql", "Php", "Delphi"],
-      "Focus":"Software development"
+      "Focus":"Développement logiciel"
   }
   ],
   "additionalWork": [
@@ -156,61 +156,61 @@
   "projects" : [
     {
       "company": "OpenJSCAD",
-      "name": "Core maintainer/ Developer",
+      "name": "Responsable coeur applicatif/ Développeur",
       "website": "https://github.com/jscad",
       "startDate": "2016",
-      "summary": "Upgrade to modern Es-next, development of core features & UI of parametric 2D/3D modeling program (Javascript, Node.js)",
+      "summary": "Mis à niveau vers standards modernes (Es-next), développement du coeur applicatif et UI d'un programme de modélisation paramétrique 2D/3D (Javascript, Node.js)",
       "highlights": [
-        "development of core modeling & maths features, UI",
-        "creation of a desktop app (Electron)",
-        "migration from monolithic code to node modules",
-        "setup and addition of a huge amount of unit tests"
+        "développement des fonctionalité de base & maths, UI",
+        "création application desktop (Electron)",
+        "migration d'un code monolithique vers modules Node",
+        "mise en place d'un très grand nombre de tests unitaires"
       ],
-      "Focus":"Software development"
+      "Focus":"Développement logiciel"
     },
     {
       "company": "CoffeeSCAD",
-      "name": "Creator/ Developer",
+      "name": "Creator/ Développeur",
       "website": "https://github.com/kaosat-dev/CoffeeSCad",
       "startDate": "2012",
       "endDate": "2017",
-      "summary": "Développement of core & UI of parametric 2D/3D modeling program (Javascript, Coffeescript, Node.js)",
-      "Focus":"Software development"
+      "summary": "Développement applicatif & UI d'un programme de modélisation paramétrique 2D/3D  (Javascript, Coffeescript, Node.js)",
+      "Focus":"Développement logiciel"
     },
     {
       "name": "Impression 3D",
       "startDate": "2010",
-      "summary": "years of experience in working with printers: possibities, challenges, limitations, design etc",
+      "summary": "des années d'expérience dans l'utilisation d'imprimantes: possibilités, challenges, limitations, design etc",
       "highlights": [
-        "design & creation of multiple 3D printers",
-        "extensive knowledge of processes, technical and human aspects (UI, design, formats)",
-        "worked for European Leaders of Open Source 3D printers (Ultimaker)",
-        "organization of Impression 3D workshops"
+        "design & création de plusieurs modèles d'imprimantes 3D",
+        "connaissance approfondies des processus, et des aspects techniques et humains (UI, design, formats...)",
+        "travaillé pour des leaders Européens de l'impresion 3D Open Source ([Ultimaker BV](https://ultimaker.com/) / [youmagine.com](youmagine.com))",
+        "organisation de workshops d' impression 3D"
       ],
       "Focus":"Impression 3D"
     },
     {
-      "name": "3D Design & modelling",
+      "name": "3D Design & modélisations",
       "startDate": "2001",
       "summary": "Low/High poly, Wings3D, 3DSMAX, Blender, OpenSCAD, OpenJSCAD etc",
       "highlights": [
-        "designed & created 3D models for various realtime & pre-rendered projects",
-        "creation of numerous [3D-printable](https://www.thingiverse.com/ckaos/about), parametric designs"
+        "design & création de modèles 3D models pour différents projets temp réel et précalculé",
+        "création de nombreux designs paramétriques [imprimables](https://www.thingiverse.com/ckaos/about)"
       ],
-      "Focus":"3D design"
+      "Focus":"Design 3D"
     },
     {
-      "company": "Electronics, sensors, robotics",
-      "name": "Electronics, sensors, robotics",
+      "company": "Electronique, capteurs, robotique",
+      "name": "Electronique, capteurs, robotique",
       "startDate": "2002",
-      "summary": "Electronics, sensors, robotics",
+      "summary": "Electronique, capteurs, robotique",
       "highlights": [
-        "Use of Microcontrollers (Arduino, Eps8266, Raspberry Pi etc)",
-        "Creation of Sensors systems, mechanisms, diy multi touch displays etc",
-        "Creation of [Robots](https://github.com/PiRo-bots/kiwikee) for Kids: mix of code, 3D design & Impression 3D",
-        "Environmental monitoring & control for plants etc..."
+        "Utilisation régulière de Microcontroleurs (Arduino, Eps8266, Raspberry Pi etc)",
+        "Création de systèmes de capteurs, mécanismes, écrans multi touch fait maison etc",
+        "Création de [Robots](https://github.com/PiRo-bots/kiwikee) pour les enfants: mélange de code, design & Impression 3D",
+        "Monitoring & control environmentale pour des plantes etc..."
       ],
-      "Focus":"Robotics"
+      "Focus":"Robotique"
     }
 
   ],
@@ -236,42 +236,42 @@
     {
       "institution": "CNAM",
       "area": "Paris, France",
-      "degree":"Validated ECS in Cs, Biochemistry und Bioinformatics, *CNAM , Paris*",
+      "degree":"Validation d'ECS en informatique, biochimie et bioinformatique",
       "studyType": "ECS",
       "startDate": "2008",
       "endDate": "2010",
       "courses": [
-        "Computer Science",
-        "Biochemistry",
-        "Bioinformatics"
+        "Informatique",
+        "Biochimie",
+        "Bioinformatique"
       ]
     },
     { 
       "institution": "IUT Amiens",
       "area": "Amiens, France", 
-      "studyType":"Bachelor in Computer Science",
+      "studyType":"DUT informatique",
       "startDate":"2003",
       "endDate":"2004",
       "courses": [
-        "Computer Science"
+        "Informatique"
       ]
     },
     {  
         "institution": "Lyon2 Lumière",
         "area": "Lyon, France", 
-        "studyType":"Bachelor in Applied foreign Languagues",
+        "studyType":"Licence de LEA Anglais Allemand",
         "startDate":"2000",
         "endDate":"2003",
         "courses": [
-          "Languages",
-          "German",
-          "English"
+          "Langues",
+          "Allemand",
+          "Anglais"
         ]
     },
     {  
         "institution": "Lyon",
         "area": "Lyon, France",
-        "studyType":"GED",
+        "studyType":"Baccalauréat ES",
         "startDate":"1999",
         "endDate":"1999"
     }
@@ -304,8 +304,8 @@
   {
     "name": "Développement",
     "keywords": [
-      "algorithms",
-      "Analysis",
+      "algorithmes",
+      "analyse",
       "C++",
       "Python",
       "Elixir",
@@ -336,26 +336,25 @@
     "name": "Impression 3D",
     "keywords": [
       "FDM",
-      "Mechanical",
-      "process"
+      "Mechanique",
+      "processus"
     ]
   },
   {
-    "name": "3D design",
+    "name": "Design 3D",
     "keywords": [
-      "Analysis",
       "Low & High poly",
       "Wings3D",
       "OpenSCAD",
       "OpenJSCAD",
-      "Parametric"
+      "Parametrique"
     ]
   },
   {
-    "name": "Robotics",
+    "name": "Robotique",
     "keywords": [
-      "Microcontrollers",
-      "Sensors",
+      "Microcontroleurs",
+      "Capteurs",
       "Esp8266",
       "Arduino"
     ]
@@ -370,33 +369,33 @@
     "summary": "Code-Mentoring for kids !",
     "highlights": [
       "Scratch, Hour of Code etc",
-      "Motivation via accessible electronics: Calliope Mini & co",
-      "occasionally combining designing via code (openjscad) & Impression 3D !"
+      "Motivation via éléctronique accessible: Calliope Mini & co",
+      "combinaison du design 3d par le code et de l' impression 3D !"
     ]
   },
   {
-    "organization": "Impression 3D workshops",
-    "position" : "Organizer",
+    "organization": "Workshops impression 3D ",
+    "position" : "Organisateur",
     "startDate":"2012",
     "endDate":"2014",
-    "summary":"Organisation of multiple Impression 3D workshops: study, assembly, operation"
+    "summary":"Organisation de plusieurs workshops sur l' impression 3D: étude, assemblage, utilisation"
   }
   ],
   "languages": [
     {  
-        "language":"English",
-        "fluency":"Fluent"
+        "language":"Anglais",
+        "fluency":"Bilingue"
     },
     {  
-        "language":"German",
-        "fluency":"Fluent"
+        "language":"Allemand",
+        "fluency":"Bilingue"
     },
     {  
-        "language":"French",
+        "language":"Français",
         "fluency":"Langue maternelle"
     },
     {  
-        "language":"Hungarian",
+        "language":"Hongrois",
         "fluency":"Langue maternelle"
     }
   ],
