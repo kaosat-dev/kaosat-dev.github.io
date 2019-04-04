@@ -231,11 +231,6 @@
       "url": "https://www.golem.de/news/coffeescad-3D-druckmodellierung-im-browser-1305-99271.html"
     }
   ],
-
-  "workLabel": "Experience",
-  "additionalWorkLabel": "",
-  "projectsLabel": "",
-  "writingLabel": "",
   "education": [
     {
       "institution": "CNAM",
@@ -280,8 +275,6 @@
         "endDate":"1999"
     }
   ],
-  "publicationsLabel": "",
-  "additionalPublicationsLabel": "",
   "skills": [
     {
     "name": "Web Development",
@@ -365,8 +358,9 @@
       "Arduino"
     ]
   }
-],
-  "volunteer": [{
+  ],
+  "volunteer": [
+    {
     "organization": "Coder Dojo Saar",
     "position": "Mentor",
     "website": "http://coderdojo-saar.de/",
@@ -386,21 +380,29 @@
     "summary":"Organisation of multiple 3D printing workshops: study, assembly, operation"
   }
   ],
-  "languages": [ {  
-    "language":"English",
-    "fluency":"Fluent"
- },
- {  
-    "language":"German",
-    "fluency":"Fluent"
- },
- {  
-    "language":"French",
-    "fluency":"Native speaker"
- },
- {  
-    "language":"Hungarian",
-    "fluency":"Native speaker"
- }]
+  "languages": [
+    {  
+        "language":"English",
+        "fluency":"Fluent"
+    },
+    {  
+        "language":"German",
+        "fluency":"Fluent"
+    },
+    {  
+        "language":"French",
+        "fluency":"Native speaker"
+    },
+    {  
+        "language":"Hungarian",
+        "fluency":"Native speaker"
+    }
+  ],
 
+  "workLabel": "Experience",
+  "additionalWorkLabel": "",
+  "projectsLabel": "",
+  "writingLabel": "",
+  "publicationsLabel": "",
+  "additionalPublicationsLabel": ""
 }
