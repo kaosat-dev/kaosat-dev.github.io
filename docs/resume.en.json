@@ -1,0 +1,406 @@
+{
+  "basics": {
+    "name": "Mark Moissette",
+    "label": "Programmer",
+    "picture": "",
+    "birthDate":"18-07-1981",
+    "summary": "Hi, my name is Mark, an experienced programmer with a focus on all things Javascript & 3D!",
+    "email":"moissette.mark@gmail.com",
+    "phone":4915902511517,
+    "degree": "",
+    "website":"https://kaosat.net",
+    "highlights": [
+      "always striving for good communication & clarity : team player !",
+      "a decade of experience in web based 3D viewers & tools, parsers & serializers, optimisations",
+      "focus on reuseable software components, functional & reactive programming",
+      "passion for open source software & hardware",
+      "scientific curiosity and motivation",
+      "good ability to learn & adapt"
+    ],
+    "location": {
+      "postalCode": "66763",
+      "city": "Dillingen",
+      "countryCode": "DE",
+      "region": "SAAR"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "kaosat-dev",
+        "url": "https://github.com/kaosat-dev"
+      },
+      {
+        "network":"linkedin",
+        "username": "mark-moissette",
+        "url":"https://www.linkedin.com/in/mark-moissette-17362227/"
+      }
+    ]
+  },
+  "work": [
+    {  
+        "company":"Stykka Aps",
+        "website":"https://stykka.com",
+        "position":"Web Developer",
+        "startDate":"2018",
+        "endDate":"2019",
+        "summary":"Development of cnc UI & 3D viewer (node.js , WebGL, Vue.js, Elixir)",
+        "highlights": [
+          "reuseable, modular software components",
+          "backend & frontend (Elixir, Webpack etc.)",
+          "setup for e2e testing (TestCafe)",
+          "Docker container creation & deployment"
+        ],
+        "keywords": ["Javascript", "Webgl", "Node.js", "Vue.js", "HTML", "CSS", "Elixir", "Cad", "Cnc", "E2e", "Testing"],
+        "Focus":"Software development"
+   },
+   {  
+        "company":"Ultimaker",
+        "website":"https://ultimaker.com",
+        "position":"Web Application Developer",
+        "startDate":"2014",
+        "endDate":"2018",
+        "summary":"Development of 3D viewer / modelling /rendering software (node.js , WebGL, React, Cycle.js)",
+        "highlights": [
+          "reuseable, modular software components",
+          "backend, frontend, mobile app (Browserify, Webpack etc.)",
+          "Docker container creation & deployment (server side webgl rendering etc)",
+          "3D printing tooling software research & prototyping"
+        ],
+        "keywords": ["Javascript", "Webgl", "Node.js", "Cycle.js", "HTML", "CSS", "Cad", "3dPrinting", "Parsers", "Mobile"],
+        "Focus":"Software development"
+    },
+    {  
+        "company":"KIT",
+        "website":"https://www.kit.edu",
+        "position":"Software Developer / 3DP technician",
+        "startDate":"2014",
+        "endDate": "2014",
+        "summary":"Development of accessibility database (Sight/Hearing/Wheelchair etc.)  & UI (Javascript, Polymer)",
+        "highlights": [
+          "Maintenance and use of 3D Printers (creation of custom 3D printed designs etc)",
+          "Development of ui & backend for custom 3D scanner software",
+          "Migration of [node-opencv](https://github.com/peterbraden/node-opencv) c++ bindings to use Nan"
+        ],
+        "keywords": ["Javascript", "Webgl", "Node.js", "Polymer.js", "HTML", "CSS", "Elixir", "Cad", "3dPrinting", "Accessibility"],
+        "Focus":"Software development"
+    },
+    {  
+      "company":"URGI",
+      "website":"https://urgi.versailles.inra.fr",
+      "position":"Software Developer/ Bioinformatician",
+      "startDate":"2011",
+      "endDate": "2014",
+      "summary":"Development of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile) ",
+      "highlights":[
+        "Development of bioanalysis Pipelines in Python/ R/ C++/ Linux Shell (Agile)",
+        "Organisation of migration of all software to Git",
+        "Migration of Software to virtual machines / parallelization"
+      ],
+      "keywords": ["Python","Agile","R","Git","Shell","Bioinformatics","Science","JIRA"],
+      "Focus":"Software development"
+  },
+  {  
+      "company":"Micro Application SA",
+      "website":"https://microapp.com",
+      "position":"Test Technician/ Software Developer/ Database Manager",
+      "startDate":"2007",
+      "endDate": "2010",
+      "summary":"Development of automation systems and UI for the generation of installations programs",
+      "highlights":[
+        "Digital signatures management (nsis + php + C#)",
+        "Creation & maintenance of the internal bug-databases (Mantis/Php/MySql)"
+      ],
+      "keywords": ["Javascript", "MySql", "Php", "C#", "Nsis", "Testing"],
+      "Focus":"Software development"
+  },
+  {  
+      "company":"Ciblo.Net",
+      "website":"http://www.ciblo.net",
+      "position":"Web-Developer",
+      "startDate":"2005",
+      "endDate": "2005",
+      "summary":"Development of various websites & backend data treatment",
+      "highlights":[
+        "php/ mysql",
+        "js/html etc"
+      ],
+      "keywords": ["Javascript", "MySql", "Php"],
+      "Focus":"Software development"
+  },
+  {  
+      "company":"Elogis Gmbh",
+      "website":"http://www.elogis.de/",
+      "position":"Software & Database Developer",
+      "startDate":"2004",
+      "endDate": "2004",
+      "summary":"Development of various websites & backend data treatment",
+      "highlights":["php/ asp/ delphi"],
+      "keywords": ["Javascript", "MySql", "Php", "Delphi"],
+      "Focus":"Software development"
+  }
+  ],
+  "additionalWork": [
+    {
+      "company": "",
+      "position": "",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        ""
+      ]
+    }
+  ],
+  "projects" : [
+    {
+      "company": "OpenJSCAD",
+      "name": "Core maintainer/ Developer",
+      "website": "https://github.com/jscad",
+      "startDate": "2016",
+      "summary": "Upgrade to modern Es-next, development of core features & UI of parametric 2D/3D modeling program (Javascript, Node.js)",
+      "highlights": [
+        "development of core modeling & maths features, UI",
+        "creation of a desktop app (Electron)",
+        "migration from monolithic code to node modules",
+        "setup and addition of a huge amount of unit tests"
+      ],
+      "Focus":"Software development"
+    },
+    {
+      "company": "CoffeeSCAD",
+      "name": "Creator/ Developer",
+      "website": "https://github.com/kaosat-dev/CoffeeSCad",
+      "startDate": "2012",
+      "endDate": "2017",
+      "summary": "Development of core & UI of parametric 2D/3D modeling program (Javascript, Coffeescript, Node.js)",
+      "Focus":"Software development"
+    },
+    {
+      "name": "3D printing",
+      "startDate": "2010",
+      "summary": "years of experience in working with printers: possibities, challenges, limitations, design etc",
+      "highlights": [
+        "design & creation of multiple 3D printers",
+        "extensive knowledge of processes, technical and human aspects (UI, design, formats)",
+        "worked for European Leaders of Open Source 3D printers (Ultimaker)",
+        "organization of 3D printing workshops"
+      ],
+      "Focus":"3D printing"
+    },
+    {
+      "name": "3D Design & modelling",
+      "startDate": "2001",
+      "summary": "Low/High poly, Wings3D, 3DSMAX, Blender, OpenSCAD, OpenJSCAD etc",
+      "highlights": [
+        "designed & created 3D models for various realtime & pre-rendered projects",
+        "creation of numerous [3D-printable](https://www.thingiverse.com/ckaos/about), parametric designs"
+      ],
+      "Focus":"3D design"
+    },
+    {
+      "company": "Electronics, sensors, robotics",
+      "name": "Electronics, sensors, robotics",
+      "startDate": "2002",
+      "summary": "Electronics, sensors, robotics",
+      "highlights": [
+        "Use of Microcontrollers (Arduino, Eps8266, Raspberry Pi etc)",
+        "Creation of Sensors systems, mechanisms, diy multi touch displays etc",
+        "Creation of [Robots](https://github.com/PiRo-bots/kiwikee) for Kids: mix of code, 3D design & 3D printing",
+        "Environmental monitoring & control for plants etc..."
+      ],
+      "Focus":"Robotics"
+    }
+
+  ],
+  "speaking": [
+    {
+      "title": "Coffeescad: 3D modeling in your browser",
+      "role": "Speaker",
+      "event": "Fabcon3D",
+      "location": "Erfurt, DE",
+      "date": "2013",
+      "url": "https://www.golem.de/news/coffeescad-3D-druckmodellierung-im-browser-1305-99271.html"
+    },
+    {
+      "title": "JSCAD: 2D/3D parametric CAD (in JavaScript)",
+      "role": "Speaker",
+      "event": "HannoverJs",
+      "location": "Hannover, DE",
+      "date": "2013",
+      "url": "https://www.golem.de/news/coffeescad-3D-druckmodellierung-im-browser-1305-99271.html"
+    }
+  ],
+
+  "workLabel": "Experience",
+  "additionalWorkLabel": "",
+  "projectsLabel": "",
+  "writingLabel": "",
+  "education": [
+    {
+      "institution": "CNAM",
+      "area": "Paris, France",
+      "degree":"Validated ECS in Cs, Biochemistry und Bioinformatics, *CNAM , Paris*",
+      "studyType": "ECS",
+      "startDate": "2008",
+      "endDate": "2010",
+      "courses": [
+        "Computer Science",
+        "Biochemistry",
+        "Bioinformatics"
+      ]
+    },
+    { 
+      "institution": "IUT Amiens",
+      "area": "Amiens, France", 
+      "studyType":"Bachelor in Computer Science",
+      "startDate":"2003",
+      "endDate":"2004",
+      "courses": [
+        "Computer Science"
+      ]
+    },
+    {  
+        "institution": "Lyon2 Lumière",
+        "area": "Lyon, France", 
+        "studyType":"Bachelor in Applied foreign Languagues",
+        "startDate":"2000",
+        "endDate":"2003",
+        "courses": [
+          "Languages",
+          "German",
+          "English"
+        ]
+    },
+    {  
+        "institution": "Lyon",
+        "area": "Lyon, France",
+        "studyType":"GED",
+        "startDate":"1999",
+        "endDate":"1999"
+    }
+  ],
+  "publicationsLabel": "",
+  "additionalPublicationsLabel": "",
+  "skills": [
+    {
+    "name": "Web Development",
+    "keywords": [
+      "Javascript",
+      "WebGL",
+      "Node.js",
+      "Streams",
+      "Electron",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "name": "Frameworks",
+    "keywords": [
+      "Vue.js",
+      "React",
+      "Cycle.js",
+      "RxJs",
+      "Ramda",
+      "Arduino"
+    ]
+  },
+  {
+    "name": "Development",
+    "keywords": [
+      "algorithms",
+      "Analysis",
+      "C++",
+      "Python",
+      "Elixir",
+      "C#",
+      "Git",
+      "Dat",
+      "p2p"
+    ]
+  },
+  {
+    "name": "System",
+    "keywords": [
+      "Linux",
+      "Docker",
+      "CLI"
+    ]
+  },
+  {
+    "name": "Testing",
+    "keywords": [
+      "CI",
+      "TDD",
+      "E2e",
+      "Unit"
+    ]
+  },
+  {
+    "name": "3D printing",
+    "keywords": [
+      "FDM",
+      "Mechanical",
+      "process"
+    ]
+  },
+  {
+    "name": "3D design",
+    "keywords": [
+      "Analysis",
+      "Low & High poly",
+      "Wings3D",
+      "OpenSCAD",
+      "OpenJSCAD",
+      "Parametric"
+    ]
+  },
+  {
+    "name": "Robotics",
+    "keywords": [
+      "Microcontrollers",
+      "Sensors",
+      "Esp8266",
+      "Arduino"
+    ]
+  }
+],
+  "volunteer": [{
+    "organization": "Coder Dojo Saar",
+    "position": "Mentor",
+    "website": "http://coderdojo-saar.de/",
+    "startDate": "2018",
+    "summary": "Code-Mentoring for kids !",
+    "highlights": [
+      "Scratch, Hour of Code etc",
+      "Motivation via accessible electronics: Calliope Mini & co",
+      "occasionally combining designing via code (openjscad) & 3D printing !"
+    ]
+  },
+  {
+    "organization": "3D printing workshops",
+    "position" : "Organizer",
+    "startDate":"2012",
+    "endDate":"2014",
+    "summary":"Organisation of multiple 3D printing workshops: study, assembly, operation"
+  }
+  ],
+  "languages": [ {  
+    "language":"English",
+    "fluency":"Fluent"
+ },
+ {  
+    "language":"German",
+    "fluency":"Fluent"
+ },
+ {  
+    "language":"French",
+    "fluency":"Native speaker"
+ },
+ {  
+    "language":"Hungarian",
+    "fluency":"Native speaker"
+ }]
+
+}
