@@ -26,7 +26,7 @@ So i decided to do a quick (less than a day)  implementation in c# .
 
 This was the result after about another day of improvements:
 
-[![l-systemtester](./assets/l-systemtester1-273x300.jpg "l-systemtester")](./assets/l-systemtester1.jpg)
+[![l-systemtester](./assets/l-systemtester1.jpg "l-systemtester")](./assets/l-systemtester1.jpg)
 
 Things of Note:
 

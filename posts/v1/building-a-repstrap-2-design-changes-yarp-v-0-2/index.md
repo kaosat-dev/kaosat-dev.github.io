@@ -37,6 +37,11 @@ So the new and improved specs for the YARP are as follows:
 - modular : the functional elements are attached to "holders" that can be removed from the frame easilly : the "inside" might change, the enclosure will remain the same
 - 4 stepper motors, two of those running on the same stepper motor controller
 
-And some pictures and videos of this upgraded design: [![](./assets/wpid-IMAG0569.jpg "wpid-IMAG0569.jpg")](./assets/wpid-IMAG0569.jpg)[![](./assets/wpid-IMAG0573.jpg "wpid-IMAG0573.jpg")](./assets/wpid-IMAG0573.jpg)  
+And some pictures and videos of this upgraded design: 
+[![](./assets/wpid-IMAG0569.jpg "wpid-IMAG0569.jpg")](./assets/wpid-IMAG0569.jpg)
+
+[![](./assets/wpid-IMAG0573.jpg "wpid-IMAG0573.jpg")](./assets/wpid-IMAG0573.jpg)
 
 And finally a two axis drawing test video : (i'm sending the commands manually , hence the slowness between each movement):
+
+[![2 axis](http://img.youtube.com/vi/yMl-0BHjm10/0.jpg)](http://www.youtube.com/watch?v=yMl-0BHjm10)

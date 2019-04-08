@@ -44,5 +44,3 @@ It has been a while , but i have finally gotten around to work on the pump contr
 Here are a few videos of the (messy) prototype: 
 
 [Hydroduino prototype : working pump control vid 2](http://vimeo.com/7422292) from [mark "ckaos"](http://vimeo.com/user1581901) on [Vimeo](http://vimeo.com).
-
-[Hydroduino prototype : working pump control vid 3](http://vimeo.com/7422511) from [mark "ckaos"](http://vimeo.com/user1581901) on [Vimeo](http://vimeo.com).

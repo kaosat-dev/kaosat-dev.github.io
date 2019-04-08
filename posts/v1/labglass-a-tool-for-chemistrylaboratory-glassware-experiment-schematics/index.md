@@ -15,9 +15,10 @@ categories: "
 coverImage: "labglass_screen_0.png"
 ---
 
+# LabGlass: a tool for chemistry/laboratory glassware experiment schematics
 
+[![Labglass](./assets/labglass_screen_0.png "labglass")](./assets/labglass_screen_0.png)
 
-# LabGlass: a tool for chemistry/laboratory glassware experiment schematics 
 
 Recently in my biochemistry studies , i needed to do a series of laboratory experiment schematics , after looking around for standardized lab glassware drawings and related tools,  i said to myself "why not make a useful tool out of it, since there is not much done in this area" more, download etc after the break.
 
@@ -39,7 +40,7 @@ This was an article and project i wanted to post about a year ago (yikes) , so i
 
 Since a lot of people seemed interested in a tool to create such schematics but with a lot more features,  this will likely become a major project over time, the final version should enable people to create schematics such as this one (text in French only , sorry):
 
-[![lactose1](./assets/lactose1-212x300.jpg "lactose1")](./assets/lactose1.jpg)
+[![lactose1](./assets/lactose1.jpg "lactose1")](./assets/lactose1.jpg)
 
 ## Downloads :
 

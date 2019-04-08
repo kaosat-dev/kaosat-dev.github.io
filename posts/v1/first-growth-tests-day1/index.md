@@ -32,12 +32,12 @@ categories: "
 
 - After 2 days:
 
-[![planting-series00_00-09-03-07_lettuce](./assets/planting-series00_00-09-03-07_lettuce-244x300.jpg "planting-series00_00-09-03-07_lettuce")](./assets/planting-series00_00-09-03-07_lettuce.jpg)
+[![planting-series00_00-09-03-07_lettuce](./assets/planting-series00_00-09-03-07_lettuce.jpg "planting-series00_00-09-03-07_lettuce")](./assets/planting-series00_00-09-03-07_lettuce.jpg)
 
 - After 3 days:
 
-[![planting-series00_00-09-03-08_lettuce](./assets/planting-series00_00-09-03-08_lettuce-176x300.jpg "planting-series00_00-09-03-08_lettuce")](./assets/planting-series00_00-09-03-08_lettuce.jpg)
+[![planting-series00_00-09-03-08_lettuce](./assets/planting-series00_00-09-03-08_lettuce.jpg "planting-series00_00-09-03-08_lettuce")](./assets/planting-series00_00-09-03-08_lettuce.jpg)
 
 - After four days:
 
-[![planting-series00_00-09-03-09_lettuce](./assets/planting-series00_00-09-03-09_lettuce-168x300.jpg "planting-series00_00-09-03-09_lettuce")](./assets/planting-series00_00-09-03-09_lettuce.jpg)
+[![planting-series00_00-09-03-09_lettuce](./assets/planting-series00_00-09-03-09_lettuce.jpg "planting-series00_00-09-03-09_lettuce")](./assets/planting-series00_00-09-03-09_lettuce.jpg)

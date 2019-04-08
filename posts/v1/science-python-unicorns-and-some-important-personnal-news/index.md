@@ -15,9 +15,9 @@ categories: "
 - Python
 - science
 - urgi"
-coverImage: "1312659474.png"
 ---
 
+!["science unicorn"](./assets/1312659474.png)
 
 
 # Science ! Python! Unicorns! (and some important personnal news) 

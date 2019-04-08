@@ -46,6 +46,6 @@ Basically i wanted to try and improve my programming skills in c# aswell do some
 - The more you know about them the more fascinating they become: very sturdy creature (production of long "lived" cyst in case of diminish water/oxygen levels, increased production oh hemoglobin in less oxygenated levels etc)
 - As their name indicates, Artemia Salinas (and some other similar varieties) , live in water with very high salt levels:  this restricts their ecosystem to something relatively simple , and thus i thought it would be a good idea to start with a simple simulation
 
-[![artemias-closeup](./assets/artemias-closeup-168x300.jpg "artemias-closeup")](./assets/artemias-closeup.jpg)
+[![artemias-closeup](./assets/artemias-closeup.jpg "artemias-closeup")](./assets/artemias-closeup.jpg)
 
 [![artemias-algae](./assets/artemias-algae.jpg "artemias-algae")](./assets/artemias-algae.jpg)

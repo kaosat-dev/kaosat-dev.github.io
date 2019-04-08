@@ -51,3 +51,5 @@ The project is still progressing at a good pace but a lot of smaller and bigger 
 - there is something weird and worry some going on with the new steppers: whenever they are working, if i touch the stepper, or any part of the box, i just **STOPS** , as if it was suddenly grounded or whatever: i really do not know where this is coming from, i double checked all the wiring, and the circuits are already correctly grounded : perhaps the new steppers cables are not insulated properly ?
 
 And for the usual "video bonus":
+
+[![bonus](http://img.youtube.com/vi/VRW7zwnjYiU/0.jpg)](http://www.youtube.com/watch?v=VRW7zwnjYiU)
