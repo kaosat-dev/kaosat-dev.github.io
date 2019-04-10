@@ -1,0 +1,40 @@
+{
+  "name": "kaosat-net",
+  "version": "1.0.0",
+  "description": "kaosat.net website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1",
+    "front-matter": "^3.0.1",
+    "fuse.js": "^3.4.4",
+    "hackmyresume": "^1.9.0-beta",
+    "jsonresume-theme-classy": "^1.0.9",
+    "jsonresume-theme-kendall": "^0.1.19",
+    "jsonresume-theme-slick": "^0.1.16",
+    "jsonresume-theme-stackoverflow": "^1.4.0",
+    "marked": "^0.6.2",
+    "node-fetch": "^2.3.0",
+    "wordpress-export-to-markdown": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaosat-dev/kaosat-dev.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "kaosat"
+  ],
+  "author": "Mark 'kaosat-dev' Moissette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaosat-dev/kaosat-dev.github.io/issues"
+  },
+  "homepage": "https://github.com/kaosat-dev/kaosat-dev.github.io#readme"
+}
