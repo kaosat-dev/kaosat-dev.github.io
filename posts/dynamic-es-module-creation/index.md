@@ -155,9 +155,9 @@ const registerJscadExtension = (fs, _require) => {
 
 Since it is a mechanism we use in Jscad for loading various file formats (which all returned data parsed as js objects), I thought it would be fun to try and add something similar to 
 
-
 ## references
-https://salomvary.com/es6-modules-in-browsers.html#custom-loaders-with-service-workers
-https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
-https://github.com/domenic/import-maps
-http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html
+
+- [custom loaders](https://salomvary.com/es6-modules-in-browsers.html#custom-loaders-with-service-workers)
+- [import maps](https://github.com/domenic/import-maps)
+- [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [service worker messaging](http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html)
