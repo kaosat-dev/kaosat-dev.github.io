@@ -1,0 +1,85 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Projects update : learning from mistakes(2) - Multitouch</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2009-11-01
+ </span>
+  <h1 id="projects-update--learning-from-mistakes2---multitouch">Projects update : learning from mistakes(2) - Multitouch</h1>
+<p><a href="./assets/lcdmatrixtrick.png"><img src="./assets/lcdmatrixtrick.png" alt="lcdmatrixtrick" title="lcdmatrixtrick"></a></p>
+<p>I have not been able to work on my flat-multitouch screen prototype in the last few month but i intend to step it up this year : so here is a short overview of what has been done, and what is upcoming.</p>
+<h1 id="the-past">The Past:</h1>
+<h2 id="what-went-wrong">What went wrong:</h2>
+<ul>
+<li>in hindsight it might have been a better idea to start of on a smaller, cheaper and easier project: but hey, challenges make you learn more and faster!</li>
+<li>the complexity of the project is really high, the amount of elements to take into account is quite huge, and the problems often intertwined: sampling speed, IC speed, power consumption (the final version is supposed to use hundreds of IR PhotoDiodes...), best layering method for Endlighten, backlighting etc</li>
+<li>the costs: both time and money have been short in the last months, so see points above</li>
+</ul>
+<h2 id="what-went-right">What went right:</h2>
+<ul>
+<li>There actually were not as much problems as i feared, and the biggest ones i came across were actually solved in the last few weeks i worked on the project</li>
+<li>i managed, in a few very small scale tests to make the Endlighten work both as IR and visible light diffuser (thus making it work as backlight as well)</li>
+<li>even if it was the first LCD disassembly i had ever done, i did not damage it (nor myself) in the process.</li>
+</ul>
+<h1 id="the-future">The future:</h1>
+<h2 id="hardware-side">Hardware Side</h2>
+<p>Before i stopped working on it , i managed to solve the main problems i had with the initial prototype (albeit on a smaller scale, since a complete rewiring would be required)</p>
+<ul>
+<li>i used the op amps ability to both amplify the signal AND work as a subtraction operator : so basically i have an additional photodiode that samples the ambient IR inside the &quot;box&quot; and then subtracts the difference between the value at the current sensor, and the ambient IR, before amplifying the result: this enables the next point.</li>
+<li>since i can now have a sufficiently strong signal even with the LCD matrix on TOP of the endlighten, it can be used both as backlight AND IR Diffuser!</li>
+<li>a big problem i have is still the costs of manufacturing the whole printed circuits and the cost of components : well &quot;costly&quot; is very relative of course, but i think i will go through one or two additional prototyping phases before i invest in a final design</li>
+<li>in the meantime, since the ir diffusion/backlight/lcd matrix section is functionally separate from the IR sensors themselves, i might use a standard webcam based solution to be able to start writing some software: only problem is , i am not sure i will be able to use the same kind of  &quot;subtraction-then-amplification&quot; method i explained above , so this will require testing as well.</li>
+<li>i have also started designing schematics for a &quot;two level&quot; system for the ir Photodiode density : the boards would allow for two configurations , without the need for rewiring :  in the &quot;cheaper&quot; configuration there would only be 1/2 of the photodiodes (cutting costs in half at least),  but it will be possible to double the resolution by adding more photodiodes to the same board,  when budget allows it :)</li>
+</ul>
+<h2 id="software-side">Software side</h2>
+<ul>
+<li>you may have spotted, in one of the previous articles , the fact that i am currently learning Python, oh and i happen to absolutely love it ! So, as soon as i can,  i will probably write some multitouch applications using <a href="http://pymt.txzone.net/">PyMT</a></li>
+<li>I am still torn on whether it will be possible to interpolate the values</li>
+</ul>
+<p>As a bonus : here is a small schematic explaining how the endlighten works as backlight aswell as IR diffuser:</p>
+<p><a href="./assets/lcdmatrixtrick.png"><img src="./assets/lcdmatrixtrick.png" alt="lcdmatrixtrick" title="lcdmatrixtrick"></a></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

@@ -1,0 +1,183 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: dynamic es-module creation</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2018-11-26
+ </span>
+  <h1 id="dynamic-es-module-creation">dynamic es-module creation</h1>
+<h2 id="the-basics">The basics</h2>
+<p>So we now have <em>native</em> es-modules in <a href="https://caniuse.com/#search=module">most of the major browsers</a></p>
+<p>This means you can do things like </p>
+<pre><code class="language-javascript">import {foo} from <span class="hljs-string">'./bar.js'</span>
+
+<span class="hljs-function"><span class="hljs-title">foo</span><span class="hljs-params">()</span></span>
+</code></pre>
+<p>The above means that you have a file called &#39;bar.js&#39; at a relative path from where you are doing the import.</p>
+<p>so something like:</p>
+<ul>
+<li>index.html <ul>
+<li>index.js</li>
+<li>bar.js </li>
+</ul>
+</li>
+</ul>
+<p>Which implies that your modules are sitting somewhere on your server, having a nice and cosy time.</p>
+<p>But what if you actually need to load &#39;virtual&#39; (usually user created) modules on the fly ? 
+with the following requirements:</p>
+<ul>
+<li>you have a text/js editor in your page</li>
+<li>you want to enable your users to create their own modules and import from other modules, in a <strong><em>purely client side way</em></strong> , without <strong><em>any</em></strong> special server side setup</li>
+</ul>
+<blockquote>
+<p>Note: this are our barebone requirements for OpenJscad, as users can drag &amp; drop files from desktop, or edit design code directly in the browser, with no special tooling other than the most basic http server</p>
+</blockquote>
+<p>If you are impatient, the code is <a href="./assets/code">here</a></p>
+<h2 id="problems">Problems</h2>
+<ul>
+<li>eval() does not work with es modules (remember, <em>import</em> statements need to live at the <strong>top</strong> of your modules&#39;s code)</li>
+<li><em>import</em> is not a function (do not get me started on that)</li>
+<li>as far as I know (and I would love to be proven wrong), there is no cannonical / well documentated way to create custom loaders</li>
+</ul>
+<h2 id="the-answer-">The answer ?</h2>
+<p>After spending weeks (actually months, sporadically) and not finding ANY information at all about how to solve this, and then I found <a href="https://salomvary.com/es6-modules-in-browsers.html#custom-loaders-with-service-workers">this</a> excellent article by accident</p>
+<ul>
+<li>the gist of it all is this<blockquote>
+<p>Service Workers can intercept Fetch API requests. This comes in handy as ES6 import uses fetch behind the scenes.</p>
+</blockquote>
+</li>
+<li>so this means you can also intercept calls to <strong>non existing modules</strong> aka your own &#39;dynamic&#39; modules<ul>
+<li>you need a <strong>service worker</strong> to handle the interception of fetch calls</li>
+<li>you also need a mechanism to send and store your &#39;dynamic&#39; module&#39;s code to the webworker (so that the worker has the necessary data to create responses)</li>
+</ul>
+</li>
+</ul>
+<h3 id="code">Code</h3>
+<p>More in depth, it looks something like this:</p>
+<p>In your root index.js: </p>
+<pre><code class="language-javascipt">const sendMessageToSW = msg =&gt; {
+  return new Promise( (resolve, reject) =&gt; {
+    <span class="hljs-comment">// Create a Message Channel</span>
+    const msg_chan = new MessageChannel()
+
+    <span class="hljs-comment">// Handler for recieving message reply from service worker</span>
+    msg_chan<span class="hljs-selector-class">.port1</span><span class="hljs-selector-class">.onmessage</span> =  event =&gt; {
+      <span class="hljs-keyword">if</span> (event<span class="hljs-selector-class">.data</span><span class="hljs-selector-class">.error</span>) {
+        reject(event<span class="hljs-selector-class">.data</span><span class="hljs-selector-class">.error</span>)
+      } <span class="hljs-keyword">else</span> {
+        resolve(event.data)
+      }
+    }
+    <span class="hljs-comment">// Send message to service worker along with port for reply</span>
+    navigator<span class="hljs-selector-class">.serviceWorker</span><span class="hljs-selector-class">.controller</span><span class="hljs-selector-class">.postMessage</span>(msg, [msg_chan.port2])
+  })
+}</code></pre>
+<p>And in the service worker:</p>
+<p>Handle the messages that set the <strong>content</strong> and <strong>uris</strong> for our &#39;virtual&#39; modules
+See <a href="http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html">here</a> for a good
+article on service worker messenging</p>
+<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">'message'</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span></span> (event) {
+  <span class="hljs-keyword">if</span> (event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> &amp;&amp; event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> === <span class="hljs-string">'reset'</span>) {
+    modules = { ...builtIns }
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span>) {
+    modules[event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span>] = event.<span class="hljs-keyword">data</span>.source
+  }
+})</code></pre>
+<p>and handle the fetch requests:</p>
+<blockquote>
+<p>we are using a prefix to distinguish between the &#39;normal&#39; modules to fetch (actual files that exists on the server) modules and the virtual ones</p>
+</blockquote>
+<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">'fetch'</span>, (event) =&gt; {
+  <span class="hljs-keyword">const</span> <span class="hljs-built_in">url</span> = event.request.url
+  <span class="hljs-keyword">let</span> path = <span class="hljs-built_in">url</span>.replace(<span class="hljs-string">'http://localhost:8080/zborg/'</span>, <span class="hljs-string">''</span>).replace(<span class="hljs-string">'http://localhost:8080/'</span>, <span class="hljs-string">''</span>)
+  <span class="hljs-keyword">const</span> ext = path.split(<span class="hljs-string">'.'</span>).pop()
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">url</span>.includes(<span class="hljs-string">'--dynamic--'</span>) || <span class="hljs-built_in">url</span>.includes(<span class="hljs-string">'/@jscad'</span>)) {
+    <span class="hljs-keyword">const</span> <span class="hljs-built_in">module</span> = modules[path]
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'loading module'</span>, path, <span class="hljs-built_in">module</span>)
+    event.respondWith(
+      <span class="hljs-keyword">new</span> Promise((resolve, reject) =&gt; {
+        <span class="hljs-keyword">const</span> headers = <span class="hljs-keyword">new</span> Headers({
+          <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/javascript'</span>,
+          <span class="hljs-string">'Cache-Control'</span>: <span class="hljs-string">'no-store'</span>, <span class="hljs-comment">// 'no-cache', // attempt at forced invalidation</span>
+          <span class="hljs-string">'Expires'</span>: <span class="hljs-string">'Wed, 21 Oct 2015 07:28:00 GMT'</span> <span class="hljs-comment">// same</span>
+        })
+        resolve(<span class="hljs-keyword">new</span> Response(<span class="hljs-built_in">module</span>, { headers }))
+      })
+    )
+  }
+})
+</code></pre>
+<h2 id="not-so-fast-">Not so fast !</h2>
+<p>Of course, it would have been too good to be true (by that I mean, hours of trying to figure out what is wrong and having an urge to forget about this for the next few months)
+it turns out it does not <em>quite</em> work the way I hoped</p>
+<ul>
+<li>once the file is loaded <strong><em>once</em></strong>, even if you make changes to the virtual module&#39;s code, the <strong>fetch</strong> call never gets triggered again</li>
+<li>I tried every possible combo I could think of to solve that issue:<ul>
+<li>no cache headers</li>
+<li>various server settings </li>
+<li>destroying and recreating the worker</li>
+</ul>
+</li>
+</ul>
+<h2 id="bonus-extension-handling">Bonus: extension handling</h2>
+<p>You might be aware of Node&#39;s way of handling extensions, ie things like</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> registerJscadExtension = <span class="hljs-function">(<span class="hljs-params">fs, _require</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> stripBom = <span class="hljs-built_in">require</span>(<span class="hljs-string">'strip-bom'</span>)
+  _require.extensions[<span class="hljs-string">'.jscad'</span>] = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">module</span>, filename</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> content = fs.readFileSync(filename, <span class="hljs-string">'utf8'</span>)
+    <span class="hljs-built_in">module</span>._compile(stripBom(content), filename)
+  }
+}</code></pre>
+<p>Since it is a mechanism we use in Jscad for loading various file formats (which all returned data parsed as js objects), I thought it would be fun to try and add something similar to </p>
+<h2 id="references">references</h2>
+<ul>
+<li><a href="https://salomvary.com/es6-modules-in-browsers.html#custom-loaders-with-service-workers">custom loaders</a></li>
+<li><a href="https://github.com/domenic/import-maps">import maps</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">service workers</a></li>
+<li><a href="http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html">service worker messaging</a></li>
+</ul>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

@@ -1,0 +1,93 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Building a Repstrap(7) : final electronics/motherboard</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2010-09-20
+ </span>
+  <h1 id="building-a-repstrap7--final-electronicsmotherboard">Building a Repstrap(7) : final electronics/motherboard</h1>
+<p><a href="./assets/wpid-IMAG0883.jpg"><img src="./assets/wpid-IMAG0883.jpg" alt="" title="wpid-IMAG0883.jpg"></a></p>
+<p>Since i was satisfied with the way the control of the repstrap was working with the temporary electronics setup (on protoboards), i started work on the permanent solution, using standalone AtMega328 (the chip powering the more recent version of Arduino boards) and a lot of electronics equipment i already had. Here is the general overview of the requirements and  what i came up with.</p>
+<h2 id="requirements">Requirements:</h2>
+<ul>
+<li><strong>versatile</strong> : needs to handle not only the standard reprap electronic elements (stepper control, opto end stops, extruder and build platform heating and temperature control etc), but also have spare i/o ports for the upcoming 3d laser scanning elements and more</li>
+<li>support the Pololu stepper drivers</li>
+<li>make the machine as <strong>standalone</strong> as possible : this meant a <strong>frontal control panel with lcd display</strong>, and <strong>sd card reader</strong></li>
+<li>as <strong>cheap</strong> as i could (using equipment i already had or that was easy , and cheap to obtain)</li>
+</ul>
+<h2 id="the-result">The result:</h2>
+<ol>
+<li>since a single AtMega328 , even with port extensions would have been pushing things a bit on the speed side (as the stepper drivers require very fast operation , in the microsecond range for example) i decided to use two chips , communicating via  I2c</li>
+<li>one AtMega controls the steppers exclusively, while the other &quot;master&quot; chip is in charge of all the rest (no problem since all other tasks are a lot less time critical)</li>
+<li>The master chip is connected to:</li>
+</ol>
+<ul>
+<li><ul>
+<li>a <strong>74hc4094</strong> shift register to control a group of <strong>4051</strong> muxers/demuxer for a total of <strong>32 additional i/o ports (up to 64 available)</strong><ul>
+<li>a second, chained 4094 shift register controls the front 2X16 LCD</li>
+<li>an addtitional 4051 that checks for the states of a 4X4 button matrix</li>
+<li>3 <strong>TIp120</strong> transistors to control the extuder head and heated build platform heaters</li>
+<li>the completely diy <strong>SD card reader</strong> (using the <strong>SPI</strong> ports)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The end result :</p>
+<p><a href="./assets/wpid-IMAG0878_infos.jpg"><img src="./assets/wpid-IMAG0878_infos.jpg" alt="" title="wpid-IMAG0878_infos"></a></p>
+<p>Yes, it is quite complex,  and requires a custom firmware (currently being coded), but for now the results are encouraging , and its very cheap at around <strong>30/40 euros</strong> (<strong>not</strong> including the stepper drivers of course)!</p>
+<p>For reference : here is what the protoboard version looked like : VERY MESSY!</p>
+<p><a href="./assets/wpid-IMAG08321.jpg"><img src="./assets/wpid-IMAG08321.jpg" alt="" title="wpid-IMAG0832.jpg"></a></p>
+<p>I will post the detailed schematics and additional information, as well as the firmware as soon as all this is finished and tested.</p>
+<p>And some additional pictures:</p>
+<p><a href="./assets/wpid-IMAG0879.jpg"><img src="./assets/wpid-IMAG0879.jpg" alt="" title="wpid-IMAG0879.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0878.jpg"><img src="./assets/wpid-IMAG0878.jpg" alt="" title="wpid-IMAG0878.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0883.jpg"><img src="./assets/wpid-IMAG0883.jpg" alt="" title="wpid-IMAG0883.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0886.jpg"><img src="./assets/wpid-IMAG0886.jpg" alt="" title="wpid-IMAG0886.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0858.jpg"><img src="./assets/wpid-IMAG0858.jpg" alt="" title="wpid-IMAG0858.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0856.jpg"><img src="./assets/wpid-IMAG0856.jpg" alt="" title="wpid-IMAG0856.jpg"></a></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

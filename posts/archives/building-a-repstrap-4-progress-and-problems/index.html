@@ -1,0 +1,102 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Building a repstrap (4) progress and problems</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2010-07-08
+ </span>
+  <h1 id="building-a-repstrap-4-progress-and-problems">Building a repstrap (4) progress and problems</h1>
+<p><a href="./assets/4773595087_5441da74fb_b.jpg"><img src="./assets/4773595087_5441da74fb_b-215x300.jpg" alt="" title="4773595087_5441da74fb_b"></a></p>
+<p>The project is still progressing at a good pace but a lot of smaller and bigger problems have also been cropping up : on some days it really seems like &quot; solve one problem and 10 more will appear&quot;: Here is a rundown :</p>
+<h2 id="progress">Progress:</h2>
+<ul>
+<li><p>done an almost complete wiring test (albeit temporary),</p>
+</li>
+<li><p>the controller arduino is now running the Reprap gcode interpreter software</p>
+</li>
+<li><p>did the first <strong><em>curvy</em></strong>/ more complex drawing tests and precision seems quite ok</p>
+<ul>
+<li><a href="./assets/4774230764_203a85285b_b.jpg"><img src="./assets/4774230764_203a85285b_b.jpg" alt="" title="4774230764_203a85285b_b"></a></li>
+<li><a href="./assets/4774228370_079b30f358_b.jpg"><img src="./assets/4774228370_079b30f358_b.jpg" alt="" title="4774228370_079b30f358_b"></a></li>
+</ul>
+</li>
+<li><p>for the &quot;2d&quot; tests I used the <strong><em>Inkscape</em></strong> to <strong><em>Gcode</em></strong> extension that you can get <a href="http://wiki.linuxcnc.org/cgi-bin/emcinfo.pl?InkscapeHowto">here</a> + a cleanup program i did in python</p>
+</li>
+<li><p>since replicatorG would not work correctly I whipped up a very basic python program to send the <strong><em>Gcode</em></strong> commands to the arduino ( using a slightly modified version of the code I use for my <a href="http://www.kaosat.net/?tag=hydroduino">HydroDuino</a> project) I might add a (very) minimal interface and make it available , as its very simple to use for basic tests</p>
+</li>
+<li><p>completely trivial , but the sound of the steppers , in particular when drawing spirals, is really hypnotizing : i knew steppers had a certain &quot;musical&quot; quality to them (hence the many people using them to play a varierty of tunes, but still, quite nice)</p>
+</li>
+<li><p>it seems i have almost everything i need to start working on a pinch wheel extruder , except for the nichrome wire and a few bits and bob, so i will begin work on that pretty soon</p>
+</li>
+</ul>
+<h2 id="problems-">Problems :</h2>
+<ul>
+<li><p>wiring is a mess so I will have to build a specific screw shield for the arduino, also the current &quot;front-top&quot; placement of the electronics is not practical at all so i might go back to this type of setup:</p>
+<ul>
+<li><a href="./assets/4773600759_61157f4c73_b.jpg"><img src="./assets/4773600759_61157f4c73_b.jpg" alt="" title="4773600759_61157f4c73_b"></a></li>
+</ul>
+</li>
+<li><p>the <strong><em>vertical</em></strong> axis is acting up again and is driving me nuts ( and bolts...) there is a massive <strong><em>4 fold speed difference</em></strong> between the up and down movement , some heavy squeaking from time to time and in the worse case of of the threaded rods detached from the motor!! No good!</p>
+<ul>
+<li>I am actually starting to wonder if the system i came up with to transmit the rotary movement to the axis platforms is at fault:</li>
+<li><a href="./assets/wpid-IMAG0641.jpg"><img src="./assets/wpid-IMAG0641.jpg" alt="" title="wpid-IMAG0641.jpg"></a><img src="./assets/wpid-IMAG0643.jpg" alt="" title="wpid-IMAG0643.jpg">](./assets/wpid-IMAG0643.jpg)</li>
+<li>Or perhaps its is due to the axis bearing/rail system ? It is a generic piece that i can easily adjust ensuring a tight fit on both local axis, and very easy to build as-well</li>
+<li><a href="./assets/AxisBearingSystem-design.jpg"><img src="./assets/AxisBearingSystem-design.jpg" alt="" title="AxisBearingSystem-design"></a></li>
+</ul>
+</li>
+<li><p>on some axis the <strong><em>transparent aquarium tubing</em></strong> I use to attach the motor axis to the threaded rods detach from time to time...so I will have to change that aswell</p>
+</li>
+<li><p>on those axis where the bearings have even just 0.5 mm play with the rails, the wobble is noticeable</p>
+</li>
+<li><p>the last of the steppers i was still using, for the X axis stopped working reliably, but i anticipated that , and installed one of the newer but heaver steppers</p>
+</li>
+<li><p>there is something weird and worry some going on with the new steppers: whenever they are working, if i touch the stepper, or any part of the box, i just <strong>STOPS</strong> , as if it was suddenly grounded or whatever: i really do not know where this is coming from, i double checked all the wiring, and the circuits are already correctly grounded : perhaps the new steppers cables are not insulated properly ?</p>
+</li>
+</ul>
+<p>And for the usual &quot;video bonus&quot;:</p>
+<p><a href="http://www.youtube.com/watch?v=VRW7zwnjYiU"><img src="http://img.youtube.com/vi/VRW7zwnjYiU/0.jpg" alt="bonus"></a></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

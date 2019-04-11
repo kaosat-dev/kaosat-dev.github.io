@@ -1,0 +1,251 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: IR interpolation (Processing applet and code)</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2009-04-20
+ </span>
+  <h1 id="ir-interpolation-processing-applet-and-code">IR interpolation (Processing applet and code)</h1>
+<p><a href="./assets/ir_interp_inverted_screen.png"><img src="./assets/ir_interp_inverted_screen.png" alt="ir_interp_inverted_screen" title="ir_interp_inverted_screen"></a></p>
+<p>Here is a little program i wrote in Processing to test out some interpolation algorithms with lower/higher threshold value limiting etc.</p>
+<p>It is quite rough and incomplete for now , but the main part, the bilinear interpolation between all 4 points in each &quot;cell&quot; of the sensor grid works well.</p>
+<p>You can adjust the interpolation precision as well as the lower and higher thresholds.</p>
+<p>You can try out the applet and download the source code after the break</p>
+<p>Why is there &quot;Emulation&quot; in the title ?</p>
+<p>-simply because i am emulating the touch of a finger with the mouse and the resulting values of ir intensity,  in a quite limited way with interpolation as well: the precision here is not high as it would actually be, and lot of adjustments and modifications need to be made still.</p>
+<p>The grid is the estimated size i will need for the 16&quot; asus screen.</p>
+<p><img src="./assets/loading.gif" alt=""></p>
+<p><strong>Source code:</strong> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/ir_interpolation_emulation_0_01.pde">ir_interpolation_inverted_0_01</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/grid.pde">grid (most important stuff is here)</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/keyboard.pde">keyboard</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/mouse.pde">mouse</a></p>
+<p>Code is gpl unless specified otherwise. (feel free to use anything you can salvage:) Main File</p>
+<p>PFont font;
+Grid testGrid;
+MouseMgr mouseMgr;//mouse manager
+KeyboardMgr keyboardMgr;//keyboardmanager</p>
+<p>void setup()
+{
+   size(510, 330);
+   testGrid=new Grid(10,18,30,0.05,0.15,4);
+   testGrid.init();
+   testGrid.clear_grid();</p>
+<p>   mouseMgr=new MouseMgr(testGrid,this);
+   mouseMgr.init();
+   keyboardMgr=new KeyboardMgr(testGrid,this);</p>
+<p>   font=loadFont(&quot;UMingCN-48.vlw&quot;);
+   textFont(font,18);
+   frameRate(30);
+}</p>
+<p>void draw()
+{
+  background(10, 10, 25);
+  testGrid.draw();
+  textFont(font,18);
+  fill(250,250,250);
+  text(&quot;* Right click to swtich between low/ high Threshold Edit&quot;,5,282);
+  text(&quot;* Middle button click to show/hide grid&quot;,5,297);
+  text(&quot;* Mouse scroll click to change currentThresholdLevel&quot;,5,312);
+  text(&quot;* up /down keys to increase(slower!) /decrease sampling&quot;,5,327);</p>
+<p>  fill(255,255,255);
+  textFont(font,15);
+  text(&quot;Low ts: &quot;+testGrid.get_lowThreshold(),410,15);
+  text(&quot;High ts: &quot;+testGrid.get_highThreshold(),410,30);
+  text(&quot;Samples: &quot;+testGrid.get_samples(),410,45);</p>
+<p>  testGrid.fade_grid();
+}</p>
+<p>Grid Class</p>
+<p>class Grid
+{
+  float[][] bigSamples;//emulation of sensor grid values</p>
+<p>  boolean lowEditModeOn;
+  boolean drawGridOn;</p>
+<p>  int gridHeight;
+  int gridLength;
+  int gridCoarsness;//size of each grid &quot;cell&quot;
+  float lowThreshold;//theshold below which values get cut to 0
+  float highThreshold;//theshold below which values get upped to 1
+  int samples;//how much intermediate samples we interpolate within each cell</p>
+<p>  public Grid( int gridHeight, int gridLength, int gridCoarsness, float lowThreshold, float highThreshold,int samples)
+  {
+    this.gridHeight= gridHeight;
+    this.gridLength= gridLength;
+    this.gridCoarsness= gridCoarsness;
+    this.lowThreshold=lowThreshold;
+    this.highThreshold=highThreshold;
+    this.samples=samples;
+  }</p>
+<p>  public void init()
+  {
+    bigSamples=new float[gridHeight][];</p>
+<pre><code><span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i5)
+    {
+       bigSamples\[i\]\[j\]=random(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>); <span class="hljs-comment">//don't mind this , it's from a previous test</span>
+    }
+    <span class="hljs-keyword">else</span>
+    {
+       bigSamples\[i\]\[j\]=<span class="hljs-number">0</span>;
+    }
+  }
+}</code></pre><p>  }</p>
+<p>  //function for bilinear interpolation
+  public float interpolate_bilinear(PVector interpolated, float upperLeft, float upperRight, float lowerRight, float lowerLeft)
+  {
+      float result=upperLeft*(1-interpolated.x)*(1-interpolated.y);
+      result+=upperRight*interpolated.x*(1-interpolated.y);
+      result+=lowerLeft*(1-interpolated.x)*interpolated.y;
+      result+=lowerRight*interpolated.x*interpolated.y;
+      if(resulthighThreshold)
+      {
+        result=1;
+      }</p>
+<pre><code><span class="hljs-built_in">  return</span> <span class="hljs-literal">result</span>;</code></pre><p>  }</p>
+<p>  public void draw()
+  {</p>
+<pre><code><span class="hljs-built_in">float</span> spacing=(<span class="hljs-built_in">float</span>)(<span class="hljs-number">1</span>/<span class="hljs-built_in">float</span>(samples));
+<span class="hljs-built_in">float</span> x=<span class="hljs-number">0</span>;
+<span class="hljs-built_in">float</span> y=<span class="hljs-number">0</span>;
+
+<span class="hljs-built_in">float</span> sX=<span class="hljs-number">0</span>;
+<span class="hljs-built_in">float</span> sY=<span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> u=<span class="hljs-number">0</span>;u&lt;<span class="hljs-number">1</span>)
+    {
+     lowThreshold+=<span class="hljs-number">0.01</span>;
+    }
+ }
+ <span class="hljs-keyword">else</span>
+ {
+     <span class="hljs-keyword">if</span>(highThreshold+<span class="hljs-number">0.01</span>&lt;<span class="hljs-number">1</span>)
+    {
+     highThreshold+=<span class="hljs-number">0.01</span>;
+    }
+ }</code></pre><p>  }</p>
+<p>  public void decrease_threshold()
+  {
+    if(lowEditModeOn)
+     {
+        if(lowThreshold-0.02&gt;0)
+        {
+         lowThreshold-=0.01;
+        }
+      }
+      else
+      {
+        if(highThreshold-0.02&gt;0)
+        {
+         highThreshold-=0.01;
+        }
+      }
+  }</p>
+<p>  public void increase_samples()
+  {
+      if((samples+1)&lt;64)
+      {
+         samples++;
+      }
+  }</p>
+<p>   public void decrease_samples()
+  {
+      if(samples-1&gt;0)
+      {
+         samples--;
+      }
+  }</p>
+<p>  public int get_samples()
+  {
+      return samples;
+  }</p>
+<p>  public void set_editMode()
+  {
+     if( lowEditModeOn)
+     {
+      lowEditModeOn=false;
+     }
+     else
+     {
+        lowEditModeOn=true;
+     }
+  }</p>
+<p>  public void set_drawMode()
+  {
+     if( drawGridOn)
+     {
+      drawGridOn=false;
+     }
+     else
+     {
+        drawGridOn=true;
+     }
+  }</p>
+<p>  public int get_gridCoarsness()
+  {
+     return  gridCoarsness;
+  }</p>
+<p>  public float[][] get_bigSamples()
+  {
+    return bigSamples;
+  }</p>
+<p>  public float get_lowThreshold()
+  {
+     return lowThreshold;
+  }</p>
+<p>   public float get_highThreshold()
+  {
+     return highThreshold;
+  }</p>
+<p>  public void set_bigSampleValue(int x, int y, float value)
+  {
+    bigSamples[y][x]=value;
+  }</p>
+<p>  public void clear_grid()
+  {
+     for(int i=0;i0)
+          {
+            bigSamples[i][j]-=0.01;
+          } </p>
+<pre><code>  }
+}</code></pre><p>  }</p>
+<p>}</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

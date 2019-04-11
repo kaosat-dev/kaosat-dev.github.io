@@ -1,0 +1,94 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Short Doboz-web news: v0.32 updates and additions</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2011-04-10
+ </span>
+  <h1 id="short-doboz-web-news-v032-updates-and-additions">Short Doboz-web news: v0.32 updates and additions</h1>
+<p><a href="./assets/DobozUi-view2.jpg"><img src="./assets/DobozUi-view2.jpg" alt="" title="DobozUi-view2"></a></p>
+<p>After some heavy bug fixing , feedback gathering and lots of testing, here is a short rundown on the current state of the project.</p>
+<h2 id="added-features-and-improvements-">Added features and improvements :</h2>
+<p>Updates have been a little slow lately as i am rewriting a lot of elements from the server backend, also, upcoming exams, and building a mini reprap :)</p>
+<p>In case you wonder why the project is at v0.32, v0.1 and v0.2 were the parent projects, that didn&#39;t get any release, as they were very machine-specific and limited:)</p>
+<p>This v0.32 added a certain number of improvement, features and bugfixes :</p>
+<h3 id="webcam-view">Webcam view:</h3>
+<ul>
+<li>after numerous suggestions on the Reprap dev list, i added some initial support for <strong>webcam view</strong>:<a href="./assets/DobozUi-webcam.jpg"><img src="./assets/DobozUi-webcam.jpg" alt="" title="DobozUi-webcam"></a></li>
+<li>It is using pyGst , a very nifty set of python bindings for <strong>gstreamer</strong> , which i had some expercience with using java, and that works great on windows and linux (tested on win xp sp3 and ubuntu 10.04)</li>
+<li>it is <strong>NOT</strong> a real &quot;streaming&quot; view : but a simple static image that gets refreshed regularly ( settable) at maximum speed , i managed to get about 15 fps : but such a speed will of course not be needed in most cases, and it allows for a lighter system, server side</li>
+</ul>
+<h3 id="server-side-architecture">Server side architecture:</h3>
+<ul>
+<li>the server side code was refactored and rewritten in the first step towards a <strong>modular</strong>, extendable architecture</li>
+<li><strong>easier configuration</strong> : you can now set the web server as well as enable webcam support through a simple configuration file</li>
+</ul>
+<h3 id="client-side-changes">Client side changes:</h3>
+<ul>
+<li>the interface was reworked and streamlined</li>
+<li>added additional settings for <strong>update refresh rates</strong> (for tasks, machine status fetching etc) to allow users to fine tune performance and reactivity of remote viewing operations</li>
+</ul>
+<h2 id="planned-features-and-improvements-for-05-first-alpha">Planned features and improvements for 0.5 (first alpha):</h2>
+<p>Version v0.5 will be the first &quot;major&quot; version with most of the api stabilized , and at least basic versions of all planned features implemented.</p>
+<p>A certain number of the features outlined below might already be present in future versions, but before 0.5</p>
+<ul>
+<li><strong>Simplified installation and configuration</strong></li>
+<li><strong>Makerbot</strong> support</li>
+<li><strong>Multiple machine</strong> support (for reprap/makerbot &quot;farms&quot;/fablabs)</li>
+<li>In the same vein as the above addition, <strong>multiple webcam view</strong></li>
+<li>switch to a <strong>python Twisted</strong> based system for the server side</li>
+<li>switch to websockets /longpolling to greatly reduce server requirement and increase speed</li>
+<li>plugin based system for extending functionality in an easier way</li>
+</ul>
+<h2 id="still-looking-for-feedback">Still looking for Feedback:</h2>
+<p>I am also still looking for feedback and people willing to give it a try , even in this early version, triffid/ triddis_hunter, has already helped point out a number of errors (via github) that have then been corrected :) For up to date instructions please refer to the wiki here : <a href="https://github.com/kaosat-dev/Doboz/wiki/Doboz-web">https://github.com/kaosat-dev/Doboz/wiki/Doboz-web</a> (the wiki on Reprap.org gets updated with a slight delay)</p>
+<p><strong>Downloads:</strong></p>
+<ul>
+<li>You can find the code here :<a href="https://github.com/kaosat-dev/Doboz">https://github.com/kaosat-dev/Doboz</a></li>
+<li>Or   here <a href="http://kaosat-dev.github.com/Doboz/">http://kaosat-dev.github.com/Doboz/</a></li>
+</ul>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

@@ -1,0 +1,76 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Building a repstrap (2) design changes: YARP v 0.2 </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2010-06-21
+ </span>
+  <h1 id="building-a-repstrap-2-design-changes-yarp-v-02">Building a repstrap (2) design changes: YARP v 0.2</h1>
+<p><a href="./assets/Yarp-0.2-design.jpg"><img src="./assets/Yarp-0.2-design.jpg" alt="" title="Yarp-0.2-design"></a></p>
+<p>After the initial trials of a very Reprap &quot;Mendel&quot; style  Repstrap, I decided to alter the design to fit my additionnal needs:</p>
+<ul>
+<li><strong>protection</strong> from projections and splinters when using the machine in a substractive mode (cnc), as the machine will be standing less than 50 cms away from my head this seems essential</li>
+<li>a <strong>better usage of the available space</strong>, by having the Z axis slaved to the Y axis and not the other way round  (thus making it  closer to the Mendel design actually)</li>
+<li><strong>more</strong> <strong>stable</strong> axis platforms even if at <strong>lower speeds</strong> : I had no way to ensure the stability of the belt driven versions so I switched back to a <strong>threaded rod</strong> approach</li>
+</ul>
+<p>So I switched to a boxed enclosure based structure, made out of L shaped aluminium rails, with 5 mm thick plexiglass protection screens bolted onto the frame. The axis remain essentially the same, save for the Y axis, which can now use the full available height.</p>
+<p>Since I had no adapted belts but had an additional stepper motor left over from the printer stripping operation, each threaded rod that moves the axis has its own motor , reducing complexity and necessary parts greatly. As usual I built a simpler proof of concept for this aspect:</p>
+<p>So the new and improved specs for the YARP are as follows:</p>
+<ul>
+<li>build volume: 200mm x 200mm x 200 mm</li>
+<li>machine total envelope  : 450 mm (h) x 450 mm (l) x 39 mm (w)</li>
+<li>aluminium frame</li>
+<li>complete enclosure (all functional elements are within the frame)</li>
+<li>modular : the functional elements are attached to &quot;holders&quot; that can be removed from the frame easilly : the &quot;inside&quot; might change, the enclosure will remain the same</li>
+<li>4 stepper motors, two of those running on the same stepper motor controller</li>
+</ul>
+<p>And some pictures and videos of this upgraded design: 
+<a href="./assets/wpid-IMAG0569.jpg"><img src="./assets/wpid-IMAG0569.jpg" alt="" title="wpid-IMAG0569.jpg"></a></p>
+<p><a href="./assets/wpid-IMAG0573.jpg"><img src="./assets/wpid-IMAG0573.jpg" alt="" title="wpid-IMAG0573.jpg"></a></p>
+<p>And finally a two axis drawing test video : (i&#39;m sending the commands manually , hence the slowness between each movement):</p>
+<p><a href="http://www.youtube.com/watch?v=yMl-0BHjm10"><img src="http://img.youtube.com/vi/yMl-0BHjm10/0.jpg" alt="2 axis"></a></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

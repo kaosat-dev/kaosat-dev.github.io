@@ -1,0 +1,95 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Repstrap/reprap: from nichrome wire to heater block</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2011-01-03
+ </span>
+  <h1 id="repstrapreprap-from-nichrome-wire-to-heater-block">Repstrap/reprap: from nichrome wire to heater block</h1>
+<p>The nichrome wire extruder heater on my Repstrap finally died after working really fine for over a month ( and being dipped completely in molten plastic a few times, thanks to a few z axis adjustment blunders...) . It was time to switch to an aluminum heater block/ vitrous resistor combo for much improved reliability and longevity! It was surprisingly easy and well worth it in the end: it is just <strong>NOT possible</strong> to have a long term reliable heater with nichrome wire, as:</p>
+<ol>
+<li>the windings will always come out <strong>differently</strong> (so every rewiring will be different, and require recalibration)</li>
+<li>it can be <strong>hard to attach</strong> it to the heater barrel</li>
+<li>it <strong>degrades</strong> with time (seems to ge brittle and sometimes snap)</li>
+<li>it <strong>cannot</strong> be <strong>soldered</strong> !</li>
+</ol>
+<p>So here is a step by step building/assembly guide in case anyone needs it:</p>
+<p>General notes:</p>
+<ol>
+<li>I used a special drill that drills and taps at the same time: while it might be slightly more expensive than the usual drill heads, its really way more practical than using seperate drills and taps.</li>
+<li>I used two <strong>vitrous, 3W, 6.8 ohm</strong> resistors</li>
+</ol>
+<p>So the construction itself:</p>
+<ul>
+<li><p>first : mark the hole placements</p>
+</li>
+<li><p>drill/ tap the main hole <img src="./assets/imag1274_5258252671_o.jpg" alt=""></p>
+</li>
+<li><p>drill the mounting holes ( this might no be necessary if you already have an insulator block) <img src="./assets/imag1275_5258253951_o.jpg" alt=""></p>
+</li>
+<li><p>drill the holes for the the resistor(s) : <img src="./assets/imag1296_5263509352_o.jpg" alt="">In some of these pictures you can see only one place for a resistor, but after some tests it turned out that it wasn&#39;t quite sufficient, as getting to around <strong>180 C</strong> took <strong>over 7 minutes</strong> (yikes, indeed) and the heater could not go beyond that!! I blame it on the rather large block I used: more surface area means more useless heat dissipation! Adding a second resistor in parallel solved both of these issues completely.</p>
+</li>
+<li><p>if you choose, and your heater block&#39;s size allows for it, you can also drill an additional hole for the thermistor, or you can put it closer to the nozlle and paste it in place with Kapton tape</p>
+</li>
+<li><p>i also did some counter sinking for the attachment screws in order not to have them stick out too much near the bottom of the block,and interfere with printing <img src="./assets/imag1281_5258257295_o.jpg" alt=""></p>
+</li>
+<li><p>cut the aluminium block to size ( I usually do it after the drilling, as the final block is relatively small, and maintaining it while drilling would not be practical)<img src="./assets/imag1284_5258260121_o.jpg" alt=""></p>
+</li>
+<li><p>mount the block on the isolator/ barrel assembly: since the central hole is already taped, it screws right in! <img src="./assets/imag1294_5263509664_o.jpg" alt=""></p>
+</li>
+<li><p>put the resistor(s) and thermistor in place, and attach the resistor&#39;s leads together if you use more than one. Then, solder the cables to the leads of the resistor(s) and  remember to take the different cables final positioning into account <img src="./assets/imag1297_5262898323_o.jpg" alt=""></p>
+</li>
+<li><p>be careful to isolate the soldered ends from the block, preferably with kapton tape to have both electric and thermal isolation<img src="./assets/imag1286_5258262009_o.jpg" alt=""></p>
+</li>
+<li><p>do the same with the thermistor ( put in place, solder, isolate), it migt also be a good idea to attach the cables to the isolator:<img src="./assets/imag1298_5263508814_o.jpg" alt=""></p>
+</li>
+</ul>
+<p>And there you go, one finished heater block ! I had never done one before and it took me less than hour from start to finish so as i like to say &quot;if i can do it ,anybody can do it &quot;:) Now you can connect, test and <strong>calibrate it</strong> : very important to go through the printing callibration process again, as a new heater will behave differently, it took me an afternoon to adjust my Skeeinforge setting to get back to the level of quality i had before  .</p>
+<p>And then , use the new heater, and  watch your house <strong>go up in flames</strong>! Joking of course, the heater block approach is no more no less dangerous than the one using nichrome wire!</p>
+<p>The brand new heater beeing used to print a &quot;Huxley&quot; Reprap vertex (foot if you will) : <em><strong>it works</strong></em>!</p>
+<p><img src="./assets/imag1299_5263071317_o.jpg" alt=""></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

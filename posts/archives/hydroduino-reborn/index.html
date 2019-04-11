@@ -1,0 +1,127 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: HydroDuino...reborn!</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2011-01-15
+ </span>
+  <h1 id="hydroduinoreborn">HydroDuino...reborn!</h1>
+<p>This is when i realize i may be working on too many projects... A few months (ok a lot of months) ago i started rewriting from scratch and greatly expanded the HydroDuino project&#39;s software side, and had a working, if basic version,but completely lacking in modularity (basically it was a completely monolithic, tightly coupled app)  and hard to maintain and expand.</p>
+<p>So i started an almost complete rewrite based on what was working and what wasn&#39;t, aiming for a <strong>highly modular</strong>, yet <strong>lightweight</strong> system, and now things are progressing at full speed , so it was time for a &quot;public anouncement&quot; of the state of the project, since i still get quite a lot of emails of people wanting to use it/participate.</p>
+<h2 id="foreword">Foreword:</h2>
+<p>This article is meant to represent the current state of the project, and since its mean to be usable (hopefully) usable, and community driven, i would really apreciate <strong><em>any feedback</em></strong> ! If you think the whole thing, ore certain aspects of it are absurd, or unusable, or badly designed , or anything, don&#39;t hesitate to contact me or leave a comment!</p>
+<p>When the first version is released it will be available here : <a href="http://code.google.com/p/hydroduino/">http://code.google.com/p/hydroduino/</a></p>
+<h2 id="currently-implemented-features">Currently implemented features</h2>
+<h3 id="it-is-now-3-semi-seperate-projects-"><strong>It is now 3 semi seperate projects :</strong></h3>
+<ul>
+<li>The <strong>core of the system</strong> , the &quot;server&quot; side backend is where most of the &quot;magic&quot; happens, and which provides all the main functionallity, the handling of sensors , hardware etc</li>
+<li>The basic web based user interface frontend: in ajax with a python webserver backend that communicates with the core&#39;s wsgi api</li>
+<li>An android based user interface frontend (still in the very early stages)</li>
+</ul>
+<h3 id="general-structure">General structure:</h3>
+<p><a href="./assets/general_structure1.jpg"><img src="./assets/general_structure1-1024x436.jpg" alt="" title="general_structure"></a></p>
+<p>For a better understanding here is what the different things mean:</p>
+<p><a href="./assets/general_structure_legend.jpg"><img src="./assets/general_structure_legend.jpg" alt="" title="general_structure_legend"></a></p>
+<p>(Hardware connector is the same here as hardware node, for more explanation , see below in the &quot;Where it is headed&quot; part)</p>
+<ul>
+<li>each <strong>environment</strong> is kept as separate as possible to avoid the problems of one of them affecting all of them : so each environment has its own <strong>sqllite db</strong> , its own scheduler(s), data access system etc</li>
+<li>currently all the <strong>sensors</strong> are within their parent &quot;<strong>HardwareNode</strong>&quot; object and have a rather strong coupling with it : for example for an Arduino and its sensors, there is a &quot;ArduinoNode&quot; which is a child class of the general node class, that manages the connection to the arduino via serial  etc</li>
+<li>the arduino side software is now a library + main code that alows the system (and you) to reconfigure the different ports, set triggers and automation etc</li>
+</ul>
+<h3 id="plugin-based-system">Plugin based system:</h3>
+<p>There are two main types of &quot;plugins&quot;</p>
+<h5 id="hardware-types">Hardware Types:</h5>
+<ul>
+<li>out of the box , Hydroduino will come with an &quot;Arduino Node&quot; : all you need to just plug in an arduino , configure the software, and have it running in just a few minutes</li>
+<li>anyone can easilly add support for different type of hardware : ie Phydgets, Webcams etc with very little work , then just drag and drop the new code into the hardware plugins&#39; directory and then be able to use this new hardware through the generic interface</li>
+</ul>
+<h5 id="converters">Converters:</h5>
+<p>if , like many people , you have been tinkering around with Arduinos, electronics , sensors etc, you know that it is not always easy to read through a specific sensor&#39;s technical sheet to be able to <em>convert</em> <strong>raw</strong> analog/digital values <em><strong>into</strong></em> <strong>usable data.</strong> Well the &quot;converter&quot; type plugins are there to make life easier : they will be a user generated, shared library of conversion functions, so that once someone has figured out a good <strong>conversion formula</strong> for a specific type of sensor, anybody else can just use that code <strong>automatically</strong>!  When you add a new sensor , just set its model name (the name of the actual physical sensor) , and if that converter exists, it will automatically be used when retrieving the data.</p>
+<h3 id="automation">Automation:</h3>
+<ul>
+<li>Schedules: you can set when you want to retrieve the information from a specific sensor, or when and how often you want a pump/motor/lamp whatever to run</li>
+<li>Triggers: you don&#39;t want the pump watering your plants to keep on working when there&#39;s already too much water ? Just set a trigger on a water probe/level sensor to have it shut down automatically when certain conditions are met</li>
+</ul>
+<p><strong>A small note about this</strong>: for now automation runs on the python <em><strong>host</strong></em> side, but i plan to have it be settable : if you want some time critical triggers etc, they will also be settable directly on the Arduino side of things , so there is no delay.</p>
+<h3 id="lightweight">Lightweight:</h3>
+<ul>
+<li>Even if it does complicate things a bit, the external dependencies of the python code are kept to a strict minimum, and i generally avoid big &quot;framework&quot; type dependencies (ie, no Django , etc required)</li>
+<li>Small memory usage: the tests i have done for now of what an average user might use/have, generally come with a l<strong><em>ess than 4 Mb</em></strong> memory consumption, although this is not set in stone, as the software is still not as feature rich as i would like, and in a pre-alpha stage.</li>
+</ul>
+<h2 id="where-it-is-headed">Where it is headed</h2>
+<p>While a lot of these features are currently implemented, and the general structure and how it works is much cleaner than before , it is far from finished, and in constant evolution (but getting there). These are a few of the problems i am facing:</p>
+<h4 id="lots-of-work-left-">Lots of work left :</h4>
+<ul>
+<li>While the core of the system is functional , a lot of parts still are not !</li>
+<li>a great deal of functions are not implemented yet</li>
+<li>each major change in the basic systems required quite a lot of rewriting (since some of them are not set in stone 100% yet)</li>
+<li>there currently is no UI to work with , since the underlying server&#39;s structure has been completely altered</li>
+<li>the project is way bigger than it was</li>
+</ul>
+<h4 id="to-depend-or-not-to-depend">To depend or not to depend:</h4>
+<p>Since i want to keep things lightweight , i am always a bit reluctant to add additional dependencies on other python packages/libraries/frameworks, but always reinventing the wheel is not a viable option either! This applies to :</p>
+<ul>
+<li><strong>ORM</strong> : (object relationship mapping): i have given small test runs off different Python Orm (<a href="http://autumn-orm.org/">Autumn</a>, <a href="https://storm.canonical.com/">Storm</a> ,<a href="http://www.sqlalchemy.org/">SqlAlchemy</a> etc) but haven&#39;t found something lightweight enough , and that doesn&#39;t require to change class hierarchies (i especially like SQlAlchemy&#39;s approach though) (having to change the base class of an object is a big no no , because of the too tight coupling, but i ain&#39;t 100% sure yet) but i will write more on this in another article</li>
+<li><strong>Wsgi /web server</strong>: this is one area where python definitely offers <strong><em>too much</em></strong> choice ! In the previous version, i was using <strong><a href="http://bottle.paws.de/docs/dev/index.html">Bottle</a></strong> a very nice &quot;micro framework&quot; , that is only <strong><em>one</em></strong> file ! But i am still looking around to find the right thing, and in the current version i just have a minimal , pure wsgi code without external framework , for the &quot;<strong><em>WSGI interface</em></strong>&quot;  part (see the different drawings ) that sort of &quot;publishes&quot; the different public functions of the Environment manager to make them accessible via http</li>
+</ul>
+<h4 id="general-structure-changes">General structure changes:</h4>
+<p>While coding and testing the different aspects of the system i realized, that, while being a nice &quot;functionality bag&quot; /black box to work with,  the <strong>HardwareNode</strong> structures are far from perfect:</p>
+<ul>
+<li>it makes sense for the sensors of an Arduino to be &quot;inside&quot; a software abstraction of it (the <em><strong>ArduinoNode</strong></em>) : the list of sensors is actually stored inside of the the ArduinoNode data structure , and there are methods to access the sensors by type, by id , etc  .</li>
+<li>but it does not make sense for a webcam for example : what would the node be ?  what would the sensor be ? In this cas there is actually not really any difference between the node and sensor, and its just confusing</li>
+</ul>
+<p>So i might alter the general structure somewhat :</p>
+<ul>
+<li><strong>Nodes</strong> would become <strong>Connectors:</strong> it makes sense to think of the Arduino itself, or a webcam&#39;s usb interface as a means of communication between the sensor and the host : it is much more generic and understandable</li>
+<li>Connectors would not <em>Contain</em> Sensors anymore, connectors would simply set themselves up/connect to the hardware , to <em>Provide</em> an access for sensors, would would just have a reference to the connector they use.</li>
+<li>This would also reduce the effect of having to use the Node as proxy aswell as a connector : currently , to communicate with a specific sensor , you have to go through : the environment-&gt;the node manager-&gt;the node ....</li>
+</ul>
+<p><a href="./assets/general_structure_alternative.jpg"><img src="./assets/general_structure_alternative-1024x436.jpg" alt="" title="general_structure_alternative"></a></p>
+<h2 id="ye-old-version">Ye old version:</h2>
+<p>As a reminder, and since i never posted it here :this is what the project&#39;s web based user interface looked like before the &quot;reboot&quot;:</p>
+<p><a href="http://www.youtube.com/watch?v=q782WUkPuj8"><img src="http://img.youtube.com/vi/q782WUkPuj8/0.jpg" alt="oldee"></a></p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

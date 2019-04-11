@@ -1,0 +1,199 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Doboz-Web: Reprap/3d scanner remote control using python, javascript, webgl</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2011-03-03
+ </span>
+  <h1 id="doboz-web-reprap3d-scanner-remote-control-using-python-javascript-webgl">Doboz-Web: Reprap/3d scanner remote control using python, javascript, webgl</h1>
+<p><a href="./assets/DobozUi-scan2.jpg"><img src="./assets/DobozUi-scan2.jpg" alt="" title="DobozUi-scan2"></a></p>
+<p>Up until now, the home-brew interface i was using to interact with my repstrap machine was using PyGtk , but i have had a ton of problems with gtk, (segfaults etc), oh and the ui was not windows compatible ( making gtk play nice with other threads requires some changes to the rest of the code i frankly didn&#39;t like, but hey that is just my opinion), so i decided to change my repstrap control system to a server/client approach and go &quot;wild&quot; a bit!  Here are the results , after the break !</p>
+<h2 id="why-the-change">Why the change?</h2>
+<ul>
+<li>it allows to decouple the interface from the actual GCode sending process/printer control completely! No more failed prints because of some UI failure</li>
+<li>also related : no more &quot;oops, i accidently closed the printing program &quot; moments ...</li>
+<li>remote control : start prints from anywhere ! (will be particularly useful in the future as Repraps get more automated)</li>
+<li>i also needed a way to integrate openGL graphics (optional) into the general interface, and with the amazing possibilities of <strong><em>WebGL</em></strong> for 3d content inside browser , it was a no-brainer (this will be used both to display the print progress aswell as the in-progress update to the 3d scanner )</li>
+<li>this is as multi-platform as it gets</li>
+<li>my other main project, the <a href="http://www.kaosat.net/?tag=hydroduino">Hydroduino</a> , already works on a similar basis : a central application core, <em><strong>accessible and controllable via http</strong></em></li>
+<li>Beyond the simple browser=&gt; server communication i also needed to get realtime <strong>feedback from the printer</strong> , to <strong>show print progress</strong>  , <strong>draw the latest axis movements</strong>  etc</li>
+</ul>
+<h2 id="results">Results:</h2>
+<h4 id="implementation-details-server-">Implementation details: server :</h4>
+<ul>
+<li>for now i use an awfull <strong>brute force polling</strong> approach : send a print progress request to the server every <strong>10 ms</strong> ...and wait for the ajax answer (yes, ouch!)</li>
+<li>in the end of course that is completely insane , so i will replace it with <a href="http://en.wikipedia.org/wiki/Push_technology#Long_polling">long polling</a> and/or something along the lines of <a href="http://en.wikipedia.org/wiki/Comet_(programming)">Comet</a> or <a href="http://dev.w3.org/html5/websockets/">WebSockets</a></li>
+<li>unfortunately Bottle/ basic Wsgi does NOT support long polling (every request response is blocking) , even though i found workarounds (<a href="http://stackoverflow.com/questions/4709303/python-web-server">monkeypatching with gevents</a>)</li>
+<li>More generally, initially i was using the simple_htttp_server implementation for the webserver , and it was damn slow and unreactive, but once switched to <a href="http://www.tornadoweb.org/">Tornado</a> , however i was really impressed ! No reaction delay, fast updates etc</li>
+<li>right now, because of the heavy handed approach, correct synching of multiple clients is not fully functionnal, until i switch to a better architecture</li>
+<li>the server side includes both the &quot;<strong>reprap manager&quot;</strong>, and the web server , for static files and ajax , and is using <a href="http://bottle.paws.de/docs/dev/index.html">Bottle</a></li>
+<li><a href="http://bottle.paws.de/docs/dev/index.html"></a>the 3d scanning is still in the early stages, but works and reuses elements from one of my previous <a href="http://www.kaosat.net/?p=1188">project</a></li>
+</ul>
+<h4 id="implementation-details-client-">Implementation details: client :</h4>
+<ul>
+<li>most of the communication between the client and server goes through ajax requests</li>
+<li>you can upload gcode files to print directly, and <strong>enqueue</strong> a series of print tasks (this would be particularly useful for things like the <a href="http://blog.makerbot.com/2010/09/25/announcing-makerbots-new-3d-printer-the-thing-o-matic/">Thing-O-Matic</a> or any other 3d printer that allows continuous prints</li>
+<li>the 3d view is implemented in Webgl, and allows you to view , depending on whether you are printing or scanning, <em><strong>the movements of print head</strong></em> (based on the gcodes sent to the printer), or the <em><strong>point cloud data</strong></em> if you have just scanned an object:</li>
+</ul>
+<p><strong>Printing</strong>: showing the movements of the print head (start)</p>
+<p><a href="./assets/DobozUi-print.jpg"><img src="./assets/DobozUi-print.jpg" alt="" title="DobozUi-print"></a></p>
+<p><a href="./assets/DobozUi-print3.jpg"><img src="./assets/DobozUi-print3.jpg" alt="" title="DobozUi-print3"></a></p>
+<p><strong>Scanning</strong>: showing the point cloud of the scan, which can then be saved locally</p>
+<p><a href="./assets/DobozUi-scan.jpg"><img src="./assets/DobozUi-scan.jpg" alt="" title="DobozUi-scan"></a></p>
+<ul>
+<li>all of this, including the manual sending of GCodes to the printer, status and, temperature retrieval etc, is controlable from the interface (basic for now, lots to do)</li>
+</ul>
+<p><strong>Machine</strong> settings:</p>
+<p><a href="./assets/DobozUi-machine-options.jpg"><img src="./assets/DobozUi-machine-options.jpg" alt="" title="DobozUi-machine-options"></a></p>
+<ul>
+<li>There are also different &quot;modes&quot; to view the 3d data, mostly for 3d scanning (ok, and eye candy too:): it will be expanded upon in the future</li>
+</ul>
+<p><a href="./assets/viewer-modes-lines-1.jpg"><img src="./assets/viewer-modes-lines-1.jpg" alt="" title="viewer-modes-lines-1"></a><img src="./assets/viewer-modes-linestrip-1.jpg" alt="" title="viewer-modes-linestrip-1">](./assets/viewer-modes-linestrip-1.jpg)<a href="./assets/viewer-modes-points-1.jpg"><img src="./assets/viewer-modes-points-1.jpg" alt="" title="viewer-modes-points-1"></a><img src="./assets/viewer-modes-trianglestrip-1.jpg" alt="" title="viewer-modes-trianglestrip-1">](./assets/viewer-modes-trianglestrip-1.jpg)</p>
+<ul>
+<li>Small note: i did not go the full <em>WebGl</em> route for the interface because of general availability /speed : webgl is quite good, but as you can read above, not that fast on all platforms, also making it mandatory would reduce the usefulness of the interface</li>
+<li>this was my first attempt at WebGl , and i relied heavilly on the excellent tutorials and code by Giles Thomas over at <a href="http://learningwebgl.com/">http://learningwebgl.com</a></li>
+<li>Using <strong><a href="http://jquery.com/">Jquery</a></strong> and <a href="http://jqueryui.com/"><strong>Jquery</strong> <strong>UI</strong></a>and a bit of <a href="http://www.erichynds.com/jquery/a-jquery-ui-growl-ubuntu-notification-widget/">Jquery Ui notify</a> ) made creating the interface a breaze. Using Jquery Ui also meant easier support for styling ( for example using the very professional <a href="http://www.michaelvanderheeren.be/?p=382">Absolution</a> Theme)</li>
+</ul>
+<h4 id="multiplatform--hey-it-also-works-on-tablets-and-smartphones-android-">Multiplatform : hey it also works on tablets and smartphones (Android )!</h4>
+<p>Ok i confess , this is really for pure geek factor , but can also be really practical  :</p>
+<ul>
+<li>I tested it out both on a smartphone : HTC desire and an Archos 101 <em><strong>Android tablet</strong></em> : and was very surprised to see that everything is still snappy, and with the latest firefox mobile beta, the webgl part works at &quot;acceptable&quot; speeds ! Call me easilly impressed, but i still feel like &quot;the future is now&quot; whenever i use a tablet ( yes, in the eighties, i was always &quot;wowed&quot; by the <a href="http://memory-alpha.org/wiki/PADD">padds</a> from Start Trek, i&#39;m such a geek :))</li>
+<li>Will works on a lot of browsers, except for Internet Explorer</li>
+<li>The 3d view can be deactivated if not needed (being experimental it is still quite buggy), or unsuported</li>
+<li>just for information : there are also some interesting stats about browser compatibility of the HTML 5 Canvas/Webgl <a href="http://caniuse.com/#search=canvas">http://caniuse.com/#search=canvas</a></li>
+</ul>
+<h4 id="the-software-in-action">The software in action:</h4>
+<h2 id="current-and-planned-features"><strong>Current and planned features:</strong></h2>
+<h4 id="current">Current:</h4>
+<p>General:</p>
+<ul>
+<li><ul>
+<li><strong>very few</strong> <strong>dependencies</strong>: server 100% python , can be run with as little as the project&#39;s source code, Python 2.6 and pyserial<ul>
+<li><strong>lightweight:</strong> the current version comes at just about 2 MB</li>
+<li><strong>easy to set up :</strong> static file server for the interface as well as reprap control all in one</li>
+<li><strong>standard</strong>: normally , it should not require you to change your reprap&#39;s firmware (except for scanning)</li>
+<li><strong>real-time</strong> <strong>view</strong>: of the current operation, whether scanning or printing</li>
+<li><strong>easy to use</strong>: nothing too fancy , just straight to the point</li>
+<li><strong>multiplatform</strong>: web based, so will work in any browser with javascript enabled (or you can send the commands directly via http from command line if you want to), 3d part requires a browser with webGl support</li>
+<li><strong>open source</strong>: still a very early version so feedback and participation are welcome !</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Printing:</p>
+<ul>
+<li><ul>
+<li><strong>upload and print:</strong> select the file, upload the file, print it<ul>
+<li><strong>remote monitoring:</strong> keep an eye on the print heads movement, the print progress,the temperature of your extruder and buid platform, from wherever you are, even from your cellphone!</li>
+<li><strong>manual</strong> control of reprap via GCodes</li>
+<li><strong>GCode</strong> file support</li>
+<li><strong>multiple chained prints</strong> via print queue</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Scanning:</p>
+<ul>
+<li><ul>
+<li><strong>set and scan</strong> : just set the area and resolution of the scan, push the button and voila ! pointcloud!<ul>
+<li><strong>store and download</strong>: the scan files are stored on the server side , and can be retrieved at any time</li>
+<li><strong>multiple viewmodes</strong></li>
+<li><strong>easy chaining:</strong> by default, the machine will be set to home in between scans, so you can chain them without fear</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="planned">Planned:</h4>
+<ul>
+<li><ul>
+<li><strong>bugfixes</strong><ul>
+<li><strong>more bugfixes!</strong></li>
+<li><strong>compatibility increase</strong> with other repraps / repstraps</li>
+<li><strong>streamlining</strong> and performance increase by eliminating brute force polling</li>
+<li><strong>fine grained control</strong> of the machine</li>
+<li><strong>full control</strong> of the reprap&#39;s settings via the interface</li>
+<li><strong>rewrite</strong> of the reprap manager server side for performance and clarity increase</li>
+<li><strong>better documentation</strong> (a bit lacking right now)</li>
+<li><strong>better synch</strong> between clients and server (lots of things will be moved from the client to the server side)</li>
+<li><strong>stl support</strong>: automatic stl-&gt; gcode conversion  : ie  1-download a file on thingiverse  2-upload to print server 3-print ! : this is still <strong>far</strong> off</li>
+<li><strong>scan &amp; print</strong> : scan the object and print it directly: this is still <strong>far</strong> off</li>
+<li><strong>detailed instructions</strong> on how to build the simple scanner that can be installed on most repraps (more on that in a future article)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="download--how-to">Download &amp; how to:</h2>
+<p><strong>Downloads:</strong></p>
+<ul>
+<li>You can find the code here :<a href="https://github.com/kaosat-dev/Doboz">https://github.com/kaosat-dev/Doboz</a></li>
+<li>Or   here <a href="http://kaosat-dev.github.com/Doboz/">http://kaosat-dev.github.com/Doboz/</a></li>
+</ul>
+<p><strong>Configuration:</strong></p>
+<p><strong>Disclaimer:</strong> This software is purely experimental, not even alpha stage, <em><strong>use at your own risk</strong></em> !!</p>
+<ul>
+<li>For now only tested with <strong><em>python 2.6</em></strong></li>
+<li>You will need to have <em><strong>pySerial</strong></em> installed</li>
+<li>By default , the web server is set to &quot;Tornado&quot; but can be easilly switched to any other web server <a href="http://bottle.paws.de/docs/dev/tutorial.html#tutorial-deployment">supported by Bottle</a>: go to source_<strong>/core/print_server/print_server.py</strong>_ and change the initial include at the top , as well as , on the last line</li>
+</ul>
+<p>[sourcecode language=&quot;python&quot;]run(app=testBottle, host=&#39;localhost&#39;, port=8000, server=TornadoServer)[/sourcecode]</p>
+<p>Just replace the <em><strong>server=TornadoServer</strong></em> with the one you want to use .</p>
+<ul>
+<li>depending on your specific reprap/3d printer settings you may have to alter the configuration of the reprap-manager (in core/print server/reprap_manager.py , since it is hard coded for now) : by default the manager expects an &quot;ok\t\n&quot;(ok+linefeed) on the end of each line returned back from the reprap to work correctly</li>
+<li>launch the server using python test.py</li>
+<li>open a browser to localhost:8000/index.html to use the interface and enjoy :)</li>
+</ul>
+<h2 id="looking-for-feedback">Looking for feedback!</h2>
+<p>It  was a fun <em><strong>two weeks</strong></em> working on this project , and it allowed me to finally get back on track with my Repstrap machine that had not been printing for a few weeks because of those pesky software problems, so whew , what a relief !</p>
+<ul>
+<li>While it is still is very buggy , and there is lots of work left to be done,  it works quite well for my machine at least</li>
+<li>Given that i have no access to other repraps and makerbots for now  , if you have any input, if you are willing to give it a whirl with your own 3d printer , give me a shout , i am more than willing to make it work for other people&#39;s machine as well, and expand from the current version, feature and functionality wise</li>
+</ul>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

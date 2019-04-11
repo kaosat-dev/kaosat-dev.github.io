@@ -1,0 +1,97 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Doboz repstrap : solving the slanted print issue </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2010-12-12
+ </span>
+  <h1 id="doboz-repstrap--solving-the-slanted-print-issue">Doboz repstrap : solving the slanted print issue</h1>
+<p>I spent the last <strong>two weeks</strong> trying to find the source of the &quot;slanted&quot; printing (see pic above) and solve the problem (also, going insane in the process) , here are the steps i went through to get to the bottom of it:</p>
+<h2 id="the-problem">The problem:</h2>
+<ul>
+<li>Every print, but in particular all those containing <strong>circular elements</strong> (very visible on this variant of Wade&#39;s extuder gear by NopHead) would be progressivelly offset on the x axis, and the problem was actually getting worse ! <img src="./assets/imag1215_5225689935_o.jpg" alt=""></li>
+<li>Also , when looking back at one earlier print failure i had on a bigger gear, the problem might actually have already been present, since the <strong>only</strong> part that was offset on the x axis was the circular attachment at the top: <img src="./assets/imag1127_5189781538_o.jpg" alt=""></li>
+<li>Giving the extreme slowness of my machine (maximum speed of <strong>2.4mm/s</strong> which is about <strong>20 times less</strong> than a Reprap, but more on that in another post) , this kind of problem is really bad, since printing takes a lot of time, and the slanting problem is only really visible and can be confirmed after around 5-10 layers .</li>
+</ul>
+<h2 id="methodology">Methodology:</h2>
+<h3 id="1-is-it-a-mechanical-problem">1. Is it a mechanical problem?</h3>
+<h4 id="a--z-axis-assembly">a- Z axis assembly:</h4>
+<p><img src="./assets/imag1201_5252245485_o.jpg" alt=""></p>
+<ul>
+<li><strong>Diagnosis</strong>: Earlier in the machine&#39;s testing phase i have had problem with the whole <strong>X/Z assembly</strong> becoming <strong>slanted</strong> , which affected the prints but certainly not in the way i was seeing now.</li>
+<li><strong>Solution</strong>: i switched the Z axis threaded rods with higher quality ones and redid the motor couplings, then i checked for any alignment problems with a laser pointer (crosshair generator) attached to the assembly: <img src="./assets/imag1207_5225688847_o.jpg" alt=""></li>
+<li><strong>Result</strong> : It reduced/ eliminated the slipping coupling issues of the Z axis,but the problem  <strong>remained</strong> !</li>
+</ul>
+<h4 id="b--x-axis-platform">b- X axis platform:</h4>
+<ul>
+<li><strong>Diagnosis</strong>: During the many stages of mechanical adjustments to the extruder attachments, and due to some original misalignment of the screws holding the roller bearings  in place, the <strong>X axis platform</strong> had gotten <strong>slightly loose</strong> (the bearings not exerting correct pressure on the sliding rails), which i had fixed temporarily with .... subway tickets ... (forcing them between the platform and the rails reduced the wobble), so i thought the problem might be comming from there. Also , there was slightly <strong>more backlash on this axis</strong> then on the Y one, so that might have accounted for the problem too.</li>
+<li><strong>Solution</strong>: I disassembled the platform, re-drilled the holes for the bearing screws, improve and tightened the structure to reduce wobble and i added a <strong>second captive nut</strong> right next to the first one, to reduce the backlash.<img src="./assets/imag1204_5252854208_o.jpg" alt="">(the weird screw like things is a special positive/negative nut)</li>
+</ul>
+<p><img src="./assets/imag1206_5252246357_o.jpg" alt=""></p>
+<ul>
+<li><strong>Result</strong> :While it greatly improved the quality of each layer being printed (these adjustments were long overdue), the problem <strong>still remained</strong> !</li>
+</ul>
+<h3 id="2is-it-a-software-problem">2.Is it a software problem?</h3>
+<ul>
+<li><strong>Diagnosis</strong>: The firmware i am using on the dual AtMega 328 chips running the machine is a rather heavilly modified 5D code , and since i work on a basis of &quot;only use what you understand at least a bit&quot; i have started to think that my stepper timing changes were faulty (the timing i use is nothing but a really cheap hack, without register timers...).</li>
+<li>Solution: Just to be sure , i decided to try a completely different firmware , which does the timing calculations quite differently, so i used a VERY trimmed down version of the HYDRA_MMM firmware V1.4 (which is a lot easier to modify and understand than the 5d Firmware, although it does&#39;nt (yet) support separate extrusion commands)</li>
+<li>Result :I spent a few hours adapting the firmware, and i made a few test prints ... the problem , as ever was <strong>still present</strong> !</li>
+</ul>
+<h3 id="3is-it-a-power-supply-problem-">3.Is it a power supply problem ?</h3>
+<ul>
+<li>Diagnosis: I have had problems in the past every since i installed the new heated bed (which uses way too much power), so i wondered if it was &quot;gobbling&quot; up the power to the steppers, and causing a malfunction.</li>
+<li>Solution: Just to be sure, i did a few test prints without the heated bed, to see if things were any different..</li>
+<li>Result : Once again,  no change, the prints were <strong>still slanted</strong>!</li>
+</ul>
+<h2 id="the-answer">THE answer!</h2>
+<p>I didn&#39;t know any other thing to try, then a friend suggested simply swapping out the <strong>X-axis Pololu Stepper driver</strong> and that ...did the trick!! I was baffled, but i have been printing day and night ever since and have had <strong>NO</strong> problem at all !</p>
+<p>So there you go , perhaps there was a glitch in the connection between the stepper driver and the motherboard, but either way, in case you run into this kind of weird problem:</p>
+<ul>
+<li>either <strong>adjust the pot of the stepper boards</strong></li>
+<li>or s<strong>wap the boards</strong> out ..</li>
+</ul>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

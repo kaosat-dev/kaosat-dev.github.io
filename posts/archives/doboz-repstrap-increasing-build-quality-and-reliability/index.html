@@ -1,0 +1,84 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Doboz repstrap: increasing build quality and reliability</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2010-11-28
+ </span>
+  <h1 id="doboz-repstrap-increasing-build-quality-and-reliability">Doboz repstrap: increasing build quality and reliability</h1>
+<p><img src="./assets/imag1158_5212336440_o.jpg" alt=""></p>
+<p>After a series of semi catastrophic breakdowns (fried heated bed controller and polulu driver etc), aswell as less than perfect reliability (almost half of my print attempts failed one way or the other) and generally not so good print quality , i set to hunt down all the failure sources one by one !</p>
+<p>***_Nov 29 2010 01 pm : sorry about the pictures not showing up , there was a slight glitch while updating certain wordpress elements_***</p>
+<p>Here is the breakdown of all problems and how they got solved:</p>
+<ul>
+<li>The <strong>Tip120</strong> transistor controlling the <strong>heated bed power supply</strong> finally fried:<ul>
+<li>which is no surprise, as i completely <strong>miscalculated</strong> the power consumption (TIP 120s are rated at <strong>5 A max</strong> and i was using ...<strong>9 A</strong> !!), i will post a detailed article on the heated bed design and power consumption calculations later on. So i replaced it with a <strong>TIP142, rated at 10 A</strong>, and voila ! heated bed working again, and a lot less electrical glitches.</li>
+</ul>
+</li>
+<li>There were a TON of strange glitches, weird variations and serial connection cut-offs:<ul>
+<li>Uppon further analysis this came from at least 4 different problems on the machine :<ul>
+<li>The <strong>heated bed</strong> controller issue mentionned above</li>
+<li>The <strong>power connector</strong> linking the repstrap to the PC&#39;s psu (machine side) , was very &quot;touchy&quot; , a slight movement and power would be cut off , and it kept getting worse.. So i opened the connector to find ...it had <strong>melted</strong> on the inside ! This is what i get from pushing 150w through filmsy cables and cheap , bad quality connectors...<img src="./assets/imag1175_5214173949_o.jpg" alt=""></li>
+<li>It turned out that <strong>both</strong> sides of the power cables were firmsy, so i also swapped out the molex connector (PC side) with a better quality version aswell</li>
+<li>The cabling, both of the heated bed and the machine&#39;s power supply was of a too small diameter aswell , and led to overheating, so all of them were swapped out<img src="./assets/imag1140_5211738017_o.jpg" alt="">(upgraded version)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>All these improvements, changes and adjustements, plus the fact that i kept fine tuning the skeeinforge settings , led to this :</p>
+<p><img src="./assets/imag1157_5212337084_o.jpg" alt=""></p>
+<p>left: before the changes / right : after</p>
+<ul>
+<li>Also, even if i don&#39;t mention it often, i am still working on hydroponics projects , and i recently stumbled upon this fantastic <strong>printed pump</strong> by Maddox : <a href="http://www.madox.net/blog/2010/11/16/miniature-3d-printed-pump-using-up-pp3dp-printer/">http://www.madox.net/blog/2010/11/16/miniature-3d-printed-pump-using-up-pp3dp-printer/</a> and its variation by Skimbal using a cd rom motor: <a href="http://www.thingiverse.com/thing:4881">http://www.thingiverse.com/thing:4881</a><ul>
+<li>So i set out to print one to test the new build quality:</li>
+</ul>
+</li>
+</ul>
+<p><img src="./assets/imag1165_5211735737_o.jpg" alt=""> <img src="./assets/imag1167_5211726049_o.jpg" alt=""></p>
+<p>Quite satisfying overall ! Next up : speeding up  the machine!</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

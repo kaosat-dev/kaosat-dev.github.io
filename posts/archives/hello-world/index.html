@@ -1,0 +1,79 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Homemade Hydroponics-HydroDuino(1) Automation with Arduino</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2009-03-11
+ </span>
+  <h1 id="homemade-hydroponics-hydroduino1-automation-with-arduino">Homemade Hydroponics-HydroDuino(1) Automation with Arduino</h1>
+<p><a href="./assets/arduino1.jpg"><img src="./assets/arduino1.jpg" alt="arduino" title="arduino"></a></p>
+<p>To go one step further, i decided to try and automate at least part of my hydroponic system, with the help of an Arduino board and a few other things..</p>
+<h3 id="aims">Aims</h3>
+<ul>
+<li>Low Cost (well , as much as possible)</li>
+<li>Reliable (I am not home much, and my flat is small, oh and i am quite paranoid about security as well)</li>
+<li>Low Power (this ties in with #1 and #2) : i really am not confident enough in my skills to do precision work and tinkering with 220v machines, so this was a necessity, plus, less power-&gt;less stress when the electricity bill arrives)</li>
+<li>Adjustable</li>
+</ul>
+<h3 id="solutions">Solutions</h3>
+<ul>
+<li>For the electronics part, i went with an Arduino, which is an absolutely fabulous open source hardware : for more info check out their site  <a href="http://www.arduino.cc/">http://www.arduino.cc/</a> I ordered a starter kit from adafruit.com (which was very good save for the absolutely outrageous french taxes that got added to it on arrival)<a href="http://www.arduino.cc/"></a></li>
+<li>I bought a few 6-12 V cheap water pumps on ebay (about 8 $) : to my surprise these actually delivered more punch than a 240l/h 220V pump</li>
+<li>A few additional electronics components :<ul>
+<li>Tip120 Transistors (beware though, check out the actual amperage of your pumps first! on my first 12V test , the tip120 actually started to overheat and emit smoke!)</li>
+<li>A few diodes</li>
+<li>Resitors, leds etc</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-it-went">How it went:</h3>
+<ul>
+<li>To my surprise,  when i first tried the pump on a molex 5v supply, it alreay was powerfull enough to pump the water up by 40cm into 4 of the containters</li>
+<li>If you want to use these pumps at full power (12v) CHECK the actual resistance /amperage first ! Otherwise you might fry your tip120 transistor (i almost did, the smoking was a good tip though :)</li>
+</ul>
+<p>Stay Tuned for more!</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

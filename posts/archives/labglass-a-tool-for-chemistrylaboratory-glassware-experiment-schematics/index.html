@@ -1,0 +1,73 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: LabGlass: a tool for chemistry/laboratory glassware experiment schematics</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2011-01-24
+ </span>
+  <h1 id="labglass-a-tool-for-chemistrylaboratory-glassware-experiment-schematics">LabGlass: a tool for chemistry/laboratory glassware experiment schematics</h1>
+<p><a href="./assets/labglass_screen_0.png"><img src="./assets/labglass_screen_0.png" alt="Labglass" title="labglass"></a></p>
+<p>Recently in my biochemistry studies , i needed to do a series of laboratory experiment schematics , after looking around for standardized lab glassware drawings and related tools,  i said to myself &quot;why not make a useful tool out of it, since there is not much done in this area&quot; more, download etc after the break.</p>
+<p>So i &quot;hacked together&quot; (really done over one two days)  a very basic and preliminary tool to generate this type of graphics.</p>
+<p><strong><em>Edit and foreword:</em></strong></p>
+<p>This was an article and project i wanted to post about a year ago (yikes) , so its quite outdated, and haven&#39;t had time to work on it more, and keep in mind, this was one of my first projects in Python, hence the dirty code.</p>
+<h2 id="the-very-short-feature-list"><strong>The (very short) feature list:</strong></h2>
+<ul>
+<li>displaying of  the different glassware/lab equipment i created in Inkscape</li>
+<li>allows you to change the text of the amounts contained within the different glassware.</li>
+<li>100% python</li>
+<li>svg rendering using <a href="http://www.pyglet.org/">Pyglet</a> and a modified version of <a href="http://www.supereffective.org/pages/Squirtle-SVG-Library">Squirtle</a>.</li>
+<li>export to svg and png formats (using some elements of <a href="http://cairographics.org/pycairo/">pycairo</a>)</li>
+<li>multi-platform (tested on windows and Ubuntu)</li>
+<li>small size</li>
+</ul>
+<p>Since a lot of people seemed interested in a tool to create such schematics but with a lot more features,  this will likely become a major project over time, the final version should enable people to create schematics such as this one (text in French only , sorry):</p>
+<p><a href="./assets/lactose1.jpg"><img src="./assets/lactose1.jpg" alt="lactose1" title="lactose1"></a></p>
+<h2 id="downloads-">Downloads :</h2>
+<p>You can get the experimental version <a href="http://code.google.com/p/labglass/">here</a></p>
+<p>I also have quite a few ideas on its usage with multitouch technology , and some interesting possibilities for educational purpose. Feel free to comment, feature ideas are also welcome!</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

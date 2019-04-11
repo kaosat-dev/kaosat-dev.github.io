@@ -1,0 +1,101 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Explorials: on the web: Blob creation and download </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  1970-01-01
+ </span>
+  <h1 id="explorials-on-the-web-blob-creation-and-download">Explorials: on the web: Blob creation and download</h1>
+<p>: Benchmarking Twisted + Reprap interactions (1) </p>
+<p>To kick of 2012 with some meaty bits of code and tech ,  I will be writing a series of articles about my exploration /musings of Python as used in my various geeky projects.</p>
+<p>So without further ado, here is the first one!</p>
+<h3 id="foreword">Foreword:</h3>
+<p>I have recently resume work on my &quot;Pollapli&quot; project which is based on a Python Twisted backend to manage multiple *<em>Repraps *</em>/ Arduino based devices (amongst other things), so this article will go into details on the results I am getting for the part of the system in charge of parsing and sending gcode files .</p>
+<ul>
+<li><p>The base assumption is the use of the current &quot;5d&quot; or simimar protocol for communication with reprap machines</p>
+</li>
+<li><p>A second key element is that I have <strong>willingly</strong> sacrificed a bit of performance by not using simple &quot;pass-through&quot; handling of commands:</p>
+</li>
+<li><p>The 5d protocol is not really one: it just uses text based, relatively inneficient (but human readable)  gcode commands</p>
+</li>
+<li><p>Gcode is prevalent today for Repraps , but that might not always be the case , so by introducing an intermediate level, the code will remain future proof : the print_task already has the option of choosing different kind of input files and therefore, parsers, and the <em><strong>protocols/drivers combo</strong></em> in Pollapli will be in charge of converting the commands represented as Python objects to the specific needs of the different hardware (Repraps, Makerbots etc)</p>
+</li>
+<li><p>This particular article will deal with the &quot;<strong>reprap_print_task</strong>&quot; and its subsidiaries : this is a small task in charge of parsing Gcode command files.  Ie:</p>
+</li>
+<li><p>parsing one command ( a line in the gcode file) into a python datastructure/class</p>
+</li>
+<li><p>sending that parsed  command  to the device and getting its result</p>
+</li>
+<li><p>moving on to the next command</p>
+</li>
+<li><p>The tests are run with a mock device class instead of going through a real &quot;driver-&gt;serial connection-&gt;hardware&quot; pipe to get a better idea of the performance of the task system itself</p>
+</li>
+<li><p>To simulate the latency of the driver/hardware communication,  the mock_device class has a <em><strong>command_delay</strong></em> parameter that leverages Twisted&#39;s deferreds , and notably the deferLater method.</p>
+</li>
+</ul>
+<h3 id="what-is-the-purpose-of-all-this-">What is the purpose of all this ?</h3>
+<p>The aim of the project is to provide the ability of driving a greater number of devices in parallel, in a client/server driven approach.</p>
+<h3 id="results">Results:</h3>
+<p>After a major refactoring of the &quot;<strong>reprap_print_task&quot;</strong>: I ran a series of tests on different machines and platforms to check for potential bottlenecks and issues:</p>
+<ul>
+<li>Without any latency (<em><strong>command_delay=0</strong></em>) the bottleneck resides in the efficiency (or lack thereof) of the run method that parses, sends , and waits for commands</li>
+<li>With a latency of <em>0.008s</em> (a guestimate of the back and forth of commands via the usb serial communication + some processing extra) , the execution time per task becomes <em><strong>constant</strong></em> !
+t would be criminal not to change things, criminal not to fight, criminal to throw optimism aside</li>
+</ul>
+<h2 id="recommended-movies-videos--books-">Recommended movies, videos , books :</h2>
+<p>Here is a short list of favorites, if you ever need to boost your morale, and outlook on the future :</p>
+<p>- The Mars Underground</p>
+<p>- Symphony of science</p>
+<p>- Pale Blue dot
+ieved(self,self.buffer[:results.start()]) self.buffer=self.buffer[results.end():] #self.logger.debug(&quot;serial seperator reached : data : %s&quot;%(self.buffer+str(data))) results=None try: results =self.regex.search(self.buffer) except: pass newDataTreated=True</p>
+<p>except SerialException: self.logger.critical(&quot;serial Error&quot;) time.sleep(0.01) Thread.__init__(self)</p>
+<p>&quot;&quot;&quot; Main funtion for getting the data recievd on the serial port If attemps to get the serial data fail,shutdown &quot;&quot;&quot; def get_data(self): data=None if self.isConnected and self.isRunning: try: waiting=self.serial.inWaiting() if waiting&gt;0: self.logger.debug(&quot;waiting for data&quot;) data=self.serial.read(waiting) except Exception: self.logger.critical(&quot;critical failure while getting serial data&quot;) self.currentErrors+=1 #after ten failed attempts , shutdown if self.currentErrors&gt;10: #self.reconnect() self.stop() return data</p>
+<p>&quot;&quot;&quot; Simple wrapper to send data over serial &quot;&quot;&quot; def send_data(self,data): if self.isConnected: self.logger.debug(&quot;sending data to arduino&quot;)</p>
+<p>try: self.logger.debug(&quot;sending %s to arduino&quot;,(data)) self.serial.write(data) except OSError: self.logger.critical(&quot;arduino not connected or not found on specified port&quot;) &quot;&quot;&quot; Function to set program into buffered serial mode, spliting recieved data at specified seperator &quot;&quot;&quot; def buffer_until(self,seperator): self.isBuffering=True self.seperator=seperator</p>
+<p>&quot;&quot;&quot; Clean shutdown function &quot;&quot;&quot; def stop(self): self.isConnected=False self.isRunning=False while not self.finished.isSet(): self.finished.set() self.logger.critical(&quot;Serial shutting down&quot;)</p>
+<p>self.serial.close() self.logger.info(&quot;Serial shut down&quot;) [/sourcecode]</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    

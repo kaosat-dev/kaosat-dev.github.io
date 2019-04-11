@@ -1,0 +1,64 @@
+
+    <html>
+      <head>
+        <title>Kaosat.dev: Ir Multitouch Test</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/github-markdown.css">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+      </head>
+
+      <body>
+        <div class="grid">
+          <header class="header grid-central">
+            <section class="infos">
+              <h1><a href="/"> Kaosat.net</a> </h1>
+              <h2>Programming, 3d printing, Gardening, Aquaponics, and lots more</h2>
+            </section>
+            <section id="navigation" class='navigation'>
+              <span> <a href="/pages/projects.html">projects</a></span> <span> <a href="/pages/articles.html">articles</a></span> <span> <a href="/pages/about.html">about</a></span>
+              <span>
+                <input type='text' placeholder='search' id='search'></input>
+                <div id='searchResults'></div>
+              </span>
+              <a href='https://github.com/kaosat-dev' alt='github'  target="_blank" rel="noopener" class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 192 192" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"/><g fill="#000000"><path d="M87.2,16.8c-36.8,4 -66.4,33.6 -70.4,69.6c-4,37.6 17.6,71.2 50.4,84c2.4,0.8 4.8,-0.8 4.8,-4v-12.8c0,0 -3.2,0.8 -7.2,0.8c-11.2,0 -16,-9.6 -16.8,-15.2c-0.8,-3.2 -2.4,-5.6 -4.8,-8c-2.4,-0.8 -3.2,-0.8 -3.2,-1.6c0,-1.6 2.4,-1.6 3.2,-1.6c4.8,0 8.8,5.6 10.4,8c4,6.4 8.8,8 11.2,8c3.2,0 5.6,-0.8 7.2,-1.6c0.8,-5.6 3.2,-11.2 8,-14.4c-18.4,-4 -32,-14.4 -32,-32c0,-8.8 4,-17.6 9.6,-24c-0.8,-1.6 -1.6,-5.6 -1.6,-11.2c0,-3.2 0,-8 2.4,-12.8c0,0 11.2,0 22.4,10.4c4,-1.6 9.6,-2.4 15.2,-2.4c5.6,0 11.2,0.8 16,2.4c10.4,-10.4 22.4,-10.4 22.4,-10.4c1.6,4.8 1.6,9.6 1.6,12.8c0,6.4 -0.8,9.6 -1.6,11.2c5.6,6.4 9.6,14.4 9.6,24c0,17.6 -13.6,28 -32,32c4.8,4 8,11.2 8,18.4v20.8c0,2.4 2.4,4.8 5.6,4c29.6,-12 50.4,-40.8 50.4,-74.4c0,-48 -40.8,-85.6 -88.8,-80z"/></g></g></svg>
+              </a>
+              <a href='mailto:contact@kaosat.net' alt='email' class='icon' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z"/>
+                </svg>
+              </a>
+            </section>
+          </header>
+          <section class="content grid-central">
+            <div class='markdown-body'>
+  <span>
+  2009-04-13
+ </span>
+  <h1 id="ir-multitouch-test">Ir Multitouch Test</h1>
+<p> <a href="http://vimeo.com/4137141">Ir_MultiTouch Test</a> from <a href="http://vimeo.com/user1581901">mark &quot;ckaos&quot;</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<p>The video you see here is from my very simple test of a potential &quot;flat&quot; multitouch detection system: IR diodes each surrounded by 4 PhotoTransistors (well, 4+2, since i didn&#39;t have the space for a real 3*3 matrix) linked to the analog pins on an Arduino board.</p>
+<p>The program was done in Processing ( first processing program for me , but so much fun !) (<a href="http://processing.org/">processing.org/</a>)</p>
+<p>-the program translates the ir intensity from the phototransistors to a few different visual representations : &quot;circles &quot;(white) for each, based on intensity, plus numerical values, and some interpolation attempts (red circles). Will see where this goes... (resolution/tracking problems, as well as overall cost)</p>
+<p>-My first attempt at blob detection and tracking is not really a success (and  the &quot;microscopic&quot; area of the detection surface, does not help !)  , but then again, i only worked on it for a single day, in a language i didn&#39;t know zilch about two days ago... :)</p>
+<p>After accidently stumbling on the <a href="http://www.nuigroup.com/" title="Nui Group">Nui Group page</a> ( i was looking around to build a small touch enabled console to centralize all the hydroponics controls, and well , to have fun too !), i started digging around into the technical aspect of things (oh and those wonderfull videos did help a lot too, combined with an interest in &quot;ghost in the shell like&quot; interfaces for years) , and finally i decided to give it a go!</p>
+<p>As i do not have the budget or space for a projector, i will be using some small disasembled lcd screens (16 &quot; and 19&quot;).</p>
+<p>I have already sucessfully disassembled (that means the screen still works! yeah !) the 16&quot; Asus Screen (VW161), so i will post some dissassembly pictures for all those who found the idea of dissasembling an lcd screen daunting (i know i did!!)</p>
+<p>-Since i have a very limited space in my flat, i would love to see if i can make something flat , since the usual diy multitouch setups are fairly thick ( distance from camera to sceen/lens max angle), also i love to experiment a bit , so we will see.</p>
+<p>Overall, some good work and interesting experimentation for a week end :)</p>
+<p>Ps:  &quot;Ponyo&quot;, the latest movie by Ghibli Studio, is just great ! ( can&#39;t get the song out of my head)</p>
+
+  </div>
+          </section>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src='/scripts/fuse.min.js'></script>
+        <script src='/scripts/lunr.js'></script>
+        <script src = '/scripts/search.js'></script>
+      </body>
+    </html>
+    
