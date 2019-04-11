@@ -4,9 +4,25 @@ const path = require('path')
 const fm = require('front-matter')
 const mainTemplate = require('../../templates/main')
 
+const flatten = arr => [].concat(...arr)
+const recurseFindPosts = dir => {
+  const subDirs = fs.readdirSync(dir)
+    .filter(e => fs.statSync(path.join(dir, e)).isDirectory())
+  // .filter(e => fs.existsSync(path.join(dir, e, 'index.md')))
+  const sub = subDirs.map(subDir => recurseFindPosts(path.join(dir, subDir)))
+  const curPostMd = path.join(dir, 'index.md')
+
+  if (fs.existsSync(curPostMd)) {
+    return { path: curPostMd, name: path.basename(dir) }
+  }
+  return sub
+}
+
 const postsDir = '/home/ckaos/dev/perso/blog/kaosat-net/posts'
-const postsList = fs.readdirSync(postsDir)
+const postsList = flatten(recurseFindPosts(postsDir))
+/* fs.readdirSync(postsDir)
   .filter(e => fs.statSync(path.join(postsDir, e)).isDirectory())
+  .filter(e => fs.existsSync(path.join(postsDir, e, 'index.md'))) */
 
 const pagesDir = '/home/ckaos/dev/perso/blog/kaosat-net/pages'
 const pagesList = fs.readdirSync(pagesDir)
@@ -14,14 +30,16 @@ const pagesList = fs.readdirSync(pagesDir)
 console.log('postsList', postsList)
 console.log('pagesList', pagesList)
 
+// console.log('FOOOOO', flatten(recurseFindPosts(postsDir)))
+
 const siteMeta = {
   name: 'Kaosat.net',
   description: 'Programming, 3d printing, Gardening, Aquaponics, and lots more',
   navigationEntries: [
     'projects',
     'articles',
-    'about',
-    'contact'
+    'about'
+    // 'contact'
   ],
   authors: [
     {
@@ -38,6 +56,9 @@ const siteMeta = {
         Love people, love to talk :)
       `,
       social: [
+        { type: 'email',
+          url: 'contact@kaosat.net'
+        },
         { type: 'github',
           url: 'https://github.com/kaosat-dev'
         }
@@ -45,30 +66,37 @@ const siteMeta = {
     }
   ],
   tags: [],
+  tagOccurences: {}, // occurences per tag
   projects: ['jscad', 'garden'] // tags for projects,
 }
 
 // to get metadata etc from a post/page
 const processPostMeta = (postDirName, postPath) => {
+  // console.log('processPostMeta', postDirName, postPath)
   const data = fs.readFileSync(postPath, 'utf8')
   const content = fm(data)
 
   const postMeta = content.attributes
-  const tags = [...new Set(siteMeta.tags.concat(postMeta.tags))]
+  const postTags = postMeta.tags || []
+  postTags.forEach(t => {
+    siteMeta.tagOccurences[t] = siteMeta.tagOccurences[t] ? siteMeta.tagOccurences[t] + 1 : 1
+  })
+  const tags = [...new Set(siteMeta.tags.concat(postTags))]
   siteMeta.tags = tags
 
   postMeta.path = postDirName
+  postMeta.fullPath = '/posts/' + path.dirname(postPath).split('/posts/')[1]
   return postMeta
 }
 
 // for the output generation
 const processPost = (postDirName, postPath) => {
-  console.log('postPath', postPath, postDirName)
+  // console.log('postPath', postPath, postDirName)
   const data = fs.readFileSync(postPath, 'utf8')
   const content = fm(data)
 
   // console.log('body', content.body)
-  console.log('attributes', content.attributes)
+  // console.log('attributes', content.attributes)
   const postMeta = content.attributes
   // const tags = [...new Set(siteMeta.tags.concat(postMeta.tags))]
   // siteMeta.tags = tags
@@ -88,24 +116,29 @@ const processPost = (postDirName, postPath) => {
     xhtml: false
   })
 
-  const postHtml = `<div class='markdown-body'>${marked(content.body)}</div>`
+  const postHtml = `<div class='markdown-body'>
+  <span>
+  ${postMeta.date}
+ </span>
+  ${marked(content.body)}
+  </div>`
 
   const postTemplate = mainTemplate(siteMeta, postHtml, postMeta)
-  const outputFileName = `posts/${postDirName}/index.html`
+  const outputFileName = `${path.dirname(postPath)}/index.html`
   fs.writeFileSync(outputFileName, postTemplate)
   console.log('generated', outputFileName)
 }
 
 const processPage = (pageFileName, pagePath) => {
-  console.log('pagePath', pageFileName, pagePath)
+  // console.log('pagePath', pageFileName, pagePath)
   const data = fs.readFileSync(pagePath, 'utf8')
   const content = fm(data)
 
   // console.log('body', content.body)
-  console.log('attributes', content.attributes)
+  // console.log('attributes', content.attributes)
   const postMeta = content.attributes
   const tags = [...new Set(siteMeta.tags.concat(postMeta.tags))]
-  siteMeta.tags = tags
+  siteMeta.tags = tags.filter(t => t !== undefined)
 
   marked.setOptions({
     renderer: new marked.Renderer(),
@@ -122,7 +155,9 @@ const processPage = (pageFileName, pagePath) => {
     xhtml: false
   })
 
-  let template = (siteMeta, pageHtml, postMeta) => `<div>${pageHtml}</div>`
+  let template = (siteMeta, pageHtml, postMeta) => `<div>
+  ${pageHtml}
+  </div>`
   if (postMeta.template) {
     console.log('USING', postMeta.template)
     try {
@@ -140,17 +175,12 @@ const processPage = (pageFileName, pagePath) => {
   console.log('generated', outputFileName)
 }
 /// //////////
-siteMeta.articles = postsList.map(x => {
-  console.log('foo', x)
-  if (fs.existsSync(path.join(postsDir, x, 'index.md'))) {
-    return processPostMeta(x, path.join(postsDir, x, 'index.md'))
-  }
-})
-  .filter(x => x !== undefined)
+siteMeta.articles = postsList.map(p => processPostMeta(p.name, p.path))
 
 /// //////////
-processPost(postsList[0], path.join(postsDir, postsList[0], 'index.md'))
-processPost(postsList[2], path.join(postsDir, postsList[2], 'index.md'))
+postsList.forEach(post => {
+  processPost(post.name, post.path)
+})
 
 pagesList.forEach(page => {
   processPage(page, path.join(pagesDir, page))
