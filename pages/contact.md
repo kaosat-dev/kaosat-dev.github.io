@@ -1,4 +1,4 @@
 ---
 title: "contact"
-template: "projects"
+template: "contact"
 ---
