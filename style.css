@@ -19,7 +19,6 @@ h1 {
 }
 
 ul {
-  list-style: none;
 }
 
 
@@ -74,9 +73,9 @@ footer{
         [container-start] minmax(0, 80em) [container-end]
         minmax(1em, 1fr) [viewport-end];
 
-  top: 0;
+  /*top: 0;
   left: 0;
-  position: absolute;
+  position: absolute;*/
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -106,7 +105,7 @@ footer{
   position: relative;
   display: inline-block;
   padding-left: 50px;*/
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   overflow: auto;
 }
 
@@ -149,6 +148,33 @@ footer{
   text-rendering: optimizeLegibility;
 }
 
-.articles li {
+.articles .articlesList li {
   padding: 20px
+}
+
+.articles .tagsList li {
+  padding: 10px;
+  display: -webkit-inline-box;
+}
+
+.projects {
+
+}
+
+.projects section {
+  /*height: 300px;*/
+}
+
+.projects section h2 {
+  position: inherit;
+  opacity: 1;
+}
+
+.fadedImg img{
+  opacity: 1;
+  width: 300px;
+}
+
+.about img {
+  width: 200px;
 }
