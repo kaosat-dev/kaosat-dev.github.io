@@ -21,6 +21,8 @@
     "wordpress-export-to-markdown": "^1.0.1"
   },
   "scripts": {
+    "rebuild": "node tools/generator/index.js",
+    "build-resume": "npx hackmyresume build data/resume/resume.en.json --theme themes/jsonresume-theme-stackoverflow/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
