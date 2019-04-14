@@ -178,3 +178,22 @@ footer{
 .about img {
   width: 200px;
 }
+
+.index {
+  display: flex;
+  flex-flow: wrap; 
+  width: 100%;
+}
+
+.index img {
+  width: 200px;
+  float: left;
+  padding-right: 30px;
+}
+
+.index .articles{
+  width: 50%
+}
+.index .articles .articlesList li{
+  padding: 2px;
+}
