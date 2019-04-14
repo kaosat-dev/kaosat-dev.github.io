@@ -7,10 +7,6 @@ const articlesTemplate = (siteMeta, content, meta) => {
   const dateSort = (a, b) => {
     let date1 = a.date
     let date2 = b.date
-    // date1 = date1.split('-')
-    // date2 = date2.split('-')
-    // date1 = date1.split('-').reverse().join('')
-    // date2 = date2.split('-').reverse().join('')
     return date2.localeCompare(date1)
   }
 
