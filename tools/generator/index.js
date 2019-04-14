@@ -4,6 +4,10 @@ const path = require('path')
 const fm = require('front-matter')
 const mainTemplate = require('../../templates/main')
 
+const siteMeta = require('../../data/config')
+
+const rootDir = '/home/ckaos/dev/perso/blog/kaosat-net/'
+
 const flatten = arr => [].concat(...arr)
 const recurseFindPosts = dir => {
   const subDirs = fs.readdirSync(dir)
@@ -18,57 +22,19 @@ const recurseFindPosts = dir => {
   return sub
 }
 
-const postsDir = '/home/ckaos/dev/perso/blog/kaosat-net/posts'
+const postsDir = path.join(rootDir, 'posts')
 const postsList = flatten(recurseFindPosts(postsDir))
 /* fs.readdirSync(postsDir)
   .filter(e => fs.statSync(path.join(postsDir, e)).isDirectory())
   .filter(e => fs.existsSync(path.join(postsDir, e, 'index.md'))) */
 
-const pagesDir = '/home/ckaos/dev/perso/blog/kaosat-net/pages'
+const pagesDir = path.join(rootDir, 'pages')
 const pagesList = fs.readdirSync(pagesDir)
   .filter(e => path.extname(e) === '.md')
-console.log('postsList', postsList)
+// console.log('postsList', postsList)
 console.log('pagesList', pagesList)
 
 // console.log('FOOOOO', flatten(recurseFindPosts(postsDir)))
-
-const siteMeta = {
-  name: 'Kaosat.net',
-  description: 'Programming, 3d printing, Gardening, Aquaponics, and lots more',
-  navigationEntries: [
-    'projects',
-    'articles',
-    'about'
-    // 'contact'
-  ],
-  authors: [
-    {
-      name: 'Mark "kaosat-dev" Moissette',
-      bio: `
-        Dad, living in Germany, gardener of code & plants.
-        Passion for 3d (webgl, printing), at the service of actual things (food, health, building etc).
-        
-        Shamelessly enthusiastic javascripter , occasional C++, Pythonista, Elixir, etc
-        
-        One of the main developpers/maintainers of https://github.com/jscad/OpenJSCAD.org and proud of it :)
-        
-        Increasingly minimalist.
-        Love people, love to talk :)
-      `,
-      social: [
-        { type: 'email',
-          url: 'contact@kaosat.net'
-        },
-        { type: 'github',
-          url: 'https://github.com/kaosat-dev'
-        }
-      ]
-    }
-  ],
-  tags: [],
-  tagOccurences: {}, // occurences per tag
-  projects: ['jscad', 'garden'] // tags for projects,
-}
 
 // to get metadata etc from a post/page
 const processPostMeta = (postDirName, postPath) => {
@@ -91,12 +57,9 @@ const processPostMeta = (postDirName, postPath) => {
 
 // for the output generation
 const processPost = (postDirName, postPath) => {
-  // console.log('postPath', postPath, postDirName)
   const data = fs.readFileSync(postPath, 'utf8')
   const content = fm(data)
 
-  // console.log('body', content.body)
-  // console.log('attributes', content.attributes)
   const postMeta = content.attributes
   // const tags = [...new Set(siteMeta.tags.concat(postMeta.tags))]
   // siteMeta.tags = tags
@@ -130,12 +93,9 @@ const processPost = (postDirName, postPath) => {
 }
 
 const processPage = (pageFileName, pagePath) => {
-  // console.log('pagePath', pageFileName, pagePath)
   const data = fs.readFileSync(pagePath, 'utf8')
   const content = fm(data)
 
-  // console.log('body', content.body)
-  // console.log('attributes', content.attributes)
   const postMeta = content.attributes
   const tags = [...new Set(siteMeta.tags.concat(postMeta.tags))]
   siteMeta.tags = tags.filter(t => t !== undefined)
@@ -159,7 +119,7 @@ const processPage = (pageFileName, pagePath) => {
   ${pageHtml}
   </div>`
   if (postMeta.template) {
-    console.log('USING', postMeta.template)
+    // console.log('USING', postMeta.template)
     try {
       template = require(`../../templates/${postMeta.template}`)
     } catch (error) {
@@ -176,7 +136,6 @@ const processPage = (pageFileName, pagePath) => {
 }
 /// //////////
 siteMeta.articles = postsList.map(p => processPostMeta(p.name, p.path))
-
 /// //////////
 postsList.forEach(post => {
   processPost(post.name, post.path)
@@ -185,3 +144,8 @@ postsList.forEach(post => {
 pagesList.forEach(page => {
   processPage(page, path.join(pagesDir, page))
 })
+
+// special case for index
+if (pagesList.includes('index.md')) {
+  fs.copyFileSync(path.join(pagesDir, 'index.html'), path.join(rootDir, 'index.html'))
+}
