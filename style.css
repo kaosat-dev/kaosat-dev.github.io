@@ -152,13 +152,32 @@ footer{
   padding: 20px
 }
 
+.articles .articlesList .item {
+  /*display: flex;*/
+}
+
+.articles .articlesList .item .date{
+  flex: 1 0 1px;
+}
+
+.articles .articlesList .item a{
+  flex: 1 0 300px;
+}
+
 .articles .tagsList li {
   padding: 10px;
   display: -webkit-inline-box;
 }
 
 .projects {
+}
 
+.projects ul {
+  list-style: none;
+}
+
+.projects li img {
+  width: 300px;
 }
 
 .projects section {
@@ -189,6 +208,13 @@ footer{
   width: 200px;
   float: left;
   padding-right: 30px;
+}
+
+.index .description {
+  width: 100%;
+}
+.index .description li {
+  left: 20px;
 }
 
 .index .articles{

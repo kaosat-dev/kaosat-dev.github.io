@@ -20,7 +20,9 @@ const indexTemplate = (siteMeta, content, meta) => {
     .map(a => {
       return `
     <li>
-    <span>${a.date}</span> <a href='${a.fullPath}'>${a.title}</a>
+      <div class='item'>
+        <span class='date'>${a.date}</span> <a href='${a.fullPath}'>${a.title}</a>
+      </div>
     </li>`
     })
     .join('')
@@ -38,7 +40,7 @@ const indexTemplate = (siteMeta, content, meta) => {
     .join('')
 
   return `<div class='index'>
-    <div>
+    <div class='description'>
       ${content}
     </div>
 

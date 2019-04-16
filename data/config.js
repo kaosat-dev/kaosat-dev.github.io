@@ -33,7 +33,7 @@ const siteMeta = {
   ],
   tags: [],
   tagOccurences: {}, // occurences per tag
-  projects: ['jscad', 'garden'] // tags for projects,
+  projects: ['jscad', 'garden', 'robots', '3d printing'] // tags for projects,
 }
 
 module.exports = siteMeta

@@ -149,3 +149,7 @@ pagesList.forEach(page => {
 if (pagesList.includes('index.md')) {
   fs.copyFileSync(path.join(pagesDir, 'index.html'), path.join(rootDir, 'index.html'))
 }
+// special case for 404
+if (pagesList.includes('404.md')) {
+  fs.copyFileSync(path.join(pagesDir, '404.html'), path.join(rootDir, '404.html'))
+}

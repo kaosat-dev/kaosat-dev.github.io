@@ -16,7 +16,7 @@ const articlesTemplate = (siteMeta, content, meta) => {
     .map(a => {
       return `
     <li>
-    <span>${a.date}</span> <a href='${a.fullPath}'>${a.title}</a>
+    <span class='date'>${a.date}</span> <a href='${a.fullPath}'>${a.title}</a>
     </li>`
     }).join('')
 
