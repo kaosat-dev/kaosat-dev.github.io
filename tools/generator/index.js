@@ -153,3 +153,17 @@ if (pagesList.includes('index.md')) {
 if (pagesList.includes('404.md')) {
   fs.copyFileSync(path.join(pagesDir, '404.html'), path.join(rootDir, '404.html'))
 }
+
+// for resumes
+
+try {
+  const resumeTemplate = require(`../../templates/resume`)
+  const resumes = ['en', 'de', 'fr']
+  resumes.forEach(lang => {
+    const resume = require(`../../data/resume/resume.${lang}.json`)
+    const html = resumeTemplate(siteMeta, undefined, { resume })
+    fs.writeFileSync(`foo-resume.${lang}.html`, html)
+  })
+} catch (error) {
+  console.error('failed to generate resume', error)
+}

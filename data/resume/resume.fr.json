@@ -400,9 +400,11 @@
     }
   ],
 
-  "workLabel": "Experience",
+  "workLabel": "Expérience",
   "additionalWorkLabel": "",
   "projectsLabel": "",
+  "educationLabel": "Education",
+  "volunteerLabel": "Benevolat",
   "writingLabel": "",
   "publicationsLabel": "",
   "additionalPublicationsLabel": ""

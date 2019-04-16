@@ -401,9 +401,11 @@
     }
   ],
 
-  "workLabel": "Experience",
+  "workLabel": "Erfahrung",
   "additionalWorkLabel": "",
-  "projectsLabel": "",
+  "projectsLabel": "Projekte",
+  "educationLabel": "Ausbilding",
+  "volunteerLabel": "Ehrenamtliches Engagement",
   "writingLabel": "",
   "publicationsLabel": "",
   "additionalPublicationsLabel": ""
