@@ -1,5 +1,5 @@
 
-const spaceToDash = x => x
+const spaceToDash = x => x.replace(' ', '-')
 const toLowerCase = x => x
 const year = x => x
 const paragraphSplit = x => x
@@ -83,6 +83,7 @@ const basicsTemplate = basics => {
       </div>` : ``
 }
     </div>
+    ${profilesEl}
     ${summary}
   </header>
   
@@ -94,7 +95,7 @@ const skillsTemplate = skills => {
     return ''
   }
 
-  const skillsFoo = skills.map(skill => `
+  const skillsList = skills.map(skill => `
     <div class='item'>
       ${skill.name ? `
         <h3 class="name">
@@ -110,7 +111,7 @@ const skillsTemplate = skills => {
 
       ${skill.keywords.length ? `
         <ul class="keywords">
-          ${skill.keywords.map(kw => `<li>${kw}</li>`)}
+          ${skill.keywords.map(kw => `<li>${kw}</li>`).join('')}
         </ul>
       ` : ''}
     </div>`
@@ -123,7 +124,7 @@ const skillsTemplate = skills => {
     </header>
   </section>
   <section id="skills">
-    ${skillsFoo}
+    ${skillsList.join('')}
   </section>
   `
 }
@@ -142,7 +143,7 @@ const workTemplate = (works, workLabel = 'work') => {
         </div>
         <div class="date">
           ${entry.startDate ? `<span class="startDate">${year(entry.startDate)}</span> ` : ''}
-          ${entry.endDate ? `<span class="startDate">${year(entry.endDate)}</span> ` : '<span class="endDate">- Current</span>'}
+          ${entry.endDate ? `<span class="endDate"> - ${year(entry.endDate)}</span> ` : '<span class="endDate">- Current</span>'}
         </div>
       </header>
     ` : ''
@@ -158,7 +159,7 @@ const workTemplate = (works, workLabel = 'work') => {
 
     const keywords = entry.keywords.length ? ` 
       <ul class="keywords">
-      ${entry.keywords.map(kw => `<li>${kw}</li>`)}
+      ${entry.keywords.map(kw => `<li>${kw}</li>`).join('')}
       </ul>` : ''
 
     const summary = entry.summary ? `
@@ -169,7 +170,7 @@ const workTemplate = (works, workLabel = 'work') => {
     const highlights = entry.highlights.length ? `
       <ul class="highlights">
 
-      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`)}
+      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`).join('')}
   
       </ul>
     ` : ''
@@ -216,7 +217,7 @@ const projectsTemplate = (projects, projectsLabel = 'projects') => {
         </div>
         <div class="date">
           ${entry.startDate ? `<span class="startDate">${year(entry.startDate)}</span> ` : ''}
-          ${entry.endDate ? `<span class="startDate">${year(entry.endDate)}</span> ` : '<span class="endDate">- Current</span>'}
+          ${entry.endDate ? `<span class="endDate"> - ${year(entry.endDate)}</span> ` : '<span class="endDate"> - Current</span>'}
         </div>
       </header>
     ` : ''
@@ -232,7 +233,7 @@ const projectsTemplate = (projects, projectsLabel = 'projects') => {
 
     const keywords = entry.keywords ? ` 
       <ul class="keywords">
-      ${entry.keywords.map(kw => `<li>${kw}</li>`)}
+      ${entry.keywords.map(kw => `<li>${kw}</li>`).join('')}
       </ul>` : ''
 
     const summary = entry.summary ? `
@@ -243,7 +244,7 @@ const projectsTemplate = (projects, projectsLabel = 'projects') => {
     const highlights = entry.highlights ? `
       <ul class="highlights">
 
-      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`)}
+      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`).join('')}
   
       </ul>
     ` : ''
@@ -290,7 +291,7 @@ const volunteerTemplate = (volunteering, volunteerLabel = 'volunteering') => {
         </div>
         <div class="date">
           ${entry.startDate ? `<span class="startDate">${year(entry.startDate)}</span> ` : ''}
-          ${entry.endDate ? `<span class="startDate">${year(entry.endDate)}</span> ` : '<span class="endDate">- Current</span>'}
+          ${entry.endDate ? `<span class="endDate"> - ${year(entry.endDate)}</span> ` : '<span class="endDate"> - Current</span>'}
         </div>
       </header>
     ` : ''
@@ -306,7 +307,7 @@ const volunteerTemplate = (volunteering, volunteerLabel = 'volunteering') => {
 
     const keywords = entry.keywords ? ` 
       <ul class="keywords">
-      ${entry.keywords.map(kw => `<li>${kw}</li>`)}
+      ${entry.keywords.map(kw => `<li>${kw}</li>`).join('')}
       </ul>` : ''
 
     const summary = entry.summary ? `
@@ -317,7 +318,7 @@ const volunteerTemplate = (volunteering, volunteerLabel = 'volunteering') => {
     const highlights = entry.highlights ? `
       <ul class="highlights">
 
-      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`)}
+      ${entry.highlights.map(h => `<li>${paragraphSplit(h)}</li>`).join('')}
   
       </ul>
     ` : ''
@@ -369,7 +370,7 @@ const educationTemplate = (education, educationLabel = 'education') => {
         </div>
         <div class="date">
           ${entry.startDate ? `<span class="startDate">${year(entry.startDate)}</span> ` : ''}
-          ${entry.endDate ? `<span class="startDate">${year(entry.endDate)}</span> ` : '<span class="endDate">- Current</span>'}
+          ${entry.endDate ? `<span class="endDate"> - ${year(entry.endDate)}</span> ` : '<span class="endDate"> - Current</span>'}
         </div>
       </header>
 
@@ -384,7 +385,7 @@ const educationTemplate = (education, educationLabel = 'education') => {
 
       ${entry.courses ? `
       <ul class="courses">
-        ${entry.courses.map(c => `<li>${c}</li>`)}
+        ${entry.courses.map(c => `<li>${c}</li>`).join('')}
       </ul>
       ` : ''}
 
