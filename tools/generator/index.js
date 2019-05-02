@@ -2,11 +2,12 @@ const marked = require('marked')
 const fs = require('fs')
 const path = require('path')
 const fm = require('front-matter')
+const lunr = require('lunr')
+
 const mainTemplate = require('../../templates/main')
-
 const siteMeta = require('../../data/config')
-
 const rootDir = '/home/ckaos/dev/perso/blog/kaosat-net/'
+let documents = []
 
 const flatten = arr => [].concat(...arr)
 const recurseFindPosts = dir => {
@@ -66,9 +67,9 @@ const processPost = (postDirName, postPath) => {
 
   marked.setOptions({
     renderer: new marked.Renderer(),
-    highlight: function (code) {
+    /* highlight: function (code) {
       return require('highlight.js').highlightAuto(code).value
-    },
+    }, */
     pedantic: false,
     gfm: true,
     tables: true,
@@ -90,6 +91,15 @@ const processPost = (postDirName, postPath) => {
   const outputFileName = `${path.dirname(postPath)}/index.html`
   fs.writeFileSync(outputFileName, postTemplate)
   console.log('generated', outputFileName)
+  // add content to documents
+  const fullPath = '/posts/' + path.dirname(postPath).split('/posts/')[1] + '/index.html'
+  documents.push({
+    id: documents.length,
+    name: postPath,
+    path: fullPath,
+    text: content.body,
+    tags: postMeta.tags
+  })
 }
 
 const processPage = (pageFileName, pagePath) => {
@@ -154,8 +164,24 @@ if (pagesList.includes('404.md')) {
   fs.copyFileSync(path.join(pagesDir, '404.html'), path.join(rootDir, '404.html'))
 }
 
-// for resumes
+// generating index for searching
+const searchIndex = lunr(function () {
+  // this.ref('id')
+  this.ref('path')
+  this.field('name')
+  this.field('text')
+  this.field('tags')
 
+  documents.forEach(function (doc) {
+    this.add(doc)
+  }, this)
+})
+
+fs.writeFileSync('./searchIndex', JSON.stringify(searchIndex))
+// just a test
+console.log('SEAAARCH', searchIndex.search('plant'))
+
+// for resumes
 try {
   const resumeTemplate = require(`../../templates/resume`)
   const resumes = ['en', 'de', 'fr']

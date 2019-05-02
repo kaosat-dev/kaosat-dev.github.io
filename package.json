@@ -6,7 +6,9 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lunr": "^2.3.6"
+  },
   "devDependencies": {
     "front-matter": "^3.0.1",
     "fuse.js": "^3.4.4",
