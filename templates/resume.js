@@ -461,8 +461,8 @@ const resumeTemplate = (siteMeta, content, meta) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>${basics.name}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/resume.css">
-    <link rel="stylesheet" href="/github-markdown.css">
+    <link rel="stylesheet" href="/assets/style/resume.css">
+    <link rel="stylesheet" href="/assets/style/github-markdown.css">
     </head>
     <body>
       <div id="resume">

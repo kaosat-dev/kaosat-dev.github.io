@@ -8,8 +8,8 @@ const mainTemplate = (siteMeta, content, meta) => {
     <html>
       <head>
         <title>Kaosat.dev: ${meta.title}</title>
-        <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="/github-markdown.css">
+        <link rel="stylesheet" href="/assets/style/style.css">
+        <link rel="stylesheet" href="/assets/style/github-markdown.css">
 
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
