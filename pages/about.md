@@ -23,7 +23,7 @@ Do you need professional software development work done ?
 You are in luck , I am currently available for all your programming needs.
 
 - resume (English) [html](/pages/resume-en.html) [pdf](/data/resume/resume-mark-moissette-en.pdf)
-- resume (German) [html](/pages/resume-de.html) [pdf](/data/resume/resume-de.pdf)
-- resume (French) [html](/pages/resume-fr.html) [pdf](/data/resume/resume-fr.pdf)
+- resume (German) [html](/pages/resume-de.html) [pdf](/data/resume/resume-mark-moissette-de.pdf)
+- resume (French) [html](/pages/resume-fr.html) [pdf](/data/resume/resume-mark-moissette-fr.pdf)
 
 and of course, [github profile](https://github.com/kaosat-dev)

@@ -5,7 +5,7 @@
     "picture": "",
     "birthDate":"Geboren: 18-07-1981",
     "status": "Zivil Partnerschaft, 2 kinder",
-    "summary": "Hallo, ich bin Mark, ein erfahrener Entwickler mit Schwerpunkt Javascript u. 3D!",
+    "summary": "Hallo, ich bin Mark, ein erfahrener Entwickler mit Schwerpunkt Javascript und 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
@@ -210,7 +210,7 @@
         "Erschafung von [Robotern](https://github.com/PiRo-bots/kiwikee) für Kinder: mischung aus Kod, 3D Design u. 3D Druck",
         "Umgebung Überwachung und Kontrolle für Pflanzen usw...."
       ],
-      "Focus":"Robotics"
+      "Focus":"Robotik"
     }
 
   ],
@@ -352,7 +352,7 @@
     ]
   },
   {
-    "name": "Robotics",
+    "name": "Robotik",
     "keywords": [
       "Microcontrollers",
       "Sensors",
@@ -408,5 +408,6 @@
   "volunteerLabel": "Ehrenamtliches Engagement",
   "writingLabel": "",
   "publicationsLabel": "",
-  "additionalPublicationsLabel": ""
+  "additionalPublicationsLabel": "",
+  "languagesLabel": "Sprachen"
 }

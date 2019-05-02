@@ -730,7 +730,7 @@ ul.courses li:hover {
         font-weight: 600;
     }
     ul.keywords::before {
-        content: "Skills acquired: ";
+        content: "";
     }
     #skills .keywords::before {
         content: '';
@@ -740,7 +740,7 @@ ul.courses li:hover {
         padding: 0;
     }
     ul.courses::before {
-        content: "Major courses: ";
+        content: "";
     }
     ul.keywords li:last-of-type::after,
     ul.courses li:last-of-type::after {

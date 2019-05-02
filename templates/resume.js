@@ -404,7 +404,7 @@ const educationTemplate = (education, educationLabel = 'education') => {
   return `
     <section class="section">
     <header>
-      <h2 class='section-title'>Education <span class="item-count">(${education.length})</span></h2>
+      <h2 class='section-title'>${educationLabel}<span class="item-count"> (${education.length})</span></h2>
     </header>
   
     <section id="education">
@@ -413,7 +413,7 @@ const educationTemplate = (education, educationLabel = 'education') => {
   </section>`
 }
 
-const languagesTemplate = languages => {
+const languagesTemplate = (languages, label) => {
   if (!languages.length) {
     return ''
   }
@@ -439,7 +439,7 @@ const languagesTemplate = languages => {
   return `
     <section class="section margin1">
     <header>
-      <h2 class='section-title'>Languages</h2>
+      <h2 class='section-title'>${label}</h2>
     </header>
     <section id="languages">
      ${languagesEl}
@@ -453,7 +453,7 @@ const interestsTemplate = interests => ''
 const resumeTemplate = (siteMeta, content, meta) => {
   const { resume } = meta
   const { basics, skills, work, projects, volunteer, education, languages, interests } = resume
-  const { workLabel, projectsLabel, writingLabel, educationLabel, volunteerLabel } = resume
+  const { workLabel, projectsLabel, writingLabel, educationLabel, languagesLabel, volunteerLabel } = resume
   return `<!doctype html>
   <html>
     <head>
@@ -473,7 +473,7 @@ const resumeTemplate = (siteMeta, content, meta) => {
         ${volunteerTemplate(volunteer, volunteerLabel)}
         ${educationTemplate(education, educationLabel)}
         
-        ${languagesTemplate(languages)}
+        ${languagesTemplate(languages, languagesLabel)}
         ${interestsTemplate(interests)}
       </div>
     </body>

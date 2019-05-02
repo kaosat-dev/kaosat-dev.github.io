@@ -162,7 +162,7 @@ try {
   resumes.forEach(lang => {
     const resume = require(`../../data/resume/resume.${lang}.json`)
     const html = resumeTemplate(siteMeta, undefined, { resume })
-    fs.writeFileSync(`foo-resume.${lang}.html`, html)
+    fs.writeFileSync(`./pages/resume-${lang}.html`, html)
   })
 } catch (error) {
   console.error('failed to generate resume', error)
