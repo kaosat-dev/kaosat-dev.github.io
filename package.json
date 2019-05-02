@@ -8,7 +8,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
     "front-matter": "^3.0.1",
     "fuse.js": "^3.4.4",
     "hackmyresume": "^1.9.0-beta",
