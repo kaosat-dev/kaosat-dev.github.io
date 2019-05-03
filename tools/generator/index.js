@@ -163,6 +163,10 @@ if (pagesList.includes('index.md')) {
 if (pagesList.includes('404.md')) {
   fs.copyFileSync(path.join(pagesDir, '404.html'), path.join(rootDir, '404.html'))
 }
+// special case for searchResults
+if (pagesList.includes('searchResults.md')) {
+  fs.copyFileSync(path.join(pagesDir, 'searchResults.html'), path.join(rootDir, 'searchResults.html'))
+}
 
 // generating index for searching
 const searchIndex = lunr(function () {
@@ -179,7 +183,7 @@ const searchIndex = lunr(function () {
 
 fs.writeFileSync('./searchIndex', JSON.stringify(searchIndex))
 // just a test
-console.log('SEAAARCH', searchIndex.search('plant'))
+// console.log('SEAAARCH', searchIndex.search('plant'))
 
 // for resumes
 try {

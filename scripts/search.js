@@ -1,7 +1,41 @@
 const lunr = window.lunr
 
-document.getElementById('search').addEventListener('input', e => {
-  console.log('changed', e.target.value)
+window.onload = () => {
+  if (window.location.pathname === '/searchResults.html') {
+    const urlParams = new URLSearchParams(window.location.search)
+    let searchCriteria = urlParams.get('search')
+    if (searchCriteria) {
+      searchCriteria = searchCriteria.length > 0 ? searchCriteria + '*' : searchCriteria
+      window.fetch('/searchIndex')
+        .then(response => response.text())
+        .then(text => {
+          const searchIndex = lunr.Index.load(JSON.parse(text))
+          const searchResults = searchIndex.search(searchCriteria)
+          console.log('results', searchResults)
+          const resultsEl = document.getElementById('searchResultsList')
+          if (resultsEl) {
+            const resultsList = searchResults
+              .map(r => {
+                const name = r.ref.replace('/posts/', '').replace('index.html', '')
+                return `<li><a href=${r.ref}>${name}</a></li>`
+              })
+              .join('')
+            // console.log('resultsList', resultsList)
+            resultsEl.innerHTML = resultsList
+          }
+        })
+    }
+  }
+}
+
+document.getElementById('search').addEventListener('keydown', e => {
+  if (e.keyCode === 13) {
+    // console.log('changed', e.target.value, window.location, window.location.origin)
+    const searchCriteria = e.target.value
+    window.searchCriteria = searchCriteria
+    window.location.href = `/searchResults.html?search=${searchCriteria}`
+  }
+  //
   /* const summaryInclude = 60
   const fuseOptions = {
     shouldSort: true,
@@ -24,7 +58,7 @@ document.getElementById('search').addEventListener('input', e => {
   console.log('fuse', fuse)
   var result = fuse.search(e.target.value) */
 
-  const pages = [
+  /* const pages = [
     { name: 'electronics are cool', contents: 'arduino', tags: ['arduino'], categories: [] },
     { name: 'plants are cool', contents: 'aquaponics', tags: ['aquaponics'], categories: [] }
   ]
@@ -64,5 +98,5 @@ document.getElementById('search').addEventListener('input', e => {
     return `<span>${d.name}</span>`
   })
   console.log('foo', document.getElementById('searchResults'))
-  document.getElementById('searchResults').innerHTML = `<div>${resultsEls}</div>`
+  document.getElementById('searchResults').innerHTML = `<div>${resultsEls}</div>` */
 })
