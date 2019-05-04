@@ -13,6 +13,7 @@
     "front-matter": "^3.0.1",
     "fuse.js": "^3.4.4",
     "hackmyresume": "^1.9.0-beta",
+    "highlight.js": "^9.15.6",
     "jsonresume-theme-classy": "^1.0.9",
     "jsonresume-theme-kendall": "^0.1.19",
     "jsonresume-theme-slick": "^0.1.16",

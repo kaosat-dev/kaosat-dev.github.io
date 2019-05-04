@@ -10,7 +10,7 @@ const mainTemplate = (siteMeta, content, meta) => {
         <title>Kaosat.dev: ${meta.title}</title>
         <link rel="stylesheet" href="/assets/style/style.css">
         <link rel="stylesheet" href="/assets/style/github-markdown.css">
-
+        <link rel="stylesheet" href="/assets/style/highlight.js/atom-one-dark.css">
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -26,7 +26,7 @@ const mainTemplate = (siteMeta, content, meta) => {
             <section id="navigation" class='navigation'>
               ${navigation}
               <span>
-                <input type='text' placeholder='search' id='search'></input>
+                <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
                 <div id='searchResults'></div>
               </span>
               <a href='${siteMeta.authors[0].social[1].url}' alt='github'  target="_blank" rel="noopener" class='icon' >
@@ -44,10 +44,12 @@ const mainTemplate = (siteMeta, content, meta) => {
           </section>
         </div>
 
+        <script type='text/javascript' src='/scripts/highlight.pack.js'></script>
+        <script type='text/javascript' src='/scripts/lunr.js'></script>
+        <script type='text/javascript' src='/scripts/search.js'></script>
+        <script type='text/javascript' src='/scripts/jszip.min.js'></script>
+
         <script>hljs.initHighlightingOnLoad();</script>
-        <script src='/scripts/fuse.min.js'></script>
-        <script src='/scripts/lunr.js'></script>
-        <script src = '/scripts/search.js'></script>
       </body>
     </html>
     `

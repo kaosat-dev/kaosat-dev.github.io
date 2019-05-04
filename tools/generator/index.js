@@ -67,9 +67,9 @@ const processPost = (postDirName, postPath) => {
 
   marked.setOptions({
     renderer: new marked.Renderer(),
-    /* highlight: function (code) {
+    highlight: (code) => {
       return require('highlight.js').highlightAuto(code).value
-    }, */
+    },
     pedantic: false,
     gfm: true,
     tables: true,

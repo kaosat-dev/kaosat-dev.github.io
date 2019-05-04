@@ -1,15 +1,18 @@
-const lunr = window.lunr
 
 window.onload = () => {
+  const lunr = window.lunr
+  const pako = window.pako
   if (window.location.pathname === '/searchResults.html') {
     const urlParams = new URLSearchParams(window.location.search)
     let searchCriteria = urlParams.get('search')
     if (searchCriteria) {
       searchCriteria = searchCriteria.length > 0 ? searchCriteria + '*' : searchCriteria
-      window.fetch('/searchIndex')
-        .then(response => response.text())
-        .then(text => {
-          const searchIndex = lunr.Index.load(JSON.parse(text))
+      window.fetch('/searchIndex.zip')
+        .then(response => response.arrayBuffer())
+        .then(async rawData => {
+          const zip = new JSZip()
+          const jsonData = await zip.loadAsync(rawData).then(x => zip.file('searchIndex').async('string'))
+          const searchIndex = lunr.Index.load(JSON.parse(jsonData))
           const searchResults = searchIndex.search(searchCriteria)
           console.log('results', searchResults)
           const resultsEl = document.getElementById('searchResultsList')
