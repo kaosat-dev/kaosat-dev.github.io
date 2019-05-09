@@ -6,7 +6,7 @@ window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search)
     let searchCriteria = urlParams.get('search')
     if (searchCriteria) {
-      searchCriteria = searchCriteria.length > 0 ? searchCriteria + '*' : searchCriteria
+      // searchCriteria = searchCriteria.length > 0 ? searchCriteria + '*' : searchCriteria
       window.fetch('/searchIndex.zip')
         .then(response => response.arrayBuffer())
         .then(async rawData => {
@@ -14,7 +14,7 @@ window.onload = () => {
           const jsonData = await zip.loadAsync(rawData).then(x => zip.file('searchIndex').async('string'))
           const searchIndex = lunr.Index.load(JSON.parse(jsonData))
           const searchResults = searchIndex.search(searchCriteria)
-          console.log('results', searchResults)
+          console.log('results', searchResults, 'for search', searchCriteria)
           const resultsEl = document.getElementById('searchResultsList')
           if (resultsEl) {
             const resultsList = searchResults

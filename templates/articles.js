@@ -30,10 +30,11 @@ const articlesTemplate = (siteMeta, content, meta) => {
     </li>`
     }).join('')
 
+    //title:
   const tagsList = siteMeta.tags.map(t => {
     return `
     <li>
-    <span> <a href='/pages/articles.html?tag=${t}'>${t} (${siteMeta.tagOccurences[t]})</a> </span>
+    <span> <a href='/searchResults.html?search=tags:${t}'>${t} (${siteMeta.tagOccurences[t]})</a> </span>
     </li>`
   }).join('')
   //  <a href='/posts/${a.path}'>${a.title}</a>

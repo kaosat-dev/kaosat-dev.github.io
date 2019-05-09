@@ -98,7 +98,7 @@ const processPost = (postDirName, postPath) => {
     name: postPath,
     path: fullPath,
     text: content.body,
-    tags: postMeta.tags
+    tags: postMeta.tags.join(' ')
   })
 }
 
