@@ -1,7 +1,6 @@
 ---
-title: "projects"
+title: "projects: 3d printing"
 template: "projects"
 ---
 
-
-oh cool, some 3D printing ! 
+I have been working on various 3D printing projecs for close to 10 years now

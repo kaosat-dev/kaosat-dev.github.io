@@ -1,6 +1,6 @@
 const siteMeta = {
   name: 'Kaosat.net',
-  description: 'Gardener of code & plants: Programming, 3d printing, Gardening, Aquaponics, and lots more',
+  description: 'Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more',
   navigationEntries: [
     'projects',
     'articles',
