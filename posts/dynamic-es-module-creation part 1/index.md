@@ -137,23 +137,19 @@ it turns out it does not *quite* work the way I hoped
  * no cache headers
  * various server settings 
  * destroying and recreating the worker
+I need to revisit & solve this soon, as it makes the solution quite limited for truely dynamic/ changing code
 
+## Limitations
 
-## Bonus: extension handling
+You currently **cannot** use es modules *FROM* Web workers: ie ```javascript  let worker = new Worker("worker.js", { type: "module" });```
+does not work yet !
 
-You might be aware of Node's way of handling extensions, ie things like
+see status for chrome for example:
+https://www.chromestatus.com/feature/5761300827209728
+and track the resolution 
+https://bugs.chromium.org/p/chromium/issues/detail?id=680046
 
-```javascript
-const registerJscadExtension = (fs, _require) => {
-  const stripBom = require('strip-bom')
-  _require.extensions['.jscad'] = (module, filename) => {
-    const content = fs.readFileSync(filename, 'utf8')
-    module._compile(stripBom(content), filename)
-  }
-}
-```
-
-Since it is a mechanism we use in Jscad for loading various file formats (which all returned data parsed as js objects), I thought it would be fun to try and add something similar to 
+This might not be a problem for everyone, but for us for JSCAD it is a show stopper sadly, as we are loading & evalutating module code in the background (in web workers). I would love to be optimistic about this , but it has been dragging on for years now, and I have only been able to find information about future support for this for Chromium so far.
 
 ## references
 

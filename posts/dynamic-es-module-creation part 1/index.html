@@ -149,20 +149,19 @@ it turns out it does not <em>quite</em> work the way I hoped</p>
 <li>I tried every possible combo I could think of to solve that issue:<ul>
 <li>no cache headers</li>
 <li>various server settings </li>
-<li>destroying and recreating the worker</li>
+<li>destroying and recreating the worker
+I need to revisit &amp; solve this soon, as it makes the solution quite limited for truely dynamic/ changing code</li>
 </ul>
 </li>
 </ul>
-<h2 id="bonus-extension-handling">Bonus: extension handling</h2>
-<p>You might be aware of Node&#39;s way of handling extensions, ie things like</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> registerJscadExtension = <span class="hljs-function">(<span class="hljs-params">fs, _require</span>) =&gt;</span> {
-  <span class="hljs-keyword">const</span> stripBom = <span class="hljs-built_in">require</span>(<span class="hljs-string">'strip-bom'</span>)
-  _require.extensions[<span class="hljs-string">'.jscad'</span>] = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">module</span>, filename</span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> content = fs.readFileSync(filename, <span class="hljs-string">'utf8'</span>)
-    <span class="hljs-built_in">module</span>._compile(stripBom(content), filename)
-  }
-}</code></pre>
-<p>Since it is a mechanism we use in Jscad for loading various file formats (which all returned data parsed as js objects), I thought it would be fun to try and add something similar to </p>
+<h2 id="limitations">Limitations</h2>
+<p>You currently <strong>cannot</strong> use es modules <em>FROM</em> Web workers: ie <code>javascript  let worker = new Worker(&quot;worker.js&quot;, { type: &quot;module&quot; });</code>
+does not work yet !</p>
+<p>see status for chrome for example:
+<a href="https://www.chromestatus.com/feature/5761300827209728">https://www.chromestatus.com/feature/5761300827209728</a>
+and track the resolution 
+<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=680046">https://bugs.chromium.org/p/chromium/issues/detail?id=680046</a></p>
+<p>This might not be a problem for everyone, but for us for JSCAD it is a show stopper sadly, as we are loading &amp; evalutating module code in the background (in web workers). I would love to be optimistic about this , but it has been dragging on for years now, and I have only been able to find information about future support for this for Chromium so far.</p>
 <h2 id="references">references</h2>
 <ul>
 <li><a href="https://salomvary.com/es6-modules-in-browsers.html#custom-loaders-with-service-workers">custom loaders</a></li>
