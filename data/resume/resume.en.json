@@ -39,6 +39,19 @@
   },
   "work": [
     {  
+        "company":"Various",
+        "position":"Web/ Full Stack Developer",
+        "startDate":"2020",
+        "endDate":"2020",
+        "summary":"Development, Upgrade, overhaul of Server & client side WebGL/Js apps",
+        "highlights": [
+          "Universal Server & client side WebGL/Js apps",
+          "Development, deployment, maintance of Dockerized apps"
+        ],
+        "keywords": ["Javascript", "Webgl", "Node.js", "Docker", "Server"],
+        "Focus":"Software development"
+  },
+    {  
         "company":"Stykka Aps",
         "website":"https://stykka.com",
         "position":"Web/ Full Stack Developer",

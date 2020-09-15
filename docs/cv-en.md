@@ -4,7 +4,7 @@
 |                          |                               |                                          |
 | ------------------------ | ----------------------------- | ---------------------------------------- |
 | moissette.mark@gmail.com | +4915902511517                | https://github.com/kaosat-dev            |
-| Born: 18.07.1981         | Civil union, 2 children       | Languages : English, German, French, Hungarian |
+| Born: 18.07.1981         | Civil union, 3 children       | Languages : English, German, French, Hungarian |
 
 ## SKILLS AND EXPERIENCE
 
@@ -15,7 +15,10 @@
   - **Linux , Mac, CI, Docker, Agile /SCRUM**
 
   -----------------------------------------------------------------------
-  
+  - *2019 - 2020*  **Web Application Developer** *[various], Remote*
+   * Development, Upgrade, overhaul of Server & client side WebGL/Js apps
+   * Development, deployment, maintance of Dockerized apps
+
   - *2018 - 2019*  **Web Application Developer** *[Stykka Aps](https://stykka.com/), Remote*
     * Development of cnc UI & 3d viewer (Node.js , WebGL, Vue.js, Elixir)
       * reuseable, modular software components
