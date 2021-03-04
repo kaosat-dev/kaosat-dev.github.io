@@ -10,6 +10,7 @@ const articlesTemplate = (siteMeta, content, meta) => {
     return date2.localeCompare(date1)
   }
 
+  console.log('siteMeta.articles',siteMeta.articles)
   const articlesList = siteMeta.articles
     .filter(a => !('archived' in a))
     .sort(dateSort)

@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -40,47 +40,47 @@
   2011-02-02
  </span>
   <h1 id="modular-parametric-printable-rack-for-rackpinion-for-reprap">Modular, parametric printable rack (for rack&amp;pinion) for Reprap</h1>
-<p>Anyone who has worked on/built a reprap  knows that sometimes, it is hard to find its &#39;<strong><em>vitamins</em></strong>&#39; (not printable elements) for certain parts: one particularly hard /expensive piece are the <em>belts</em> and people have been trying to find ways to replace those with fully 3d printable parts: here is my contribution in the form of an <strong><em><a href="http://www.openscad.org/">OpenScad</a></em></strong> script to generate modular and parametric racks .</p>
+<p>Anyone who has worked on/built a reprap  knows that sometimes, it is hard to find its &#39;<strong><em>vitamins</em></strong>&#39; (not printable elements) for certain parts: one particularly hard /expensive piece are the <em>belts</em> and people have been trying to find ways to replace those with fully 3d printable parts: here is my contribution in the form of an <strong><em><a href="http://www.openscad.org/">OpenScad</a></em></strong> script to generate modular and parametric racks .</p>
 <h2 id="credit-where-credit-is-due-">Credit where credit is due :</h2>
-<p>Let me begin by saying that i would not have been able to do this  without  the fantastic work by Forrest Higgs  as explained in his articles:</p>
+<p>Let me begin by saying that i would not have been able to do this  without  the fantastic work by Forrest Higgs  as explained in his articles:</p>
 <ul>
 <li><a href="http://technocraticanarchist.blogspot.com/2010/01/high-speed-alternative-to-belts.html">http://technocraticanarchist.blogspot.com/2010/01/high-speed-alternative-to-belts.html</a></li>
 <li><a href="http://blog.reprap.org/2010/01/high-speed-alternative-to-belts.html">http://blog.reprap.org/2010/01/high-speed-alternative-to-belts.html</a></li>
 <li><a href="http://technocraticanarchist.blogspot.com/2010_10_01_archive.html">http://technocraticanarchist.blogspot.com/2010_10_01_archive.html</a></li>
 </ul>
-<p>and the equaly awesome work done  by _Peter:</p>
+<p>and the equaly awesome work done  by _Peter:</p>
 <ul>
 <li><a href="http://www.thingiverse.com/thing:3554">http://www.thingiverse.com/thing:3554</a></li>
 </ul>
-<p>and  <a href="http://reprap.org/wiki/Gears:Simultaneous_Meshing_with_Rack">this</a> article in  Reprap wiki as well as the Octave script for rack and pinion generation found here <a href="http://forums.reprap.org/read.php?1,51452,52099#msg-52099">http://forums.reprap.org/read.php?1,51452,52099#msg-52099</a></p>
+<p>and  <a href="http://reprap.org/wiki/Gears:Simultaneous_Meshing_with_Rack">this</a> article in  Reprap wiki as well as the Octave script for rack and pinion generation found here <a href="http://forums.reprap.org/read.php?1,51452,52099#msg-52099">http://forums.reprap.org/read.php?1,51452,52099#msg-52099</a></p>
 <h2 id="the-whys-and-hows">The whys and hows:</h2>
 <h3 id="why">Why:</h3>
 <ul>
-<li>When i mentioned the <em><strong>unavailability of belts</strong></em> i was not joking:  it was one of the reasons i went with the &quot;<strong><em>threaded rod&quot; approach</em></strong> for the Doboz Repstrap , unfortunately, that also means that my machine was <strong>way</strong> slower than it could have been, hence the horribly long print times.</li>
-<li>The availability of such printable alternates is <strong><em>absolutely crucial</em></strong> to the spread of reprap style printers: if you can&#39;t event get your hands on the most essential mechanical parts , and you can&#39;t even ask anyone in the world to print it, it is a big no no</li>
+<li>When i mentioned the <em><strong>unavailability of belts</strong>_ i was not joking:  it was one of the reasons i went with the &quot;**_threaded rod&quot; approach</em>** for the Doboz Repstrap , unfortunately, that also means that my machine was <strong>way</strong> slower than it could have been, hence the horribly long print times.</li>
+<li>The availability of such printable alternates is <strong><em>absolutely crucial</em></strong> to the spread of reprap style printers: if you can&#39;t event get your hands on the most essential mechanical parts , and you can&#39;t even ask anyone in the world to print it, it is a big no no</li>
 <li>Also, i must confess,i find working, 3d printed mechanical parts plain cool, and a good showcase of the abilities of Repraps/Repstraps :)</li>
 </ul>
 <h3 id="how">How:</h3>
 <ul>
-<li><strong>Modularity:</strong> was essential since there are quite a few variations of repraps, and having the length of the rack be variable meant easier experimentation , and also made sure that it can be assembled with other elements to build more lengthy  railings . Also , withouth modularity it would be impossible to print, as the typical length of such racks is <strong>more</strong> than the maximum printable length on most machines: in my case i could have the necessary size for the y axis by printing two 13cm rack/rails</li>
+<li><strong>Modularity:</strong> was essential since there are quite a few variations of repraps, and having the length of the rack be variable meant easier experimentation , and also made sure that it can be assembled with other elements to build more lengthy  railings . Also , withouth modularity it would be impossible to print, as the typical length of such racks is <strong>more</strong> than the maximum printable length on most machines: in my case i could have the necessary size for the y axis by printing two 13cm rack/rails</li>
 </ul>
 <p>Here is a small (5cm) rack module: <img src="./assets/imag1365_5282903804_o.jpg" alt=""></p>
 <p>And the bigger one (13 cm):<img src="./assets/imag1368_5282303061_o.jpg" alt=""></p>
 <ul>
 <li><p><strong>Parametric</strong><em>:</em> there is a trend in making more and more Reprap parts parametric (ie: you can change the design of an object to suit your needs, just by altering a few parameters) and for a reason : it makes it more adaptable to different cases, design variation, machine sizes etc</p>
 </li>
-<li><p>One of my additional constraints was that it should easily integrate with the current structure/general assembly of a &quot;Mendel&quot; Reprap: hence the decision to have these racks be mountable on threaded rods, and attachable to the frame in the same way the smooth rods currently are.</p>
+<li><p>One of my additional constraints was that it should easily integrate with the current structure/general assembly of a &quot;Mendel&quot; Reprap: hence the decision to have these racks be mountable on threaded rods, and attachable to the frame in the same way the smooth rods currently are.</p>
 </li>
 </ul>
 <p>In this screecap you can clearly see the central hole , for mounting <img src="./assets/rack_5410345390_o.png" alt=""></p>
-<p>And in  the following picture you can see the printed version in place on a Huxley:<img src="./assets/imag1379_5318056299_o.jpg" alt=""></p>
+<p>And in  the following picture you can see the printed version in place on a Huxley:<img src="./assets/imag1379_5318056299_o.jpg" alt=""></p>
 <ul>
-<li>But wait, there&#39;s <strong>more</strong> ! While not immediately clear, the rack is also meant to act as a rail and replace the smooth rods as &quot;rolling surface&quot; based on a similar approach to this one :<a href="http://www.thingiverse.com/thing:3554">http://www.thingiverse.com/thing:3554</a></li>
+<li>But wait, there&#39;s <strong>more</strong> ! While not immediately clear, the rack is also meant to act as a rail and replace the smooth rods as &quot;rolling surface&quot; based on a similar approach to this one :<a href="http://www.thingiverse.com/thing:3554">http://www.thingiverse.com/thing:3554</a></li>
 </ul>
 <h3 id="script-download--explanation-and-future-work">Script download , explanation and future work:</h3>
 <ul>
-<li>For the gears themselves i used this very nice script: <a href="http://www.thingiverse.com/thing:3575">http://www.thingiverse.com/thing:3575</a></li>
-<li>It is actually my first open scad script,  and its still in the very early stages , so sorry if it is not quite clean yet!</li>
+<li>For the gears themselves i used this very nice script: <a href="http://www.thingiverse.com/thing:3575">http://www.thingiverse.com/thing:3575</a></li>
+<li>It is actually my first open scad script,  and its still in the very early stages , so sorry if it is not quite clean yet!</li>
 <li>You can find the instructions in the Openscad files available below.</li>
 <li>Things i planned:<ul>
 <li>i will be adding a version of &quot;herringbone&quot; racks .</li>

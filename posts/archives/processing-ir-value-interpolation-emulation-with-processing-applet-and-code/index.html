@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -46,7 +46,7 @@
 <p>You can adjust the interpolation precision as well as the lower and higher thresholds.</p>
 <p>You can try out the applet and download the source code after the break</p>
 <p>Why is there &quot;Emulation&quot; in the title ?</p>
-<p>-simply because i am emulating the touch of a finger with the mouse and the resulting values of ir intensity,  in a quite limited way with interpolation as well: the precision here is not high as it would actually be, and lot of adjustments and modifications need to be made still.</p>
+<p>-simply because i am emulating the touch of a finger with the mouse and the resulting values of ir intensity,  in a quite limited way with interpolation as well: the precision here is not high as it would actually be, and lot of adjustments and modifications need to be made still.</p>
 <p>The grid is the estimated size i will need for the 16&quot; asus screen.</p>
 <p><img src="./assets/loading.gif" alt=""></p>
 <p><strong>Source code:</strong> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/ir_interpolation_emulation_0_01.pde">ir_interpolation_inverted_0_01</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/grid.pde">grid (most important stuff is here)</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/keyboard.pde">keyboard</a> <a href="http://www.kaosat.net/applets/ir_interpolation_emulation_0_01/mouse.pde">mouse</a></p>
@@ -109,16 +109,18 @@ KeyboardMgr keyboardMgr;//keyboardmanager</p>
 <p>  public void init()
   {
     bigSamples=new float[gridHeight][];</p>
-<pre><code><span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i5)
+<pre><code>for(int i=0;i5)
     {
-       bigSamples\[i\]\[j\]=random(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>); <span class="hljs-comment">//don't mind this , it's from a previous test</span>
+       bigSamples<span class="hljs-symbol">\[</span>i<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>j<span class="hljs-symbol">\]</span>=random(0,1); //don&#x27;t mind this , it&#x27;s from a previous test
     }
-    <span class="hljs-keyword">else</span>
+    else
     {
-       bigSamples\[i\]\[j\]=<span class="hljs-number">0</span>;
+       bigSamples<span class="hljs-symbol">\[</span>i<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>j<span class="hljs-symbol">\]</span>=0;
     }
   }
-}</code></pre><p>  }</p>
+}
+</code></pre>
+<p>  }</p>
 <p>  //function for bilinear interpolation
   public float interpolate_bilinear(PVector interpolated, float upperLeft, float upperRight, float lowerRight, float lowerLeft)
   {
@@ -130,28 +132,32 @@ KeyboardMgr keyboardMgr;//keyboardmanager</p>
       {
         result=1;
       }</p>
-<pre><code><span class="hljs-built_in">  return</span> <span class="hljs-literal">result</span>;</code></pre><p>  }</p>
+<pre><code><span class="hljs-built_in">  return</span> <span class="hljs-literal">result</span>;
+</code></pre>
+<p>  }</p>
 <p>  public void draw()
   {</p>
-<pre><code><span class="hljs-built_in">float</span> spacing=(<span class="hljs-built_in">float</span>)(<span class="hljs-number">1</span>/<span class="hljs-built_in">float</span>(samples));
-<span class="hljs-built_in">float</span> x=<span class="hljs-number">0</span>;
-<span class="hljs-built_in">float</span> y=<span class="hljs-number">0</span>;
+<pre><code>float spacing=(float)(1/float(samples));
+float <span class="hljs-attribute">x</span>=0;
+float <span class="hljs-attribute">y</span>=0;
 
-<span class="hljs-built_in">float</span> sX=<span class="hljs-number">0</span>;
-<span class="hljs-built_in">float</span> sY=<span class="hljs-number">0</span>;
+float <span class="hljs-attribute">sX</span>=0;
+float <span class="hljs-attribute">sY</span>=0;
 
-<span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> u=<span class="hljs-number">0</span>;u&lt;<span class="hljs-number">1</span>)
+<span class="hljs-keyword">for</span>(int <span class="hljs-attribute">u</span>=0;u&lt;1)
     {
-     lowThreshold+=<span class="hljs-number">0.01</span>;
+     lowThreshold+=0.01;
     }
  }
  <span class="hljs-keyword">else</span>
  {
-     <span class="hljs-keyword">if</span>(highThreshold+<span class="hljs-number">0.01</span>&lt;<span class="hljs-number">1</span>)
+     <span class="hljs-keyword">if</span>(highThreshold+0.01&lt;1)
     {
-     highThreshold+=<span class="hljs-number">0.01</span>;
+     highThreshold+=0.01;
     }
- }</code></pre><p>  }</p>
+ }
+</code></pre>
+<p>  }</p>
 <p>  public void decrease_threshold()
   {
     if(lowEditModeOn)
@@ -236,7 +242,9 @@ KeyboardMgr keyboardMgr;//keyboardmanager</p>
             bigSamples[i][j]-=0.01;
           } </p>
 <pre><code>  }
-}</code></pre><p>  }</p>
+}
+</code></pre>
+<p>  }</p>
 <p>}</p>
 
   </div>

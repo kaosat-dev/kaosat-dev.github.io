@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -40,7 +40,7 @@
   2011-01-15
  </span>
   <h1 id="hydroduinoreborn">HydroDuino...reborn!</h1>
-<p>This is when i realize i may be working on too many projects... A few months (ok a lot of months) ago i started rewriting from scratch and greatly expanded the HydroDuino project&#39;s software side, and had a working, if basic version,but completely lacking in modularity (basically it was a completely monolithic, tightly coupled app)  and hard to maintain and expand.</p>
+<p>This is when i realize i may be working on too many projects... A few months (ok a lot of months) ago i started rewriting from scratch and greatly expanded the HydroDuino project&#39;s software side, and had a working, if basic version,but completely lacking in modularity (basically it was a completely monolithic, tightly coupled app)  and hard to maintain and expand.</p>
 <p>So i started an almost complete rewrite based on what was working and what wasn&#39;t, aiming for a <strong>highly modular</strong>, yet <strong>lightweight</strong> system, and now things are progressing at full speed , so it was time for a &quot;public anouncement&quot; of the state of the project, since i still get quite a lot of emails of people wanting to use it/participate.</p>
 <h2 id="foreword">Foreword:</h2>
 <p>This article is meant to represent the current state of the project, and since its mean to be usable (hopefully) usable, and community driven, i would really apreciate <strong><em>any feedback</em></strong> ! If you think the whole thing, ore certain aspects of it are absurd, or unusable, or badly designed , or anything, don&#39;t hesitate to contact me or leave a comment!</p>
@@ -58,8 +58,8 @@
 <p><a href="./assets/general_structure_legend.jpg"><img src="./assets/general_structure_legend.jpg" alt="" title="general_structure_legend"></a></p>
 <p>(Hardware connector is the same here as hardware node, for more explanation , see below in the &quot;Where it is headed&quot; part)</p>
 <ul>
-<li>each <strong>environment</strong> is kept as separate as possible to avoid the problems of one of them affecting all of them : so each environment has its own <strong>sqllite db</strong> , its own scheduler(s), data access system etc</li>
-<li>currently all the <strong>sensors</strong> are within their parent &quot;<strong>HardwareNode</strong>&quot; object and have a rather strong coupling with it : for example for an Arduino and its sensors, there is a &quot;ArduinoNode&quot; which is a child class of the general node class, that manages the connection to the arduino via serial  etc</li>
+<li>each <strong>environment</strong> is kept as separate as possible to avoid the problems of one of them affecting all of them : so each environment has its own <strong>sqllite db</strong> , its own scheduler(s), data access system etc</li>
+<li>currently all the <strong>sensors</strong> are within their parent &quot;<strong>HardwareNode</strong>&quot; object and have a rather strong coupling with it : for example for an Arduino and its sensors, there is a &quot;ArduinoNode&quot; which is a child class of the general node class, that manages the connection to the arduino via serial  etc</li>
 <li>the arduino side software is now a library + main code that alows the system (and you) to reconfigure the different ports, set triggers and automation etc</li>
 </ul>
 <h3 id="plugin-based-system">Plugin based system:</h3>
@@ -70,7 +70,7 @@
 <li>anyone can easilly add support for different type of hardware : ie Phydgets, Webcams etc with very little work , then just drag and drop the new code into the hardware plugins&#39; directory and then be able to use this new hardware through the generic interface</li>
 </ul>
 <h5 id="converters">Converters:</h5>
-<p>if , like many people , you have been tinkering around with Arduinos, electronics , sensors etc, you know that it is not always easy to read through a specific sensor&#39;s technical sheet to be able to <em>convert</em> <strong>raw</strong> analog/digital values <em><strong>into</strong></em> <strong>usable data.</strong> Well the &quot;converter&quot; type plugins are there to make life easier : they will be a user generated, shared library of conversion functions, so that once someone has figured out a good <strong>conversion formula</strong> for a specific type of sensor, anybody else can just use that code <strong>automatically</strong>!  When you add a new sensor , just set its model name (the name of the actual physical sensor) , and if that converter exists, it will automatically be used when retrieving the data.</p>
+<p>if , like many people , you have been tinkering around with Arduinos, electronics , sensors etc, you know that it is not always easy to read through a specific sensor&#39;s technical sheet to be able to <em>convert</em> <strong>raw</strong> analog/digital values _<strong>into</strong>_ <strong>usable data.</strong> Well the &quot;converter&quot; type plugins are there to make life easier : they will be a user generated, shared library of conversion functions, so that once someone has figured out a good <strong>conversion formula</strong> for a specific type of sensor, anybody else can just use that code <strong>automatically</strong>!  When you add a new sensor , just set its model name (the name of the actual physical sensor) , and if that converter exists, it will automatically be used when retrieving the data.</p>
 <h3 id="automation">Automation:</h3>
 <ul>
 <li>Schedules: you can set when you want to retrieve the information from a specific sensor, or when and how often you want a pump/motor/lamp whatever to run</li>
@@ -80,7 +80,7 @@
 <h3 id="lightweight">Lightweight:</h3>
 <ul>
 <li>Even if it does complicate things a bit, the external dependencies of the python code are kept to a strict minimum, and i generally avoid big &quot;framework&quot; type dependencies (ie, no Django , etc required)</li>
-<li>Small memory usage: the tests i have done for now of what an average user might use/have, generally come with a l<strong><em>ess than 4 Mb</em></strong> memory consumption, although this is not set in stone, as the software is still not as feature rich as i would like, and in a pre-alpha stage.</li>
+<li>Small memory usage: the tests i have done for now of what an average user might use/have, generally come with a l**<em>ess than 4 Mb</em>** memory consumption, although this is not set in stone, as the software is still not as feature rich as i would like, and in a pre-alpha stage.</li>
 </ul>
 <h2 id="where-it-is-headed">Where it is headed</h2>
 <p>While a lot of these features are currently implemented, and the general structure and how it works is much cleaner than before , it is far from finished, and in constant evolution (but getting there). These are a few of the problems i am facing:</p>
@@ -95,14 +95,14 @@
 <h4 id="to-depend-or-not-to-depend">To depend or not to depend:</h4>
 <p>Since i want to keep things lightweight , i am always a bit reluctant to add additional dependencies on other python packages/libraries/frameworks, but always reinventing the wheel is not a viable option either! This applies to :</p>
 <ul>
-<li><strong>ORM</strong> : (object relationship mapping): i have given small test runs off different Python Orm (<a href="http://autumn-orm.org/">Autumn</a>, <a href="https://storm.canonical.com/">Storm</a> ,<a href="http://www.sqlalchemy.org/">SqlAlchemy</a> etc) but haven&#39;t found something lightweight enough , and that doesn&#39;t require to change class hierarchies (i especially like SQlAlchemy&#39;s approach though) (having to change the base class of an object is a big no no , because of the too tight coupling, but i ain&#39;t 100% sure yet) but i will write more on this in another article</li>
-<li><strong>Wsgi /web server</strong>: this is one area where python definitely offers <strong><em>too much</em></strong> choice ! In the previous version, i was using <strong><a href="http://bottle.paws.de/docs/dev/index.html">Bottle</a></strong> a very nice &quot;micro framework&quot; , that is only <strong><em>one</em></strong> file ! But i am still looking around to find the right thing, and in the current version i just have a minimal , pure wsgi code without external framework , for the &quot;<strong><em>WSGI interface</em></strong>&quot;  part (see the different drawings ) that sort of &quot;publishes&quot; the different public functions of the Environment manager to make them accessible via http</li>
+<li><strong>ORM</strong> : (object relationship mapping): i have given small test runs off different Python Orm (<a href="http://autumn-orm.org/">Autumn</a>, <a href="https://storm.canonical.com/">Storm</a> ,<a href="http://www.sqlalchemy.org/">SqlAlchemy</a> etc) but haven&#39;t found something lightweight enough , and that doesn&#39;t require to change class hierarchies (i especially like SQlAlchemy&#39;s approach though) (having to change the base class of an object is a big no no , because of the too tight coupling, but i ain&#39;t 100% sure yet) but i will write more on this in another article</li>
+<li><strong>Wsgi /web server</strong>: this is one area where python definitely offers <strong><em>too much</em></strong> choice ! In the previous version, i was using <strong><a href="http://bottle.paws.de/docs/dev/index.html">Bottle</a></strong> a very nice &quot;micro framework&quot; , that is only <strong><em>one</em></strong> file ! But i am still looking around to find the right thing, and in the current version i just have a minimal , pure wsgi code without external framework , for the &quot;<strong><em>WSGI interface</em></strong>&quot;  part (see the different drawings ) that sort of &quot;publishes&quot; the different public functions of the Environment manager to make them accessible via http</li>
 </ul>
 <h4 id="general-structure-changes">General structure changes:</h4>
-<p>While coding and testing the different aspects of the system i realized, that, while being a nice &quot;functionality bag&quot; /black box to work with,  the <strong>HardwareNode</strong> structures are far from perfect:</p>
+<p>While coding and testing the different aspects of the system i realized, that, while being a nice &quot;functionality bag&quot; /black box to work with,  the <strong>HardwareNode</strong> structures are far from perfect:</p>
 <ul>
-<li>it makes sense for the sensors of an Arduino to be &quot;inside&quot; a software abstraction of it (the <em><strong>ArduinoNode</strong></em>) : the list of sensors is actually stored inside of the the ArduinoNode data structure , and there are methods to access the sensors by type, by id , etc  .</li>
-<li>but it does not make sense for a webcam for example : what would the node be ?  what would the sensor be ? In this cas there is actually not really any difference between the node and sensor, and its just confusing</li>
+<li>it makes sense for the sensors of an Arduino to be &quot;inside&quot; a software abstraction of it (the <em><strong>ArduinoNode</strong></em>) : the list of sensors is actually stored inside of the the ArduinoNode data structure , and there are methods to access the sensors by type, by id , etc  .</li>
+<li>but it does not make sense for a webcam for example : what would the node be ?  what would the sensor be ? In this cas there is actually not really any difference between the node and sensor, and its just confusing</li>
 </ul>
 <p>So i might alter the general structure somewhat :</p>
 <ul>

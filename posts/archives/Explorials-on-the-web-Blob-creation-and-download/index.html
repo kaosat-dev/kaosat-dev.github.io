@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -41,30 +41,30 @@
  </span>
   <h1 id="explorials-on-the-web-blob-creation-and-download">Explorials: on the web: Blob creation and download</h1>
 <p>: Benchmarking Twisted + Reprap interactions (1) </p>
-<p>To kick of 2012 with some meaty bits of code and tech ,  I will be writing a series of articles about my exploration /musings of Python as used in my various geeky projects.</p>
+<p>To kick of 2012 with some meaty bits of code and tech ,  I will be writing a series of articles about my exploration /musings of Python as used in my various geeky projects.</p>
 <p>So without further ado, here is the first one!</p>
 <h3 id="foreword">Foreword:</h3>
-<p>I have recently resume work on my &quot;Pollapli&quot; project which is based on a Python Twisted backend to manage multiple *<em>Repraps *</em>/ Arduino based devices (amongst other things), so this article will go into details on the results I am getting for the part of the system in charge of parsing and sending gcode files .</p>
+<p>I have recently resume work on my &quot;Pollapli&quot; project which is based on a Python Twisted backend to manage multiple **Repraps **/ Arduino based devices (amongst other things), so this article will go into details on the results I am getting for the part of the system in charge of parsing and sending gcode files .</p>
 <ul>
 <li><p>The base assumption is the use of the current &quot;5d&quot; or simimar protocol for communication with reprap machines</p>
 </li>
 <li><p>A second key element is that I have <strong>willingly</strong> sacrificed a bit of performance by not using simple &quot;pass-through&quot; handling of commands:</p>
 </li>
-<li><p>The 5d protocol is not really one: it just uses text based, relatively inneficient (but human readable)  gcode commands</p>
+<li><p>The 5d protocol is not really one: it just uses text based, relatively inneficient (but human readable)  gcode commands</p>
 </li>
 <li><p>Gcode is prevalent today for Repraps , but that might not always be the case , so by introducing an intermediate level, the code will remain future proof : the print_task already has the option of choosing different kind of input files and therefore, parsers, and the <em><strong>protocols/drivers combo</strong></em> in Pollapli will be in charge of converting the commands represented as Python objects to the specific needs of the different hardware (Repraps, Makerbots etc)</p>
 </li>
-<li><p>This particular article will deal with the &quot;<strong>reprap_print_task</strong>&quot; and its subsidiaries : this is a small task in charge of parsing Gcode command files.  Ie:</p>
+<li><p>This particular article will deal with the &quot;<strong>reprap_print_task</strong>&quot; and its subsidiaries : this is a small task in charge of parsing Gcode command files.  Ie:</p>
 </li>
-<li><p>parsing one command ( a line in the gcode file) into a python datastructure/class</p>
+<li><p> parsing one command ( a line in the gcode file) into a python datastructure/class</p>
 </li>
-<li><p>sending that parsed  command  to the device and getting its result</p>
+<li><p> sending that parsed  command  to the device and getting its result</p>
 </li>
-<li><p>moving on to the next command</p>
+<li><p> moving on to the next command</p>
 </li>
 <li><p>The tests are run with a mock device class instead of going through a real &quot;driver-&gt;serial connection-&gt;hardware&quot; pipe to get a better idea of the performance of the task system itself</p>
 </li>
-<li><p>To simulate the latency of the driver/hardware communication,  the mock_device class has a <em><strong>command_delay</strong></em> parameter that leverages Twisted&#39;s deferreds , and notably the deferLater method.</p>
+<li><p>To simulate the latency of the driver/hardware communication,  the mock_device class has a <em><strong>command_delay</strong></em> parameter that leverages Twisted&#39;s deferreds , and notably the deferLater method.</p>
 </li>
 </ul>
 <h3 id="what-is-the-purpose-of-all-this-">What is the purpose of all this ?</h3>
@@ -73,10 +73,10 @@
 <p>After a major refactoring of the &quot;<strong>reprap_print_task&quot;</strong>: I ran a series of tests on different machines and platforms to check for potential bottlenecks and issues:</p>
 <ul>
 <li>Without any latency (<em><strong>command_delay=0</strong></em>) the bottleneck resides in the efficiency (or lack thereof) of the run method that parses, sends , and waits for commands</li>
-<li>With a latency of <em>0.008s</em> (a guestimate of the back and forth of commands via the usb serial communication + some processing extra) , the execution time per task becomes <em><strong>constant</strong></em> !
+<li>With a latency of <em>0.008s</em> (a guestimate of the back and forth of commands via the usb serial communication + some processing extra) , the execution time per task becomes <em><strong>constant</strong></em> !
 t would be criminal not to change things, criminal not to fight, criminal to throw optimism aside</li>
 </ul>
-<h2 id="recommended-movies-videos--books-">Recommended movies, videos , books :</h2>
+<h2 id="recommended-movies-videos--books-">Recommended movies, videos , books :</h2>
 <p>Here is a short list of favorites, if you ever need to boost your morale, and outlook on the future :</p>
 <p>- The Mars Underground</p>
 <p>- Symphony of science</p>

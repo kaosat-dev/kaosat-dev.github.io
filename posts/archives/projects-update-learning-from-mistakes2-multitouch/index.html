@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -62,12 +62,12 @@
 <li>i used the op amps ability to both amplify the signal AND work as a subtraction operator : so basically i have an additional photodiode that samples the ambient IR inside the &quot;box&quot; and then subtracts the difference between the value at the current sensor, and the ambient IR, before amplifying the result: this enables the next point.</li>
 <li>since i can now have a sufficiently strong signal even with the LCD matrix on TOP of the endlighten, it can be used both as backlight AND IR Diffuser!</li>
 <li>a big problem i have is still the costs of manufacturing the whole printed circuits and the cost of components : well &quot;costly&quot; is very relative of course, but i think i will go through one or two additional prototyping phases before i invest in a final design</li>
-<li>in the meantime, since the ir diffusion/backlight/lcd matrix section is functionally separate from the IR sensors themselves, i might use a standard webcam based solution to be able to start writing some software: only problem is , i am not sure i will be able to use the same kind of  &quot;subtraction-then-amplification&quot; method i explained above , so this will require testing as well.</li>
-<li>i have also started designing schematics for a &quot;two level&quot; system for the ir Photodiode density : the boards would allow for two configurations , without the need for rewiring :  in the &quot;cheaper&quot; configuration there would only be 1/2 of the photodiodes (cutting costs in half at least),  but it will be possible to double the resolution by adding more photodiodes to the same board,  when budget allows it :)</li>
+<li>in the meantime, since the ir diffusion/backlight/lcd matrix section is functionally separate from the IR sensors themselves, i might use a standard webcam based solution to be able to start writing some software: only problem is , i am not sure i will be able to use the same kind of  &quot;subtraction-then-amplification&quot; method i explained above , so this will require testing as well.</li>
+<li>i have also started designing schematics for a &quot;two level&quot; system for the ir Photodiode density : the boards would allow for two configurations , without the need for rewiring :  in the &quot;cheaper&quot; configuration there would only be 1/2 of the photodiodes (cutting costs in half at least),  but it will be possible to double the resolution by adding more photodiodes to the same board,  when budget allows it :)</li>
 </ul>
 <h2 id="software-side">Software side</h2>
 <ul>
-<li>you may have spotted, in one of the previous articles , the fact that i am currently learning Python, oh and i happen to absolutely love it ! So, as soon as i can,  i will probably write some multitouch applications using <a href="http://pymt.txzone.net/">PyMT</a></li>
+<li>you may have spotted, in one of the previous articles , the fact that i am currently learning Python, oh and i happen to absolutely love it ! So, as soon as i can,  i will probably write some multitouch applications using <a href="http://pymt.txzone.net/">PyMT</a></li>
 <li>I am still torn on whether it will be possible to interpolate the values</li>
 </ul>
 <p>As a bonus : here is a small schematic explaining how the endlighten works as backlight aswell as IR diffuser:</p>

@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -43,25 +43,23 @@
 <h2 id="the-basics">The basics</h2>
 <p>So we now have <em>native</em> es-modules in <a href="https://caniuse.com/#search=module">most of the major browsers</a></p>
 <p>This means you can do things like </p>
-<pre><code class="language-javascript">import {foo} from <span class="hljs-string">'./bar.js'</span>
+<pre><code class="language-javascript">import {foo} from <span class="hljs-string">&#x27;./bar.js&#x27;</span>
 
 <span class="hljs-function"><span class="hljs-title">foo</span><span class="hljs-params">()</span></span>
 </code></pre>
 <p>The above means that you have a file called &#39;bar.js&#39; at a relative path from where you are doing the import.</p>
 <p>so something like:</p>
 <ul>
-<li>index.html <ul>
+<li>index.html </li>
 <li>index.js</li>
 <li>bar.js </li>
-</ul>
-</li>
 </ul>
 <p>Which implies that your modules are sitting somewhere on your server, having a nice and cosy time.</p>
 <p>But what if you actually need to load &#39;virtual&#39; (usually user created) modules on the fly ? 
 with the following requirements:</p>
 <ul>
 <li>you have a text/js editor in your page</li>
-<li>you want to enable your users to create their own modules and import from other modules, in a <strong><em>purely client side way</em></strong> , without <strong><em>any</em></strong> special server side setup</li>
+<li>you want to enable your users to create their own modules and import from other modules, in a <em><strong>purely client side way</strong></em> , without <em><strong>any</strong></em> special server side setup</li>
 </ul>
 <blockquote>
 <p>Note: this are our barebone requirements for OpenJscad, as users can drag &amp; drop files from desktop, or edit design code directly in the browser, with no special tooling other than the most basic http server</p>
@@ -89,51 +87,53 @@ with the following requirements:</p>
 <h3 id="code">Code</h3>
 <p>More in depth, it looks something like this:</p>
 <p>In your root index.js: </p>
-<pre><code class="language-javascipt">const sendMessageToSW = msg =&gt; {
-  return new Promise( (resolve, reject) =&gt; {
+<pre><code class="language-javascipt">const sendMessageToSW =<span class="hljs-function"> <span class="hljs-params">msg</span> =&gt;</span> {
+  return <span class="hljs-keyword">new</span> <span class="hljs-constructor">Promise( (<span class="hljs-params">resolve</span>, <span class="hljs-params">reject</span>)</span> =&gt; {
     <span class="hljs-comment">// Create a Message Channel</span>
-    const msg_chan = new MessageChannel()
+    const msg_chan = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MessageChannel()</span>
 
     <span class="hljs-comment">// Handler for recieving message reply from service worker</span>
-    msg_chan<span class="hljs-selector-class">.port1</span><span class="hljs-selector-class">.onmessage</span> =  event =&gt; {
-      <span class="hljs-keyword">if</span> (event<span class="hljs-selector-class">.data</span><span class="hljs-selector-class">.error</span>) {
-        reject(event<span class="hljs-selector-class">.data</span><span class="hljs-selector-class">.error</span>)
+    msg_chan.port1.onmessage = <span class="hljs-function"> <span class="hljs-params">event</span> =&gt;</span> {
+      <span class="hljs-keyword">if</span> (event.data.error) {
+        reject(event.data.error)
       } <span class="hljs-keyword">else</span> {
         resolve(event.data)
       }
     }
     <span class="hljs-comment">// Send message to service worker along with port for reply</span>
-    navigator<span class="hljs-selector-class">.serviceWorker</span><span class="hljs-selector-class">.controller</span><span class="hljs-selector-class">.postMessage</span>(msg, [msg_chan.port2])
+    navigator.serviceWorker.controller.post<span class="hljs-constructor">Message(<span class="hljs-params">msg</span>, [<span class="hljs-params">msg_chan</span>.<span class="hljs-params">port2</span>])</span>
   })
-}</code></pre>
+}
+</code></pre>
 <p>And in the service worker:</p>
 <p>Handle the messages that set the <strong>content</strong> and <strong>uris</strong> for our &#39;virtual&#39; modules
 See <a href="http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html">here</a> for a good
 article on service worker messenging</p>
-<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">'message'</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span></span> (event) {
-  <span class="hljs-keyword">if</span> (event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> &amp;&amp; event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> === <span class="hljs-string">'reset'</span>) {
+<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">&#x27;message&#x27;</span>, async function (event) {
+  <span class="hljs-keyword">if</span> (event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> &amp;&amp; event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span> === <span class="hljs-string">&#x27;reset&#x27;</span>) {
     modules = { ...builtIns }
   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span>) {
     modules[event.<span class="hljs-keyword">data</span>.<span class="hljs-keyword">name</span>] = event.<span class="hljs-keyword">data</span>.source
   }
-})</code></pre>
+})
+</code></pre>
 <p>and handle the fetch requests:</p>
 <blockquote>
 <p>we are using a prefix to distinguish between the &#39;normal&#39; modules to fetch (actual files that exists on the server) modules and the virtual ones</p>
 </blockquote>
-<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">'fetch'</span>, (event) =&gt; {
-  <span class="hljs-keyword">const</span> <span class="hljs-built_in">url</span> = event.request.url
-  <span class="hljs-keyword">let</span> path = <span class="hljs-built_in">url</span>.replace(<span class="hljs-string">'http://localhost:8080/zborg/'</span>, <span class="hljs-string">''</span>).replace(<span class="hljs-string">'http://localhost:8080/'</span>, <span class="hljs-string">''</span>)
-  <span class="hljs-keyword">const</span> ext = path.split(<span class="hljs-string">'.'</span>).pop()
-  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">url</span>.includes(<span class="hljs-string">'--dynamic--'</span>) || <span class="hljs-built_in">url</span>.includes(<span class="hljs-string">'/@jscad'</span>)) {
+<pre><code class="language-javascript">self.addEventListener(<span class="hljs-string">&#x27;fetch&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> url = event.request.url
+  <span class="hljs-keyword">let</span> path = url.replace(<span class="hljs-string">&#x27;http://localhost:8080/zborg/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;http://localhost:8080/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)
+  <span class="hljs-keyword">const</span> ext = path.split(<span class="hljs-string">&#x27;.&#x27;</span>).pop()
+  <span class="hljs-keyword">if</span> (url.includes(<span class="hljs-string">&#x27;--dynamic--&#x27;</span>) || url.includes(<span class="hljs-string">&#x27;/@jscad&#x27;</span>)) {
     <span class="hljs-keyword">const</span> <span class="hljs-built_in">module</span> = modules[path]
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'loading module'</span>, path, <span class="hljs-built_in">module</span>)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;loading module&#x27;</span>, path, <span class="hljs-built_in">module</span>)
     event.respondWith(
-      <span class="hljs-keyword">new</span> Promise((resolve, reject) =&gt; {
+      <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
         <span class="hljs-keyword">const</span> headers = <span class="hljs-keyword">new</span> Headers({
-          <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/javascript'</span>,
-          <span class="hljs-string">'Cache-Control'</span>: <span class="hljs-string">'no-store'</span>, <span class="hljs-comment">// 'no-cache', // attempt at forced invalidation</span>
-          <span class="hljs-string">'Expires'</span>: <span class="hljs-string">'Wed, 21 Oct 2015 07:28:00 GMT'</span> <span class="hljs-comment">// same</span>
+          <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;application/javascript&#x27;</span>,
+          <span class="hljs-string">&#x27;Cache-Control&#x27;</span>: <span class="hljs-string">&#x27;no-store&#x27;</span>, <span class="hljs-comment">// &#x27;no-cache&#x27;, // attempt at forced invalidation</span>
+          <span class="hljs-string">&#x27;Expires&#x27;</span>: <span class="hljs-string">&#x27;Wed, 21 Oct 2015 07:28:00 GMT&#x27;</span> <span class="hljs-comment">// same</span>
         })
         resolve(<span class="hljs-keyword">new</span> Response(<span class="hljs-built_in">module</span>, { headers }))
       })
@@ -145,14 +145,14 @@ article on service worker messenging</p>
 <p>Of course, it would have been too good to be true (by that I mean, hours of trying to figure out what is wrong and having an urge to forget about this for the next few months)
 it turns out it does not <em>quite</em> work the way I hoped</p>
 <ul>
-<li>once the file is loaded <strong><em>once</em></strong>, even if you make changes to the virtual module&#39;s code, the <strong>fetch</strong> call never gets triggered again</li>
-<li>I tried every possible combo I could think of to solve that issue:<ul>
+<li>once the file is loaded <em><strong>once</strong></em>, even if you make changes to the virtual module&#39;s code, the <strong>fetch</strong> call never gets triggered again</li>
+<li>I tried every possible combo I could think of to solve that issue:</li>
+</ul>
+<ul>
 <li>no cache headers</li>
 <li>various server settings </li>
 <li>destroying and recreating the worker
 I need to revisit &amp; solve this soon, as it makes the solution quite limited for truely dynamic/ changing code</li>
-</ul>
-</li>
 </ul>
 <h2 id="limitations">Limitations</h2>
 <p>You currently <strong>cannot</strong> use es modules <em>FROM</em> Web workers: ie <code>javascript  let worker = new Worker(&quot;worker.js&quot;, { type: &quot;module&quot; });</code>

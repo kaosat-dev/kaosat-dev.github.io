@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -45,7 +45,7 @@
 <ul>
 <li>Every print, but in particular all those containing <strong>circular elements</strong> (very visible on this variant of Wade&#39;s extuder gear by NopHead) would be progressivelly offset on the x axis, and the problem was actually getting worse ! <img src="./assets/imag1215_5225689935_o.jpg" alt=""></li>
 <li>Also , when looking back at one earlier print failure i had on a bigger gear, the problem might actually have already been present, since the <strong>only</strong> part that was offset on the x axis was the circular attachment at the top: <img src="./assets/imag1127_5189781538_o.jpg" alt=""></li>
-<li>Giving the extreme slowness of my machine (maximum speed of <strong>2.4mm/s</strong> which is about <strong>20 times less</strong> than a Reprap, but more on that in another post) , this kind of problem is really bad, since printing takes a lot of time, and the slanting problem is only really visible and can be confirmed after around 5-10 layers .</li>
+<li>Giving the extreme slowness of my machine (maximum speed of <strong>2.4mm/s</strong> which is about <strong>20 times less</strong> than a Reprap, but more on that in another post) , this kind of problem is really bad, since printing takes a lot of time, and the slanting problem is only really visible and can be confirmed after around 5-10 layers .</li>
 </ul>
 <h2 id="methodology">Methodology:</h2>
 <h3 id="1-is-it-a-mechanical-problem">1. Is it a mechanical problem?</h3>
@@ -53,17 +53,17 @@
 <p><img src="./assets/imag1201_5252245485_o.jpg" alt=""></p>
 <ul>
 <li><strong>Diagnosis</strong>: Earlier in the machine&#39;s testing phase i have had problem with the whole <strong>X/Z assembly</strong> becoming <strong>slanted</strong> , which affected the prints but certainly not in the way i was seeing now.</li>
-<li><strong>Solution</strong>: i switched the Z axis threaded rods with higher quality ones and redid the motor couplings, then i checked for any alignment problems with a laser pointer (crosshair generator) attached to the assembly: <img src="./assets/imag1207_5225688847_o.jpg" alt=""></li>
-<li><strong>Result</strong> : It reduced/ eliminated the slipping coupling issues of the Z axis,but the problem  <strong>remained</strong> !</li>
+<li><strong>Solution</strong>: i switched the Z axis threaded rods with higher quality ones and redid the motor couplings, then i checked for any alignment problems with a laser pointer (crosshair generator) attached to the assembly: <img src="./assets/imag1207_5225688847_o.jpg" alt=""></li>
+<li><strong>Result</strong> : It reduced/ eliminated the slipping coupling issues of the Z axis,but the problem  <strong>remained</strong> !</li>
 </ul>
 <h4 id="b--x-axis-platform">b- X axis platform:</h4>
 <ul>
-<li><strong>Diagnosis</strong>: During the many stages of mechanical adjustments to the extruder attachments, and due to some original misalignment of the screws holding the roller bearings  in place, the <strong>X axis platform</strong> had gotten <strong>slightly loose</strong> (the bearings not exerting correct pressure on the sliding rails), which i had fixed temporarily with .... subway tickets ... (forcing them between the platform and the rails reduced the wobble), so i thought the problem might be comming from there. Also , there was slightly <strong>more backlash on this axis</strong> then on the Y one, so that might have accounted for the problem too.</li>
-<li><strong>Solution</strong>: I disassembled the platform, re-drilled the holes for the bearing screws, improve and tightened the structure to reduce wobble and i added a <strong>second captive nut</strong> right next to the first one, to reduce the backlash.<img src="./assets/imag1204_5252854208_o.jpg" alt="">(the weird screw like things is a special positive/negative nut)</li>
+<li><strong>Diagnosis</strong>: During the many stages of mechanical adjustments to the extruder attachments, and due to some original misalignment of the screws holding the roller bearings  in place, the <strong>X axis platform</strong> had gotten <strong>slightly loose</strong> (the bearings not exerting correct pressure on the sliding rails), which i had fixed temporarily with .... subway tickets ... (forcing them between the platform and the rails reduced the wobble), so i thought the problem might be comming from there. Also , there was slightly <strong>more backlash on this axis</strong> then on the Y one, so that might have accounted for the problem too.</li>
+<li><strong>Solution</strong>: I disassembled the platform, re-drilled the holes for the bearing screws, improve and tightened the structure to reduce wobble and i added a <strong>second captive nut</strong> right next to the first one, to reduce the backlash.<img src="./assets/imag1204_5252854208_o.jpg" alt="">(the weird screw like things is a special positive/negative nut)</li>
 </ul>
 <p><img src="./assets/imag1206_5252246357_o.jpg" alt=""></p>
 <ul>
-<li><strong>Result</strong> :While it greatly improved the quality of each layer being printed (these adjustments were long overdue), the problem <strong>still remained</strong> !</li>
+<li><strong>Result</strong> :While it greatly improved the quality of each layer being printed (these adjustments were long overdue), the problem <strong>still remained</strong> !</li>
 </ul>
 <h3 id="2is-it-a-software-problem">2.Is it a software problem?</h3>
 <ul>
@@ -75,7 +75,7 @@
 <ul>
 <li>Diagnosis: I have had problems in the past every since i installed the new heated bed (which uses way too much power), so i wondered if it was &quot;gobbling&quot; up the power to the steppers, and causing a malfunction.</li>
 <li>Solution: Just to be sure, i did a few test prints without the heated bed, to see if things were any different..</li>
-<li>Result : Once again,  no change, the prints were <strong>still slanted</strong>!</li>
+<li>Result : Once again,  no change, the prints were <strong>still slanted</strong>!</li>
 </ul>
 <h2 id="the-answer">THE answer!</h2>
 <p>I didn&#39;t know any other thing to try, then a friend suggested simply swapping out the <strong>X-axis Pololu Stepper driver</strong> and that ...did the trick!! I was baffled, but i have been printing day and night ever since and have had <strong>NO</strong> problem at all !</p>

@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -41,7 +41,7 @@
  </span>
   <h1 id="doboz-web-reprap3d-scanner-remote-control-using-python-javascript-webgl">Doboz-Web: Reprap/3d scanner remote control using python, javascript, webgl</h1>
 <p><a href="./assets/DobozUi-scan2.jpg"><img src="./assets/DobozUi-scan2.jpg" alt="" title="DobozUi-scan2"></a></p>
-<p>Up until now, the home-brew interface i was using to interact with my repstrap machine was using PyGtk , but i have had a ton of problems with gtk, (segfaults etc), oh and the ui was not windows compatible ( making gtk play nice with other threads requires some changes to the rest of the code i frankly didn&#39;t like, but hey that is just my opinion), so i decided to change my repstrap control system to a server/client approach and go &quot;wild&quot; a bit!  Here are the results , after the break !</p>
+<p>Up until now, the home-brew interface i was using to interact with my repstrap machine was using PyGtk , but i have had a ton of problems with gtk, (segfaults etc), oh and the ui was not windows compatible ( making gtk play nice with other threads requires some changes to the rest of the code i frankly didn&#39;t like, but hey that is just my opinion), so i decided to change my repstrap control system to a server/client approach and go &quot;wild&quot; a bit!  Here are the results , after the break !</p>
 <h2 id="why-the-change">Why the change?</h2>
 <ul>
 <li>it allows to decouple the interface from the actual GCode sending process/printer control completely! No more failed prints because of some UI failure</li>
@@ -50,7 +50,7 @@
 <li>i also needed a way to integrate openGL graphics (optional) into the general interface, and with the amazing possibilities of <strong><em>WebGL</em></strong> for 3d content inside browser , it was a no-brainer (this will be used both to display the print progress aswell as the in-progress update to the 3d scanner )</li>
 <li>this is as multi-platform as it gets</li>
 <li>my other main project, the <a href="http://www.kaosat.net/?tag=hydroduino">Hydroduino</a> , already works on a similar basis : a central application core, <em><strong>accessible and controllable via http</strong></em></li>
-<li>Beyond the simple browser=&gt; server communication i also needed to get realtime <strong>feedback from the printer</strong> , to <strong>show print progress</strong>  , <strong>draw the latest axis movements</strong>  etc</li>
+<li>Beyond the simple browser=&gt; server communication i also needed to get realtime <strong>feedback from the printer</strong> , to <strong>show print progress</strong>  , <strong>draw the latest axis movements</strong>  etc</li>
 </ul>
 <h2 id="results">Results:</h2>
 <h4 id="implementation-details-server-">Implementation details: server :</h4>
@@ -67,7 +67,7 @@
 <ul>
 <li>most of the communication between the client and server goes through ajax requests</li>
 <li>you can upload gcode files to print directly, and <strong>enqueue</strong> a series of print tasks (this would be particularly useful for things like the <a href="http://blog.makerbot.com/2010/09/25/announcing-makerbots-new-3d-printer-the-thing-o-matic/">Thing-O-Matic</a> or any other 3d printer that allows continuous prints</li>
-<li>the 3d view is implemented in Webgl, and allows you to view , depending on whether you are printing or scanning, <em><strong>the movements of print head</strong></em> (based on the gcodes sent to the printer), or the <em><strong>point cloud data</strong></em> if you have just scanned an object:</li>
+<li>the 3d view is implemented in Webgl, and allows you to view , depending on whether you are printing or scanning, <em><strong>the movements of print head</strong>_ (based on the gcodes sent to the printer), or the _<strong>point cloud data</strong></em> if you have just scanned an object:</li>
 </ul>
 <p><strong>Printing</strong>: showing the movements of the print head (start)</p>
 <p><a href="./assets/DobozUi-print.jpg"><img src="./assets/DobozUi-print.jpg" alt="" title="DobozUi-print"></a></p>
@@ -82,14 +82,14 @@
 <ul>
 <li>There are also different &quot;modes&quot; to view the 3d data, mostly for 3d scanning (ok, and eye candy too:): it will be expanded upon in the future</li>
 </ul>
-<p><a href="./assets/viewer-modes-lines-1.jpg"><img src="./assets/viewer-modes-lines-1.jpg" alt="" title="viewer-modes-lines-1"></a><img src="./assets/viewer-modes-linestrip-1.jpg" alt="" title="viewer-modes-linestrip-1">](./assets/viewer-modes-linestrip-1.jpg)<a href="./assets/viewer-modes-points-1.jpg"><img src="./assets/viewer-modes-points-1.jpg" alt="" title="viewer-modes-points-1"></a><img src="./assets/viewer-modes-trianglestrip-1.jpg" alt="" title="viewer-modes-trianglestrip-1">](./assets/viewer-modes-trianglestrip-1.jpg)</p>
+<p><a href="./assets/viewer-modes-lines-1.jpg"><img src="./assets/viewer-modes-lines-1.jpg" alt="" title="viewer-modes-lines-1"></a><a href="./assets/viewer-modes-linestrip-1.jpg"><img src="./assets/viewer-modes-linestrip-1.jpg" alt="" title="viewer-modes-linestrip-1"></a><a href="./assets/viewer-modes-points-1.jpg"><img src="./assets/viewer-modes-points-1.jpg" alt="" title="viewer-modes-points-1"></a><a href="./assets/viewer-modes-trianglestrip-1.jpg"><img src="./assets/viewer-modes-trianglestrip-1.jpg" alt="" title="viewer-modes-trianglestrip-1"></a></p>
 <ul>
 <li>Small note: i did not go the full <em>WebGl</em> route for the interface because of general availability /speed : webgl is quite good, but as you can read above, not that fast on all platforms, also making it mandatory would reduce the usefulness of the interface</li>
 <li>this was my first attempt at WebGl , and i relied heavilly on the excellent tutorials and code by Giles Thomas over at <a href="http://learningwebgl.com/">http://learningwebgl.com</a></li>
-<li>Using <strong><a href="http://jquery.com/">Jquery</a></strong> and <a href="http://jqueryui.com/"><strong>Jquery</strong> <strong>UI</strong></a>and a bit of <a href="http://www.erichynds.com/jquery/a-jquery-ui-growl-ubuntu-notification-widget/">Jquery Ui notify</a> ) made creating the interface a breaze. Using Jquery Ui also meant easier support for styling ( for example using the very professional <a href="http://www.michaelvanderheeren.be/?p=382">Absolution</a> Theme)</li>
+<li>Using <strong><a href="http://jquery.com/">Jquery</a></strong> and <a href="http://jqueryui.com/"><strong>Jquery</strong> <strong>UI</strong></a> (and a bit of <a href="http://www.erichynds.com/jquery/a-jquery-ui-growl-ubuntu-notification-widget/">Jquery Ui notify</a> ) made creating the interface a breaze. Using Jquery Ui also meant easier support for styling ( for example using the very professional <a href="http://www.michaelvanderheeren.be/?p=382">Absolution</a> Theme)</li>
 </ul>
 <h4 id="multiplatform--hey-it-also-works-on-tablets-and-smartphones-android-">Multiplatform : hey it also works on tablets and smartphones (Android )!</h4>
-<p>Ok i confess , this is really for pure geek factor , but can also be really practical  :</p>
+<p>Ok i confess , this is really for pure geek factor , but can also be really practical  :</p>
 <ul>
 <li>I tested it out both on a smartphone : HTC desire and an Archos 101 <em><strong>Android tablet</strong></em> : and was very surprised to see that everything is still snappy, and with the latest firefox mobile beta, the webgl part works at &quot;acceptable&quot; speeds ! Call me easilly impressed, but i still feel like &quot;the future is now&quot; whenever i use a tablet ( yes, in the eighties, i was always &quot;wowed&quot; by the <a href="http://memory-alpha.org/wiki/PADD">padds</a> from Start Trek, i&#39;m such a geek :))</li>
 <li>Will works on a lot of browsers, except for Internet Explorer</li>
@@ -106,7 +106,7 @@
 <li><strong>lightweight:</strong> the current version comes at just about 2 MB</li>
 <li><strong>easy to set up :</strong> static file server for the interface as well as reprap control all in one</li>
 <li><strong>standard</strong>: normally , it should not require you to change your reprap&#39;s firmware (except for scanning)</li>
-<li><strong>real-time</strong> <strong>view</strong>: of the current operation, whether scanning or printing</li>
+<li><strong>real-time</strong> <strong>view</strong>: of the current operation, whether scanning or printing</li>
 <li><strong>easy to use</strong>: nothing too fancy , just straight to the point</li>
 <li><strong>multiplatform</strong>: web based, so will work in any browser with javascript enabled (or you can send the commands directly via http from command line if you want to), 3d part requires a browser with webGl support</li>
 <li><strong>open source</strong>: still a very early version so feedback and participation are welcome !</li>
@@ -121,7 +121,7 @@
 <li><strong>upload and print:</strong> select the file, upload the file, print it<ul>
 <li><strong>remote monitoring:</strong> keep an eye on the print heads movement, the print progress,the temperature of your extruder and buid platform, from wherever you are, even from your cellphone!</li>
 <li><strong>manual</strong> control of reprap via GCodes</li>
-<li><strong>GCode</strong> file support</li>
+<li><strong>GCode</strong> file support</li>
 <li><strong>multiple chained prints</strong> via print queue</li>
 </ul>
 </li>
@@ -152,8 +152,8 @@
 <li><strong>rewrite</strong> of the reprap manager server side for performance and clarity increase</li>
 <li><strong>better documentation</strong> (a bit lacking right now)</li>
 <li><strong>better synch</strong> between clients and server (lots of things will be moved from the client to the server side)</li>
-<li><strong>stl support</strong>: automatic stl-&gt; gcode conversion  : ie  1-download a file on thingiverse  2-upload to print server 3-print ! : this is still <strong>far</strong> off</li>
-<li><strong>scan &amp; print</strong> : scan the object and print it directly: this is still <strong>far</strong> off</li>
+<li><strong>stl support</strong>: automatic stl-&gt; gcode conversion  : ie  1-download a file on thingiverse  2-upload to print server 3-print ! : this is still <strong>far</strong> off</li>
+<li><strong>scan &amp; print</strong> : scan the object and print it directly: this is still <strong>far</strong> off</li>
 <li><strong>detailed instructions</strong> on how to build the simple scanner that can be installed on most repraps (more on that in a future article)</li>
 </ul>
 </li>
@@ -164,14 +164,14 @@
 <p><strong>Downloads:</strong></p>
 <ul>
 <li>You can find the code here :<a href="https://github.com/kaosat-dev/Doboz">https://github.com/kaosat-dev/Doboz</a></li>
-<li>Or   here <a href="http://kaosat-dev.github.com/Doboz/">http://kaosat-dev.github.com/Doboz/</a></li>
+<li>Or   here <a href="http://kaosat-dev.github.com/Doboz/">http://kaosat-dev.github.com/Doboz/</a></li>
 </ul>
 <p><strong>Configuration:</strong></p>
 <p><strong>Disclaimer:</strong> This software is purely experimental, not even alpha stage, <em><strong>use at your own risk</strong></em> !!</p>
 <ul>
 <li>For now only tested with <strong><em>python 2.6</em></strong></li>
 <li>You will need to have <em><strong>pySerial</strong></em> installed</li>
-<li>By default , the web server is set to &quot;Tornado&quot; but can be easilly switched to any other web server <a href="http://bottle.paws.de/docs/dev/tutorial.html#tutorial-deployment">supported by Bottle</a>: go to source_<strong>/core/print_server/print_server.py</strong>_ and change the initial include at the top , as well as , on the last line</li>
+<li>By default , the web server is set to &quot;Tornado&quot; but can be easilly switched to any other web server <a href="http://bottle.paws.de/docs/dev/tutorial.html#tutorial-deployment">supported by Bottle</a>: go to source_**/core/print_server/print_server.py**_ and change the initial include at the top , as well as , on the last line</li>
 </ul>
 <p>[sourcecode language=&quot;python&quot;]run(app=testBottle, host=&#39;localhost&#39;, port=8000, server=TornadoServer)[/sourcecode]</p>
 <p>Just replace the <em><strong>server=TornadoServer</strong></em> with the one you want to use .</p>
@@ -181,10 +181,10 @@
 <li>open a browser to localhost:8000/index.html to use the interface and enjoy :)</li>
 </ul>
 <h2 id="looking-for-feedback">Looking for feedback!</h2>
-<p>It  was a fun <em><strong>two weeks</strong></em> working on this project , and it allowed me to finally get back on track with my Repstrap machine that had not been printing for a few weeks because of those pesky software problems, so whew , what a relief !</p>
+<p>It  was a fun <em><strong>two weeks</strong></em> working on this project , and it allowed me to finally get back on track with my Repstrap machine that had not been printing for a few weeks because of those pesky software problems, so whew , what a relief !</p>
 <ul>
-<li>While it is still is very buggy , and there is lots of work left to be done,  it works quite well for my machine at least</li>
-<li>Given that i have no access to other repraps and makerbots for now  , if you have any input, if you are willing to give it a whirl with your own 3d printer , give me a shout , i am more than willing to make it work for other people&#39;s machine as well, and expand from the current version, feature and functionality wise</li>
+<li>While it is still is very buggy , and there is lots of work left to be done,  it works quite well for my machine at least</li>
+<li>Given that i have no access to other repraps and makerbots for now  , if you have any input, if you are willing to give it a whirl with your own 3d printer , give me a shout , i am more than willing to make it work for other people&#39;s machine as well, and expand from the current version, feature and functionality wise</li>
 </ul>
 
   </div>

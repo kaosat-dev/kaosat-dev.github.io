@@ -1,6 +1,3 @@
-// <link rel="stylesheet"
-// href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css">
-// <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
 const mainTemplate = (siteMeta, content, meta) => {
   const navigation = siteMeta.navigationEntries.map(x => `<a href="/pages/${x}.html">${x}</a>`).join(' ')
 

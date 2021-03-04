@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -44,20 +44,22 @@
 <p>We went through multiple iterations before finding, &quot;lo and behold!&quot; a setting in rollup itself.</p>
 <h2 id="solution">Solution:</h2>
 <p>You can specify a <strong><code>banner</code></strong> option : it is a string that will appear at the very top of your output bundle: very handy for creating cli tools!</p>
-<pre><code class="language-javascript"> {
-   <span class="hljs-attribute">banner</span>: <span class="hljs-string">'#!/usr/bin/env node\n'</span>,
-   //other settings here
- }</code></pre>
+<pre><code class="language-javascript">{
+  banner: <span class="hljs-string">&#x27;#!/usr/bin/env node\n&#x27;</span>,
+  <span class="hljs-regexp">//</span>other settings here
+}
+</code></pre>
 <h2 id="other-not-so-great-solution-using-the-rollup-plugin-post-replace-plugin">Other (not so great) solution: using the <a href="foo">rollup-plugin-post-replace</a> plugin:</h2>
 <p>you need to add a <strong>replace</strong> entry to the plugins list :</p>
 <p>This relies on the fact that <code>use strict</code> is added to the top of the bundles (when transpiling es6)</p>
 <pre><code class="language-javascript">{
-  <span class="hljs-attribute">plugins</span>: [
-    <span class="hljs-built_in">replace</span>({
-      <span class="hljs-string">"'use strict';"</span>: <span class="hljs-string">"#!/usr/bin/env node\n'use strict';"</span>
+  plugins: [
+    replace({
+      <span class="hljs-string">&quot;&#x27;use strict&#x27;;&quot;</span>: <span class="hljs-string">&quot;#!/usr/bin/env node\n&#x27;use strict&#x27;;&quot;</span>
     })
    ]
-}</code></pre>
+}
+</code></pre>
 <p>the problem with this , is that it utterly fails if you have more than one <code>use strict</code> entries ...</p>
 
   </div>

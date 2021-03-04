@@ -20,7 +20,7 @@
               <h2>Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more</h2>
             </section>
             <section id="navigation" class='navigation'>
-              <a href="/pages/projects.html">projects</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
+              <a href="/pages/projects.html">projects</a> <a href="/pages/portofolio.html">portofolio</a> <a href="/pages/articles.html">articles</a> <a href="/pages/about.html">about</a>
               <span>
                 <input type='text' placeholder='search' id='search' name='search' autocomplete='off'></input>
               </span>
@@ -50,12 +50,12 @@
 <li>a few cables</li>
 <li>a perfboard</li>
 </ul>
-<p>Total cost : <strong>5 euro tops</strong></p>
+<p>Total cost : <strong>5 euro tops</strong></p>
 <p>And that&#39;s it folks ! The good thing about having such a simple system , is that it is also really lightweight, and can be added by the side of the extruder mechanism and not cause any problems.</p>
 <p>On the software side of things, it&#39;s a bit more complex, but nothing overly complicated:</p>
 <ul>
 <li>after each movement, the signal from the photodiode is sent back via serial</li>
-<li>that signal&#39;s strengh is then converted into <strong>height</strong> information</li>
+<li>that signal&#39;s strengh is then converted into <strong>height</strong> information</li>
 <li>the X and Y component of each vertex building up the 3d point cloud are simply the respective x and y axis position at the time of the scan</li>
 <li>after creating an additional vertex in the point cloud, you can just link it to the previous vertices for display (i&#39;m currently using simple GL_LINES in opengl</li>
 </ul>
