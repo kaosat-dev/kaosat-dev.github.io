@@ -5,7 +5,7 @@ template: "portofolio"
 
 # Why a portofolio/showcase ?
 
-I have worked on a lot of projects in the past decade, on a lot of 3D/webgl, quite visual projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
+I have worked on a lot of projects in the past decade, on a lot of 3D/webgl/CAD/3D printing etc, quite visual projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
  
 ## Jam / usco 
 
@@ -57,7 +57,12 @@ https://www.youtube.com/watch?v=PLA8VPRRi6A
 
 * I also created [Electron based experimental Desktop app](https://www.youtube.com/watch?v=nJyede1Ah9k&list=PLCiWVcSJ1UJSghHdQcTsAaXOBDkX0Nmx9)
 
+***Showcase:***
+
 ![jscad](/assets/img/portofolio/jscad/Screenshot%20from%202021-03-01%2009-39-15.png "Jscad")
+
+![jscad](/assets/img/portofolio/jscad/emitter-internal.png "Jscad")
+
 
 - Using the principle of 'dogfooding' (actually use the software you are developing), I often used the software to create robots, pcb housings, gardening tools etc
 ### Variations
@@ -97,8 +102,11 @@ A full blown 3d scanning app in the browser , with connected dedicated hardware 
   * pleasant, easy to use user interface
   * ported c bindings to enable use of native libraries for camera/hardware access
 
-![scan](/assets/img/portofolio/simple-scan/87544581-b6f2-4d7f-b41b-7143ad69033d.png "scan")
-![scan](/assets/img/portofolio/simple-scan/b659faff-af75-43b1-9d56-026ffc3e7846.png "scan")
+  ***Showcase:***
+
+  ![scan](/assets/img/portofolio/simple-scan/87544581-b6f2-4d7f-b41b-7143ad69033d.png "scan")
+
+  ![scan](/assets/img/portofolio/simple-scan/b659faff-af75-43b1-9d56-026ffc3e7846.png "scan")
 
 </details>
 
@@ -109,12 +117,32 @@ A full blown 3d scanning app in the browser , with connected dedicated hardware 
 
 A long standing passion & work of mine is 3d printing, in all its aspects: software, hardware, electronics, processes
 
-![scan](/assets/img/portofolio/simple-scan/0ceca305-6b8d-4b69-8ee9-951658f5fff3.png "scan")
+  ![3dp](/assets/img/portofolio/3dp/video.gif "3dp")
+
 
 <details>
   <summary>Click to learn more!</summary>
 
-  ***Key points:***
+***Key points:***
+
+  * design & build of multiple 3D printers
+  * custom firmware development (C/C++/Arduino)
+  * front end / UI development in Python & Js
+  * 9 + years of experience both for 3d printing Companies (Ultimaker) & personally
+  * 3D printing workshop organization for adults & children
+
+***Showcase:***
+
+![3dp](/assets/img/portofolio/3dp/3DR2%20-%201.jpg "3dp")
+
+![3dp](/assets/img/portofolio/3dp/317.jpg "3dp")
+
+![3dp](/assets/img/portofolio/3dp/320.jpg "3dp")
+
+![3dp](/assets/img/portofolio/3dp/2014%20-%207.jpg "3dp")
+
+![3dp](/assets/img/portofolio/3dp/2014%20-%208.jpg "3dp")
+
 
 
 </details>
@@ -124,15 +152,62 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
 
 ## Electronics/ Robotics
 
+  A lot of my hardware projects also revolve around, or have included electronics/sensors actuators !
+
+  ![robotics](/assets/img/portofolio/robotics/kiwikee.jpg "robotics")
+
 <details>
   <summary>Click to learn more!</summary>
 
-  ***Key points:***
+***Key points:***
+
+  * [ parametric versions](https://github.com/PiRo-bots/kiwikee) of 3D printable robots
+  * custom electronics, with home made PCB designs 
+  * lots of experience with using off the shelf components for sensors, actuators, etc (Arduino, Esp8266, Raspberry Pi)
+  * coding custom firmware (c/c++/Arduino/PlatformIo) for robots, sensor networks (Mqtt...)
+  * [live coding video series](https://www.youtube.com/watch?v=o5OMGnLj5-I&list=PLCiWVcSJ1UJRSipDN3YPTuBrR8wG8bjks) mixing Hardware/Firmware & web dev
+  
+
+***Showcase:***
+
+  ![robotics](/assets/img/portofolio/robotics/overview.png "robotics")
+
+  ![robotics](/assets/img/portofolio/robotics/repBug_0.1.jpg "robotics")
+
+  ![robotics](/assets/img/portofolio/robotics/robout-pcb.png "robotics")
+
 
 </details>
 
 <br>
 
+
+## 3d visualization
+
+In my carreer I have also been working on different types of data visualization in WebGL & 2d
+
+![dataviz](/assets/img/portofolio/dataviz/sensorGraphs.gif "dataviz")
+
+
+<details>
+  <summary>Click to learn more!</summary>
+
+***Key points:***
+
+  * built specifically for client needs
+  * performant WebGL (GPU instancing etc)
+  * lean/ minimalistic implementations
+
+***Showcase:***
+
+![dataviz](/assets/img/portofolio/dataviz/Screenshot%20from%202021-03-01%2011-13-42.png "dataviz")
+
+![dataviz](/assets/img/portofolio/dataviz/Screenshot%20from%202021-03-01%2011-15-43.png "dataviz")
+
+
+</details>
+
+<br>
 
 ## Game engine/ tech exploration
 
@@ -156,6 +231,8 @@ can push a 'tool-less' web stack (no build steps, using native esmodules only as
   * python code for Blender add ons
 
 </details>
+
+<br>
 
 
 
