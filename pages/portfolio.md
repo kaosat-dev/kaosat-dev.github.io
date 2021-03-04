@@ -1,9 +1,9 @@
 ---
-title: "portofolio"
-template: "portofolio"
+title: "portfolio"
+template: "portfolio"
 ---
 
-# Why a portofolio/showcase ?
+# Why a portfolio/showcase ?
 
 I have worked on a lot of projects in the past decade, on a lot of 3D/webgl/CAD/3D printing etc, quite visual projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
  
@@ -11,7 +11,7 @@ I have worked on a lot of projects in the past decade, on a lot of 3D/webgl/CAD/
 
 A very modular, multi platform Webgl app for collaborative editing & sharing of 3d designs for Ultimaker/Youmagine.com for 3D printing & more
 
-![Jam](/assets/img/portofolio/jam/MoreMultiEdit.gif "Jam")
+![Jam](/assets/img/portfolio/jam/MoreMultiEdit.gif "Jam")
 
 <details>
   <summary>Click to learn more!</summary>
@@ -24,9 +24,9 @@ A very modular, multi platform Webgl app for collaborative editing & sharing of 
 
 ***Showcase:***
 
-![Jam](/assets/img/portofolio/jam/RenderServer.gif "Jam")
+![Jam](/assets/img/portfolio/jam/RenderServer.gif "Jam")
 
-![Jam](/assets/img/portofolio/jam/video.gif "Jam")
+![Jam](/assets/img/portfolio/jam/video.gif "Jam")
 
 </details>
 
@@ -37,7 +37,7 @@ A very modular, multi platform Webgl app for collaborative editing & sharing of 
 A procedural, code based 3d modeling tool, for the browser, desktop, CLI & more ! Ie: write some code, get a 3d printable design !
 A project with a huge scope and possibilities
 
-![jscad](/assets/img/portofolio/jscad/Screenshot%20from%202021-03-01%2011-22-05.png "Jscad")
+![jscad](/assets/img/portfolio/jscad/Screenshot%20from%202021-03-01%2011-22-05.png "Jscad")
 
 <details>
   <summary>Click to learn more!</summary>
@@ -59,9 +59,9 @@ https://www.youtube.com/watch?v=PLA8VPRRi6A
 
 ***Showcase:***
 
-![jscad](/assets/img/portofolio/jscad/Screenshot%20from%202021-03-01%2009-39-15.png "Jscad")
+![jscad](/assets/img/portfolio/jscad/Screenshot%20from%202021-03-01%2009-39-15.png "Jscad")
 
-![jscad](/assets/img/portofolio/jscad/emitter-internal.png "Jscad")
+![jscad](/assets/img/portfolio/jscad/emitter-internal.png "Jscad")
 
 
 - Using the principle of 'dogfooding' (actually use the software you are developing), I often used the software to create robots, pcb housings, gardening tools etc
@@ -70,11 +70,11 @@ https://www.youtube.com/watch?v=PLA8VPRRi6A
 #### Signed distance field modeling
 
 At some point I also experimented with purely GPU based rendering based on signed distance fields as a possible frontend/renderer alternative
-![jscad](/assets/img/portofolio/jscad/df-csg-16.gif "Jscad")
+![jscad](/assets/img/portfolio/jscad/df-csg-16.gif "Jscad")
 
-![jscad](/assets/img/portofolio/jscad/ShapeFu-openscad.gif "Jscad")
+![jscad](/assets/img/portfolio/jscad/ShapeFu-openscad.gif "Jscad")
 
-![jscad](/assets/img/portofolio/jscad/3d-sdf1.gif "Jscad")
+![jscad](/assets/img/portfolio/jscad/3d-sdf1.gif "Jscad")
 
 
 #### Coffeescad
@@ -90,7 +90,7 @@ There is an [interview](https://www.golem.de/news/coffeescad-3d-druckmodellierun
 
 A full blown 3d scanning app in the browser , with connected dedicated hardware !
 
-![scan](/assets/img/portofolio/simple-scan/0ceca305-6b8d-4b69-8ee9-951658f5fff3.png "scan")
+![scan](/assets/img/portfolio/simple-scan/0ceca305-6b8d-4b69-8ee9-951658f5fff3.png "scan")
 
 <details>
   <summary>Click to learn more!</summary>
@@ -104,9 +104,9 @@ A full blown 3d scanning app in the browser , with connected dedicated hardware 
 
   ***Showcase:***
 
-  ![scan](/assets/img/portofolio/simple-scan/87544581-b6f2-4d7f-b41b-7143ad69033d.png "scan")
+  ![scan](/assets/img/portfolio/simple-scan/87544581-b6f2-4d7f-b41b-7143ad69033d.png "scan")
 
-  ![scan](/assets/img/portofolio/simple-scan/b659faff-af75-43b1-9d56-026ffc3e7846.png "scan")
+  ![scan](/assets/img/portfolio/simple-scan/b659faff-af75-43b1-9d56-026ffc3e7846.png "scan")
 
 </details>
 
@@ -117,7 +117,7 @@ A full blown 3d scanning app in the browser , with connected dedicated hardware 
 
 A long standing passion & work of mine is 3d printing, in all its aspects: software, hardware, electronics, processes
 
-  ![3dp](/assets/img/portofolio/3dp/video.gif "3dp")
+  ![3dp](/assets/img/portfolio/3dp/video.gif "3dp")
 
 
 <details>
@@ -133,15 +133,15 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
 
 ***Showcase:***
 
-![3dp](/assets/img/portofolio/3dp/3DR2%20-%201.jpg "3dp")
+![3dp](/assets/img/portfolio/3dp/3DR2%20-%201.jpg "3dp")
 
-![3dp](/assets/img/portofolio/3dp/317.jpg "3dp")
+![3dp](/assets/img/portfolio/3dp/317.jpg "3dp")
 
-![3dp](/assets/img/portofolio/3dp/320.jpg "3dp")
+![3dp](/assets/img/portfolio/3dp/320.jpg "3dp")
 
-![3dp](/assets/img/portofolio/3dp/2014%20-%207.jpg "3dp")
+![3dp](/assets/img/portfolio/3dp/2014%20-%207.jpg "3dp")
 
-![3dp](/assets/img/portofolio/3dp/2014%20-%208.jpg "3dp")
+![3dp](/assets/img/portfolio/3dp/2014%20-%208.jpg "3dp")
 
 
 
@@ -154,7 +154,7 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
 
   A lot of my hardware projects also revolve around, or have included electronics/sensors actuators !
 
-  ![robotics](/assets/img/portofolio/robotics/kiwikee.jpg "robotics")
+  ![robotics](/assets/img/portfolio/robotics/kiwikee.jpg "robotics")
 
 <details>
   <summary>Click to learn more!</summary>
@@ -170,11 +170,11 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
 
 ***Showcase:***
 
-  ![robotics](/assets/img/portofolio/robotics/overview.png "robotics")
+  ![robotics](/assets/img/portfolio/robotics/overview.png "robotics")
 
-  ![robotics](/assets/img/portofolio/robotics/repBug_0.1.jpg "robotics")
+  ![robotics](/assets/img/portfolio/robotics/repBug_0.1.jpg "robotics")
 
-  ![robotics](/assets/img/portofolio/robotics/robout-pcb.png "robotics")
+  ![robotics](/assets/img/portfolio/robotics/robout-pcb.png "robotics")
 
 
 </details>
@@ -186,7 +186,7 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
 
 In my carreer I have also been working on different types of data visualization in WebGL & 2d
 
-![dataviz](/assets/img/portofolio/dataviz/sensorGraphs.gif "dataviz")
+![dataviz](/assets/img/portfolio/dataviz/sensorGraphs.gif "dataviz")
 
 
 <details>
@@ -200,9 +200,9 @@ In my carreer I have also been working on different types of data visualization 
 
 ***Showcase:***
 
-![dataviz](/assets/img/portofolio/dataviz/Screenshot%20from%202021-03-01%2011-13-42.png "dataviz")
+![dataviz](/assets/img/portfolio/dataviz/Screenshot%20from%202021-03-01%2011-13-42.png "dataviz")
 
-![dataviz](/assets/img/portofolio/dataviz/Screenshot%20from%202021-03-01%2011-15-43.png "dataviz")
+![dataviz](/assets/img/portfolio/dataviz/Screenshot%20from%202021-03-01%2011-15-43.png "dataviz")
 
 
 </details>
@@ -215,7 +215,7 @@ In my carreer I have also been working on different types of data visualization 
 This personal project was a breeding ground to learn/ deepen my understanding about a lot of technologies, and how far you 
 can push a 'tool-less' web stack (no build steps, using native esmodules only as much as possible)
 
-![gamedev](/assets/img/portofolio/gamedev/su-proto2.2.png "gamedev")
+![gamedev](/assets/img/portfolio/gamedev/su-proto2.2.png "gamedev")
 
 
 <details>
