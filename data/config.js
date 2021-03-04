@@ -3,6 +3,7 @@ const siteMeta = {
   description: 'Gardener of code & plants: programming, 3d printing, Gardening, Aquaponics, & lots more',
   navigationEntries: [
     'projects',
+    'portofolio',
     'articles',
     'about'
     // 'contact'
