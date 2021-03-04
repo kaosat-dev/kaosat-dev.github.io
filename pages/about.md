@@ -9,7 +9,7 @@ template: "about"
 
 I am a Dad, living in Germany, gardener of code & plants.
 
-- Passion for 3d (programming, webgl, printing), at the service of 'real' things (food, health, building etc), but also for fun !
+- Passion for 3d (programming, webgl, printing), at the service of 'real' things (food, robotics, health, building etc), but also for fun !
 - Shamelessly enthusiastic javascripter , occasional C++, Pythonista, Elixir, etc
 - One of the main developpers/maintainers of https://github.com/jscad/OpenJSCAD.org and proud of it :)
 - Love of plants, nature
