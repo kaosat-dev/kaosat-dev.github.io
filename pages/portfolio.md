@@ -48,13 +48,9 @@ Over the past (5+) years I was a core developer/maintainer of OpenJscad
 
 * Upgrade to modern Es-next, development of core features & UI of parametric 2D/3D modeling program (Javascript, Node.js)
 * development of core modeling & maths features, UI
-* creation of a desktop app (Electron)
 * migration from monolithic code to node modules
 * setup and addition of a huge amount of unit test
-
-* I did a talk at HannoverJs a few years back that explains the scope and challenges of my work on the project
-https://www.youtube.com/watch?v=PLA8VPRRi6A
-
+* I did [a talk](https://www.youtube.com/watch?v=PLA8VPRRi6A) at HannoverJs a few years back that explains the scope and challenges of my work on the project
 * I also created [Electron based experimental Desktop app](https://www.youtube.com/watch?v=nJyede1Ah9k&list=PLCiWVcSJ1UJSghHdQcTsAaXOBDkX0Nmx9)
 
 ***Showcase:***
@@ -88,7 +84,7 @@ There is an [interview](https://www.golem.de/news/coffeescad-3d-druckmodellierun
 
 ## Simple-scan
 
-A full blown 3d scanning app in the browser , with connected dedicated hardware !
+A full blown 3d scanning app in the browser , with connected dedicated hardware ! It was done for the KIT in Germany, Karslruhe
 
 ![scan](/assets/img/portfolio/simple-scan/0ceca305-6b8d-4b69-8ee9-951658f5fff3.png "scan")
 
