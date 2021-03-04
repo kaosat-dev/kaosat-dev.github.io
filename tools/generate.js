@@ -4,10 +4,10 @@ const path = require('path')
 const fm = require('front-matter')
 const lunr = require('lunr')
 
-const mainTemplate = require('../../templates/main')
-const siteMeta = require('../../data/config')
-const rootDir = '/home/ckaos/dev/perso/blog/kaosat-net/'
-let documents = []
+const mainTemplate = require('../templates/main')
+const siteMeta = require('../data/config')
+const rootDir = '.'
+const documents = []
 
 const flatten = arr => [].concat(...arr)
 const recurseFindPosts = dir => {
@@ -34,8 +34,6 @@ const pagesList = fs.readdirSync(pagesDir)
   .filter(e => path.extname(e) === '.md')
 // console.log('postsList', postsList)
 console.log('pagesList', pagesList)
-
-// console.log('FOOOOO', flatten(recurseFindPosts(postsDir)))
 
 // to get metadata etc from a post/page
 const processPostMeta = (postDirName, postPath) => {
@@ -129,11 +127,11 @@ const processPage = (pageFileName, pagePath) => {
   ${pageHtml}
   </div>`
   if (postMeta.template) {
-    // console.log('USING', postMeta.template)
+    console.log('USING template', postMeta.template)
     try {
-      template = require(`../../templates/${postMeta.template}`)
+      template = require(`../templates/${postMeta.template}`)
     } catch (error) {
-
+      console.error('failed to load template', error)
     }
   }
 
@@ -187,10 +185,10 @@ fs.writeFileSync('./searchIndex', JSON.stringify(searchIndex))
 
 // for resumes
 try {
-  const resumeTemplate = require(`../../templates/resume`)
+  const resumeTemplate = require('../templates/resume')
   const resumes = ['en', 'de', 'fr']
   resumes.forEach(lang => {
-    const resume = require(`../../data/resume/resume.${lang}.json`)
+    const resume = require(`../data/resume/resume.${lang}.json`)
     const html = resumeTemplate(siteMeta, undefined, { resume })
     fs.writeFileSync(`./pages/resume-${lang}.html`, html)
   })
