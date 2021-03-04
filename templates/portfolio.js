@@ -1,7 +1,7 @@
-const portofolioTemplate = (siteMeta, content, meta) => {
-  return `<div class='portofolio'>
+const portfolioTemplate = (siteMeta, content, meta) => {
+  return `<div class='portfolio'>
     ${content}
   </div>`
 }
 
-module.exports = portofolioTemplate
+module.exports = portfolioTemplate
