@@ -52,6 +52,7 @@ Over the past (5+) years I was a core developer/maintainer of OpenJscad
 * setup and addition of a huge amount of unit test
 * I did [a talk](https://www.youtube.com/watch?v=PLA8VPRRi6A) at HannoverJs a few years back that explains the scope and challenges of my work on the project
 * I also created [Electron based experimental Desktop app](https://www.youtube.com/watch?v=nJyede1Ah9k&list=PLCiWVcSJ1UJSghHdQcTsAaXOBDkX0Nmx9)
+* latest versions also support decentralized design sharing using the [dat protocol](https://dat.foundation/) / [beaker browser](https://beakerbrowser.com/)
 
 ***Showcase:***
 
@@ -90,15 +91,15 @@ A full blown 3d scanning app in the browser , with connected dedicated hardware 
 
 <details>
   <summary>Click to learn more!</summary>
-  
-  ***Key points:***
+
+***Key points:***
 
   * polymer.js / web component based
   * hardware connection
   * pleasant, easy to use user interface
   * ported c bindings to enable use of native libraries for camera/hardware access
 
-  ***Showcase:***
+***Showcase:***
 
   ![scan](/assets/img/portfolio/simple-scan/87544581-b6f2-4d7f-b41b-7143ad69033d.png "scan")
 
