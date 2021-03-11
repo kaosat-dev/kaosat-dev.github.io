@@ -5,7 +5,7 @@
     "picture": "",
     "birthDate":"Born: 18-07-1981",
     "status": "Civil union, 2 children",
-    "summary": "Hi, my name is Mark, an experienced programmer with a focus on all things Javascript & 3D!",
+    "summary": "Hi, my name is Mark, an experienced programmer with a focus on all things Javascript/web, modular software & code, and 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
@@ -61,7 +61,7 @@
     "highlights": [
       "reuseable, minimalistic modular software components",
       "Webgl visualizations with large datasets",
-      "Backed integration for real time data flow"
+      "Backend integration for real time data flow"
     ],
     "keywords": ["Javascript", "Webgl", "Node.js", "HTML", "CSS"],
     "Focus":"Software development"

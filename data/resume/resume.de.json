@@ -5,7 +5,7 @@
     "picture": "",
     "birthDate":"Geboren: 18-07-1981",
     "status": "Zivil Partnerschaft, 2 kinder",
-    "summary": "Hallo, ich bin Mark, ein erfahrener Entwickler mit Schwerpunkt Javascript und 3D!",
+    "summary": "Hallo, ich bin Mark, ein erfahrener software Entwickler mit Schwerpunkt Javascript/ webdev, modulare Anwendungen und Code, und 3D!",
     "email":"moissette.mark@gmail.com",
     "phone":4915902511517,
     "degree": "",
@@ -16,7 +16,7 @@
       "Schwerpunkt Wiederbenutzbare, Modulare software Komponente, funktionales u. 'reaktive programming'",
       "Leidenschaft für Open Source Software u. Hardware",
       "Wissenschaftlische Neugier und Motivation",
-      "Gute Lern-und Anpassungs-Fähigkeit"
+      "Sehr Gute Lern-und Anpassungs-Fähigkeit"
     ],
     "location": {
       "postalCode": "66763",
@@ -38,6 +38,34 @@
     ]
   },
   "work": [
+    {  
+      "company":"Verschiedene",
+      "position":"Web/ Full Stack Entwickler",
+      "startDate":"2020",
+      "endDate":"2021",
+      "summary":"Entwickling, Upgrade von Server & client side WebGL/Js Anwendungen",
+      "highlights": [
+        "Universal Server & client WebGL/Js Anwendungen",
+        "Entwicklung, Softwarebereitstellung, Instandhaltung von Docker Anwendungen"
+      ],
+      "keywords": ["Javascript", "Webgl", "Node.js", "Docker", "Server"],
+      "Focus":"Software Entwicklung"
+},
+    {  
+      "company":"Crystal Dynamics Singapore",
+      "website":"",
+      "position":"Webgl / js Entwickler",
+      "startDate":"2020",
+      "endDate":"2020",
+      "summary":"Entwicklung von 3d data Visualizierungen",
+      "highlights": [
+        "Wiederbenutzbare, focusierte, Modulare software Komponente",
+        "Webgl Visualizierungen mit grossen datenmengen",
+        "Backend Integration für Echtzeit Daten flüsse"
+      ],
+      "keywords": ["Javascript", "Webgl", "Node.js", "HTML", "CSS"],
+      "Focus":"Software Entwicklung"
+    },
     {  
         "company":"Stykka Aps",
         "website":"https://stykka.com",
