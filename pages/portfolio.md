@@ -6,6 +6,21 @@ template: "portfolio"
 # Why a portfolio/showcase ?
 
 I have worked on a lot of projects in the past decade, on a lot of 3D/webgl/CAD/3D printing etc, quite visual (very often web, based) projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
+
+* 3D modeling, scanning & visualisation:
+  * [Jam/usco](#jam--usco)
+  * [OpenJscad](#openjscad-jscad)
+  * [Simple-scan](#simple-scan)
+
+* 3d Printing, electronics & robotics
+  * [3d printing](#3d-printing)
+  * [robotics](#electronics-robotics)
+
+* Game developement & Ecs:
+  * [Blenvy: Blender + gltf + Bevy](#blenvy-bevy-engine--blender-integration)
+  * [Custom engine](#custom-game-engine-tech-exploration)
+
+
  
 ## Jam / usco 
 
@@ -44,7 +59,7 @@ A project with a huge scope and possibilities
 
   ***Key points:***
 
-Over the past (5+) years I was a core developer/maintainer of OpenJscad 
+For Over 5 years I was a core developer/maintainer of [OpenJscad](https://github.com/jscad/OpenJSCAD.org) 
 
 * Upgrade to modern Es-next, development of core features & UI of parametric 2D/3D modeling program (Javascript, Node.js)
 * development of core modeling & maths features, UI
@@ -125,7 +140,7 @@ A long standing passion & work of mine is 3d printing, in all its aspects: softw
   * design & build of multiple 3D printers
   * custom firmware development (C/C++/Arduino)
   * front end / UI development in Python & Js
-  * 9 + years of experience both for 3d printing Companies (Ultimaker) & personally
+  * 10 + years of experience both for 3d printing Companies (Ultimaker) & personally
   * 3D printing workshop organization for adults & children
 
 ***Showcase:***
@@ -206,7 +221,34 @@ In my carreer I have also been working on different types of data visualization 
 
 <br>
 
-## Game engine/ tech exploration
+## Blenvy: Bevy engine / Blender integration
+
+![gamedev](/assets/img/portfolio/Blenvy/blenvy.png "gamedev")
+
+
+I have created & maintained [Blenvy](https://github.com/kaosat-dev/Blenvy) a set of tools to enable [Blender](https://www.blender.org/) to be used as an editor for the amazing [Bevy game engine](https://bevyengine.org/)
+I love editor-less and code based approaches, but sometimes you need a good 3d modeling tool, and I use Blender regularly , so why not combine both ?
+It enables a [Blender](https://www.blender.org/) (gltf) centric workflow for Bevy, ie defining entites & their components
+inside Blender. Aka "Blender as editor for Bevy"
+
+It also allows you to setup 'blueprints' in Blender by using collections etc.
+
+<details>
+  <summary>Click to learn more!</summary>
+
+  ***Key points:***
+
+  * Rust on the Bevy side, Python on the Blender side
+  * custom UI to add custom components with seamless integration into Bevy's ecs
+  * uses glf files with metadata to transfer information
+  * automated incremental exports with change detection on the Blender side
+  * a LOT more tools
+
+</details>
+
+<br>
+
+## Custom Game engine/ tech exploration
 
 
 This personal project was a breeding ground to learn/ deepen my understanding about a lot of technologies, and how far you 
