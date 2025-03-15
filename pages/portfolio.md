@@ -5,7 +5,8 @@ template: "portfolio"
 
 # Why a portfolio/showcase ?
 
-I have worked on a lot of projects in the past decade, on a lot of 3D/webgl/CAD/3D printing etc, quite visual (very often web, based) projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
+I have worked on a lot of projects in the past decade(s), on a lot of 3D/webgl/CAD/3D printing etc, quite visual (very often web, based) projects, so it recently dawned on me: let's have a nice visual showcase ! I love learning, challenges, finding the right tools for the job, as you can see in the list below.
+This list only scratches the surface, would be too long to list, not to mention a few projects under NDA ;)
 
 * 3D modeling, scanning & visualisation:
   * [Jam/usco](#jam--usco)
@@ -233,6 +234,8 @@ inside Blender. Aka "Blender as editor for Bevy"
 
 It also allows you to setup 'blueprints' in Blender by using collections etc.
 
+An (older) video explaining the basics can be found [here](https://youtu.be/CgyNtwgYwdM)
+
 <details>
   <summary>Click to learn more!</summary>
 
@@ -242,7 +245,18 @@ It also allows you to setup 'blueprints' in Blender by using collections etc.
   * custom UI to add custom components with seamless integration into Bevy's ecs
   * uses glf files with metadata to transfer information
   * automated incremental exports with change detection on the Blender side
+  * hot reloading of assets to avoid recompilation of Rust code
   * a LOT more tools
+
+
+***Showcase:***
+
+![Blenvy](/assets/img/portfolio/Blenvy/Blenvy1.png "Blenvy")
+
+![Blenvy](/assets/img/portfolio/Blenvy/Blenvy2.png "Blenvy")
+
+![Blenvy](/assets/img/portfolio/Blenvy/Blenvy3.png "Blenvy")
+
 
 </details>
 

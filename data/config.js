@@ -24,7 +24,7 @@ const siteMeta = {
       `,
       social: [
         { type: 'email',
-          url: 'contact@kaosat.net'
+          url: 'moissette.mark@gmail.com'
         },
         { type: 'github',
           url: 'https://github.com/kaosat-dev'

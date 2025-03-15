@@ -37,7 +37,7 @@ console.log('pagesList', pagesList)
 
 // to get metadata etc from a post/page
 const processPostMeta = (postDirName, postPath) => {
-  // console.log('processPostMeta', postDirName, postPath)
+  console.log('processPostMeta', postDirName, postPath)
   const data = fs.readFileSync(postPath, 'utf8')
   const content = fm(data)
 
@@ -49,8 +49,9 @@ const processPostMeta = (postDirName, postPath) => {
   const tags = [...new Set(siteMeta.tags.concat(postTags))]
   siteMeta.tags = tags
 
+
   postMeta.path = postDirName
-  postMeta.fullPath = '/posts/' + path.dirname(postPath).split('/posts/')[1]
+  postMeta.fullPath = '/posts/' + path.dirname(postPath).split('posts/')[1]
   return postMeta
 }
 
