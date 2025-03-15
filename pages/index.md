@@ -9,10 +9,14 @@ template: "index"
 Welcome !
 My name is Mark & I am a gardener of code & plants.
 
-Bullet points in bullet list (ah the wonders of technology)
-* core dev of [jscad](https://openjscad.org/)
-* mentor for kids at [CoderDojo-saar](http://coderdojo-saar.de/)
+The short version: 
+* 3d modeling, 3d tooling & 3d printing enthusiast 
+* proud creator of [Blenvy](https://github.com/kaosat-dev/Blenvy) a Blender (gltf) centric workflow for Bevy, ie defining entites & their components
+inside Blender. Aka "Blender as editor for Bevy"
+* previous core dev of [jscad](https://openjscad.org/) a js based (browser, node etc) parametric modeling tool
+* occasional STEM mentor for kids at [CoderDojo-saar](http://coderdojo-saar.de/)
+* open source enthusiast
+* Multilingual: French (native), English (fluent), German (fluent), Hungarian, etc
 * find me on [github](https://github.com/kaosat-dev)
-* my [resume](/pages/resume-en.html)  
 
-Curious for more ? check out my latest posts & projects below or read up [here](/pages/about)
+Curious for more ? check out my [portofolio](/pages/portfolio) or read up [here](/pages/about)
