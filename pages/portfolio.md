@@ -12,6 +12,7 @@ This list only scratches the surface, would be too long to list, not to mention 
   * [Jam/usco](#jam--usco)
   * [OpenJscad](#openjscad-jscad)
   * [Simple-scan](#simple-scan)
+  * [Blender](#blender)
 
 * 3d Printing, electronics & robotics
   * [3d printing](#3d-printing)
@@ -94,6 +95,35 @@ At some point I also experimented with purely GPU based rendering based on signe
 
 I also worked on a fork in CoffeeScript for a while called ... Coffeescad !
 There is an [interview](https://www.golem.de/news/coffeescad-3d-druckmodellierung-im-browser-1305-99271.html) I did about it for the German It/tech journal Golem 
+
+</details>
+
+<br>
+
+## Blender
+
+I have been using Blender (& more recently developing add-ons) ever since it became open-source !
+Using it for gamedev & architecture purposes mostly.
+
+![Blender](/assets/img/portfolio/blender/blender3.png "Blender")
+
+<details>
+  <summary>Click to learn more!</summary>
+
+***Key points:***
+
+  * polygonal modeling, low poly, geometry nodes, arch-vis etc
+  * experiments with Blender as a gamedev tool with custom add-ons (see [here](#blenvy-bevy-engine--blender-integration) and [here](#custom-game-engine-tech-exploration))
+
+***Showcase:***
+
+  ![Blender](/assets/img/portfolio/blender/blender2.png "Blender")
+
+
+  ![Blender](/assets/img/portfolio/blender/blender1.png "Blender")
+
+  ![Blender](/assets/img/portfolio/blender/blender4.png "Blender")
+
 
 </details>
 
